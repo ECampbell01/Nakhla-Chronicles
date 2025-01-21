@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
 
     Animator anim;
     private Vector2 lastMoveDirection;
-    private bool facingLeft = true;
 
 
     void Start()
@@ -24,13 +23,6 @@ public class PlayerController : MonoBehaviour
     {
         HandleInputs();
         Animate();
-
-        // Flip the player sprite if the player is moving in the opposite direction on the x-axis
-
-        if (input.x > 0 && !facingLeft || input.x < 0 && facingLeft)
-        {
-            Flip();
-        }
     }
 
     void FixedUpdate()
@@ -67,16 +59,6 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("MoveMagnitude", input.magnitude);
         anim.SetFloat("LastMoveX", lastMoveDirection.x);
         anim.SetFloat("LastMoveY", lastMoveDirection.y);
-    }
-
-    void Flip()
-    {
-        // Flip the player sprite on the x-axis
-
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
-        facingLeft = !facingLeft;
     }
 }
 
