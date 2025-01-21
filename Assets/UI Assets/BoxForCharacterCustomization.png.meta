@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2855ffd7891401d47a546066af41d550
+guid: 671ef72fcc495b64b891b2fff43e1288
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7635563162873571100
-    second: RightArrow_0
+      213: -6462507225447829053
+    second: BoxForCharacterCustomization_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 18
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,12 +100,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RightArrow_0
+      name: BoxForCharacterCustomization_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 21
+        width: 72
         height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c17232fdd38f6f960800000000000000
-      internalID: 7635563162873571100
+      spriteID: 3c179c41bef8056a0800000000000000
+      internalID: -6462507225447829053
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      RightArrow_0: 7635563162873571100
+      BoxForCharacterCustomization_0: -6462507225447829053
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

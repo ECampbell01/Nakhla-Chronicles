@@ -2,6 +2,7 @@
 // Date Created: 1/18/2025
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class ButtonController : MonoBehaviour
     public GameObject achievementsScreen;
     public GameObject creditsScreen;
     public GameObject howToPlayScreen;
+    public GameObject characterCreationMenu;
 
     public void ShowMainMenu()
     {
@@ -42,5 +44,11 @@ public class ButtonController : MonoBehaviour
     {
         mainMenu.SetActive(false);
         howToPlayScreen.SetActive(true);
+    }
+
+    public void LoadCharacterCreation()
+    {
+        mainMenu.SetActive(false);
+        characterCreationMenu.SetActive(true);
     }
 }
