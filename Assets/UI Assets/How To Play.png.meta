@@ -1,37 +1,34 @@
 fileFormatVersion: 2
-guid: c42bbf5612394fc4488544d68e32c0c3
+guid: d74283c3746f0e84098f875ed4fdbcdf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -536747933965175660
-    second: Game Options_0
+      213: -5733530803734091279
+    second: How To Play_0
   - first:
-      213: 2454436741696179368
-    second: Game Options_1
+      213: -3306757540683621874
+    second: How To Play_1
   - first:
-      213: 5053451934503001592
-    second: Game Options_2
+      213: -2322679556075035712
+    second: How To Play_2
   - first:
-      213: 2549379667522882817
-    second: Game Options_3
+      213: -5298849328379098504
+    second: How To Play_3
   - first:
-      213: 5788690061184795039
-    second: Game Options_4
+      213: -8867468863986326067
+    second: How To Play_4
   - first:
-      213: -773120069499131238
-    second: Game Options_5
+      213: -2666606128436082242
+    second: How To Play_5
   - first:
-      213: -7073927517765308934
-    second: Game Options_6
+      213: -6637665030136535020
+    second: How To Play_6
   - first:
-      213: 2408671111733359055
-    second: Game Options_7
+      213: 6757487702546887316
+    second: How To Play_7
   - first:
-      213: 2160911151233922950
-    second: Game Options_8
-  - first:
-      213: 3854966366691789938
-    second: Game Options_9
+      213: 285021931145996365
+    second: How To Play_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -127,7 +124,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Game Options_0
+      name: How To Play_0
       rect:
         serializedVersion: 2
         x: 0
@@ -142,14 +139,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 494b41e09961d88f0800000000000000
-      internalID: -536747933965175660
+      spriteID: 1f96bae8c186e60b0800000000000000
+      internalID: -5733530803734091279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game Options_1
+      name: How To Play_1
       rect:
         serializedVersion: 2
         x: 4
@@ -164,14 +161,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8acc7706639ef0220800000000000000
-      internalID: 2454436741696179368
+      spriteID: e0a553569890c12d0800000000000000
+      internalID: -3306757540683621874
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game Options_2
+      name: How To Play_2
       rect:
         serializedVersion: 2
         x: 9
@@ -186,17 +183,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8fddf8592c7712640800000000000000
-      internalID: 5053451934503001592
+      spriteID: 0c3e515ff3f24cfd0800000000000000
+      internalID: -2322679556075035712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game Options_3
+      name: How To Play_3
       rect:
         serializedVersion: 2
-        x: 15
+        x: 17
+        y: 0
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87a85af3c94b676b0800000000000000
+      internalID: -5298849328379098504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: How To Play_4
+      rect:
+        serializedVersion: 2
+        x: 23
         y: 0
         width: 6
         height: 5
@@ -208,17 +227,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 10d0e48ec47316320800000000000000
-      internalID: 2549379667522882817
+      spriteID: dc52241dc0c60f480800000000000000
+      internalID: -8867468863986326067
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game Options_4
+      name: How To Play_5
       rect:
         serializedVersion: 2
-        x: 22
+        x: 30
         y: 0
         width: 6
         height: 5
@@ -230,17 +249,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f9101cbd0fe855050800000000000000
-      internalID: 5788690061184795039
+      spriteID: eb900bebadf4efad0800000000000000
+      internalID: -2666606128436082242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game Options_5
+      name: How To Play_6
       rect:
         serializedVersion: 2
-        x: 27
+        x: 35
         y: 0
         width: 6
         height: 5
@@ -252,39 +271,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a9a67c894635545f0800000000000000
-      internalID: -773120069499131238
+      spriteID: 418edaca2d642e3a0800000000000000
+      internalID: -6637665030136535020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game Options_6
+      name: How To Play_7
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 11
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: afdecb0e66c54dd90800000000000000
-      internalID: -7073927517765308934
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Game Options_7
-      rect:
-        serializedVersion: 2
-        x: 42
+        x: 40
         y: 0
         width: 6
         height: 5
@@ -296,17 +293,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fc1bc9b4d915d6120800000000000000
-      internalID: 2408671111733359055
+      spriteID: 492b064434b67cd50800000000000000
+      internalID: 6757487702546887316
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game Options_8
+      name: How To Play_8
       rect:
         serializedVersion: 2
-        x: 47
+        x: 45
         y: 0
         width: 6
         height: 5
@@ -318,30 +315,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6877a783e391dfd10800000000000000
-      internalID: 2160911151233922950
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Game Options_9
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 0
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 27c0ebb6c779f7530800000000000000
-      internalID: 3854966366691789938
+      spriteID: d48272fafe994f300800000000000000
+      internalID: 285021931145996365
       vertices: []
       indices: 
       edges: []
@@ -360,16 +335,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Game Options_0: -536747933965175660
-      Game Options_1: 2454436741696179368
-      Game Options_2: 5053451934503001592
-      Game Options_3: 2549379667522882817
-      Game Options_4: 5788690061184795039
-      Game Options_5: -773120069499131238
-      Game Options_6: -7073927517765308934
-      Game Options_7: 2408671111733359055
-      Game Options_8: 2160911151233922950
-      Game Options_9: 3854966366691789938
+      How To Play_0: -5733530803734091279
+      How To Play_1: -3306757540683621874
+      How To Play_2: -2322679556075035712
+      How To Play_3: -5298849328379098504
+      How To Play_4: -8867468863986326067
+      How To Play_5: -2666606128436082242
+      How To Play_6: -6637665030136535020
+      How To Play_7: 6757487702546887316
+      How To Play_8: 285021931145996365
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

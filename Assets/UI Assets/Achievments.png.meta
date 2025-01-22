@@ -1,37 +1,40 @@
 fileFormatVersion: 2
-guid: c42bbf5612394fc4488544d68e32c0c3
+guid: c7aba4faeef98544c84920b8f56677de
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -536747933965175660
-    second: Game Options_0
+      213: 7405199287896026319
+    second: Achievments_0
   - first:
-      213: 2454436741696179368
-    second: Game Options_1
+      213: 3524034402035712503
+    second: Achievments_1
   - first:
-      213: 5053451934503001592
-    second: Game Options_2
+      213: -2160903346844840979
+    second: Achievments_2
   - first:
-      213: 2549379667522882817
-    second: Game Options_3
+      213: -5231545957739307638
+    second: Achievments_3
   - first:
-      213: 5788690061184795039
-    second: Game Options_4
+      213: 6855344994996894101
+    second: Achievments_4
   - first:
-      213: -773120069499131238
-    second: Game Options_5
+      213: -2534074479518733887
+    second: Achievments_5
   - first:
-      213: -7073927517765308934
-    second: Game Options_6
+      213: 4164119643209206811
+    second: Achievments_6
   - first:
-      213: 2408671111733359055
-    second: Game Options_7
+      213: 4504794180213527214
+    second: Achievments_7
   - first:
-      213: 2160911151233922950
-    second: Game Options_8
+      213: 875220467069806186
+    second: Achievments_8
   - first:
-      213: 3854966366691789938
-    second: Game Options_9
+      213: -5842059172001482004
+    second: Achievments_9
+  - first:
+      213: 7863533813453084442
+    second: Achievments_10
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -127,7 +130,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Game Options_0
+      name: Achievments_0
       rect:
         serializedVersion: 2
         x: 0
@@ -142,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 494b41e09961d88f0800000000000000
-      internalID: -536747933965175660
+      spriteID: fcca406948d84c660800000000000000
+      internalID: 7405199287896026319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game Options_1
+      name: Achievments_1
       rect:
         serializedVersion: 2
         x: 4
@@ -164,17 +167,61 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8acc7706639ef0220800000000000000
-      internalID: 2454436741696179368
+      spriteID: 7f148951e92e7e030800000000000000
+      internalID: 3524034402035712503
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game Options_2
+      name: Achievments_2
       rect:
         serializedVersion: 2
         x: 9
+        y: 0
+        width: 10
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deb4c51eadde202e0800000000000000
+      internalID: -2160903346844840979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievments_3
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 0
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8d51da5ba0d567b0800000000000000
+      internalID: -5231545957739307638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievments_4
+      rect:
+        serializedVersion: 2
+        x: 23
         y: 0
         width: 7
         height: 5
@@ -186,17 +233,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8fddf8592c7712640800000000000000
-      internalID: 5053451934503001592
+      spriteID: 599ba87a3f3132f50800000000000000
+      internalID: 6855344994996894101
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game Options_3
+      name: Achievments_5
       rect:
         serializedVersion: 2
-        x: 15
+        x: 29
         y: 0
         width: 6
         height: 5
@@ -208,17 +255,39 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 10d0e48ec47316320800000000000000
-      internalID: 2549379667522882817
+      spriteID: 1c927eddfa825dcd0800000000000000
+      internalID: -2534074479518733887
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game Options_4
+      name: Achievments_6
       rect:
         serializedVersion: 2
-        x: 22
+        x: 34
+        y: 0
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1c06b7c0cce9c930800000000000000
+      internalID: 4164119643209206811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Achievments_7
+      rect:
+        serializedVersion: 2
+        x: 40
         y: 0
         width: 6
         height: 5
@@ -230,17 +299,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f9101cbd0fe855050800000000000000
-      internalID: 5788690061184795039
+      spriteID: ea2dfd1807e348e30800000000000000
+      internalID: 4504794180213527214
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game Options_5
+      name: Achievments_8
       rect:
         serializedVersion: 2
-        x: 27
+        x: 45
         y: 0
         width: 6
         height: 5
@@ -252,19 +321,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a9a67c894635545f0800000000000000
-      internalID: -773120069499131238
+      spriteID: a66e8dfa068652c00800000000000000
+      internalID: 875220467069806186
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game Options_6
+      name: Achievments_9
       rect:
         serializedVersion: 2
-        x: 32
+        x: 50
         y: 0
-        width: 11
+        width: 7
         height: 5
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -274,61 +343,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: afdecb0e66c54dd90800000000000000
-      internalID: -7073927517765308934
+      spriteID: ceaf908b226dceea0800000000000000
+      internalID: -5842059172001482004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game Options_7
+      name: Achievments_10
       rect:
         serializedVersion: 2
-        x: 42
-        y: 0
-        width: 6
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fc1bc9b4d915d6120800000000000000
-      internalID: 2408671111733359055
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Game Options_8
-      rect:
-        serializedVersion: 2
-        x: 47
-        y: 0
-        width: 6
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6877a783e391dfd10800000000000000
-      internalID: 2160911151233922950
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Game Options_9
-      rect:
-        serializedVersion: 2
-        x: 52
+        x: 56
         y: 0
         width: 5
         height: 5
@@ -340,8 +365,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 27c0ebb6c779f7530800000000000000
-      internalID: 3854966366691789938
+      spriteID: a17d42e2752e02d60800000000000000
+      internalID: 7863533813453084442
       vertices: []
       indices: 
       edges: []
@@ -360,16 +385,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Game Options_0: -536747933965175660
-      Game Options_1: 2454436741696179368
-      Game Options_2: 5053451934503001592
-      Game Options_3: 2549379667522882817
-      Game Options_4: 5788690061184795039
-      Game Options_5: -773120069499131238
-      Game Options_6: -7073927517765308934
-      Game Options_7: 2408671111733359055
-      Game Options_8: 2160911151233922950
-      Game Options_9: 3854966366691789938
+      Achievments_0: 7405199287896026319
+      Achievments_1: 3524034402035712503
+      Achievments_10: 7863533813453084442
+      Achievments_2: -2160903346844840979
+      Achievments_3: -5231545957739307638
+      Achievments_4: 6855344994996894101
+      Achievments_5: -2534074479518733887
+      Achievments_6: 4164119643209206811
+      Achievments_7: 4504794180213527214
+      Achievments_8: 875220467069806186
+      Achievments_9: -5842059172001482004
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
