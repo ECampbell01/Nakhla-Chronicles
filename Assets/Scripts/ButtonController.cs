@@ -51,4 +51,9 @@ public class ButtonController : MonoBehaviour
         mainMenu.SetActive(false);
         characterCreationMenu.SetActive(true);
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
