@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     Animator anim;
     private Vector2 lastMoveDirection;
 
-
     void Start()
     {
         // Get the components
