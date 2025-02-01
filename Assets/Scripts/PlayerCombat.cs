@@ -6,6 +6,10 @@ public class PlayerCombat : MonoBehaviour
     public float attackCooldown = 0.1f;
     float timer = 0f;
 
+    public Transform aimPoint;
+    public GameObject bullet;
+    public float bulletVelocity = 10f;
+
     void Start()
     {
         // Get the components
@@ -15,8 +19,32 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        HandleStab();
+        HandleShoot();
+    }
+
+    void Stab()
+    {
+        anim.SetTrigger("Stab");
+    }
+
+    void Shoot()
+    {
+        anim.SetTrigger("Shoot");
+        SpawnBullet();
+    }
+
+    void SpawnBullet()
+    {
+        GameObject intBullet = Instantiate(bullet, aimPoint.position, aimPoint.rotation);
+        intBullet.GetComponent<Rigidbody2D>().AddForce(-aimPoint.up * bulletVelocity, ForceMode2D.Impulse);
+        Destroy(intBullet, 2f);
+    }
+
+    void HandleStab()
+    {
         timer += Time.deltaTime;
-        if(timer >= attackCooldown)
+        if (timer >= attackCooldown)
         {
             if (Input.GetMouseButton(0))
             {
@@ -26,8 +54,16 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    void Stab()
+    void HandleShoot()
     {
-        anim.SetTrigger("Stab");
+        timer += Time.deltaTime;
+        if (timer >= attackCooldown)
+        {
+            if (Input.GetMouseButton(1))
+            {
+                Shoot();
+                timer = 0f;
+            }
+        }
     }
 }
