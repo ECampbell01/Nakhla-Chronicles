@@ -171,7 +171,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53cd1086a75bbe24eabc53f87000a115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCooldown: 1
+  stabCooldown: 0.1
+  shootCooldown: 0.1
   aimPoint: {fileID: 6665209960840500887}
   bullet: {fileID: 4187883161975756274}
   bulletVelocity: 10
@@ -356,7 +357,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6424656259630612510, guid: c168be0003b909e43a829338ce595269, type: 3}
       propertyPath: m_SortingOrder
-      value: 5
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6424656259630612510, guid: c168be0003b909e43a829338ce595269, type: 3}
       propertyPath: m_WasSpriteAssigned

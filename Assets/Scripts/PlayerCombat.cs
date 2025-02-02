@@ -3,7 +3,8 @@ using UnityEngine;
 public class PlayerCombat : MonoBehaviour
 {
     Animator anim;
-    public float attackCooldown = 0.1f;
+    public float stabCooldown = 0.1f;
+    public float shootCooldown = 0.1f;
     float timer = 0f;
 
     public Transform aimPoint;
@@ -44,7 +45,7 @@ public class PlayerCombat : MonoBehaviour
     void HandleStab()
     {
         timer += Time.deltaTime;
-        if (timer >= attackCooldown)
+        if (timer >= stabCooldown)
         {
             if (Input.GetMouseButton(0))
             {
@@ -57,7 +58,7 @@ public class PlayerCombat : MonoBehaviour
     void HandleShoot()
     {
         timer += Time.deltaTime;
-        if (timer >= attackCooldown)
+        if (timer >= shootCooldown)
         {
             if (Input.GetMouseButton(1))
             {

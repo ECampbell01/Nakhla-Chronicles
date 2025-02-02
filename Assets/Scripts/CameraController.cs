@@ -10,12 +10,19 @@ public class CameraController: MonoBehaviour
     public Transform target;
     Vector3 playerPosition;
 
+    Camera cam;
+
+    void Start()
+    {
+        cam = GetComponent<Camera>();
+    }
+
     void FixedUpdate()
     {
         HandlePlayerFollow();
     }
 
-    private void Update()
+    void Update()
     {
         HandleZoom();
     }
@@ -23,14 +30,14 @@ public class CameraController: MonoBehaviour
     private void HandlePlayerFollow()
     {
         playerPosition = new Vector3(target.position.x, target.position.y, transform.position.z);
-        transform.position = Vector3.Lerp(transform.position, playerPosition, Time.deltaTime * lerpSpeed);
+        transform.position = Vector3.Lerp(transform.position, playerPosition, Time.fixedDeltaTime * lerpSpeed);
     }
 
     private void HandleZoom()
     {
-        float zoom = Camera.main.orthographicSize;
+        float zoom = cam.orthographicSize;
         zoom -= Input.GetAxis("Mouse ScrollWheel") * 5;
         zoom = Mathf.Clamp(zoom, 2, 10);
-        Camera.main.orthographicSize = zoom;
+        cam.orthographicSize = zoom;
     }
 }

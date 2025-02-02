@@ -24,11 +24,12 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        Move();
         HandleInputs();
         Animate();
     }
 
-    void FixedUpdate()
+    void Move()
     {
         // Move the player
         input = input * movementSpeed;
