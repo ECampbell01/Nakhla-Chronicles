@@ -39,7 +39,6 @@ public class PlayerCombat : MonoBehaviour
     {
         GameObject intBullet = Instantiate(bullet, aimPoint.position, aimPoint.rotation);
         intBullet.GetComponent<Rigidbody2D>().AddForce(-aimPoint.up * bulletVelocity, ForceMode2D.Impulse);
-        Destroy(intBullet, 2f);
     }
 
     void HandleStab()
