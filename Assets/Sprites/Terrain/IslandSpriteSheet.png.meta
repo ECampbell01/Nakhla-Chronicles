@@ -1,10 +1,52 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/Terrain/IslandSpriteSheet.png.meta
 guid: 172a75b3dbb76554286adad16e3c2cb7
 TextureImporter:
   internalIDToNameTable:
   - first:
       213: -8702440558424754834
     second: IslandSpriteSheet_0
+========
+guid: 47a1d0817dde3494a96011f66ffeee2e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4346244404228752641
+    second: Arrow_0
+  - first:
+      213: -6662812116773042688
+    second: Arrow_1
+  - first:
+      213: -2292719611878453243
+    second: Arrow_2
+  - first:
+      213: 5946551882310926714
+    second: Arrow_3
+  - first:
+      213: 4428292855295335941
+    second: Arrow_4
+  - first:
+      213: -7017944715137372645
+    second: Arrow_5
+  - first:
+      213: -7742078795318259045
+    second: Arrow_6
+  - first:
+      213: 7160053665899228399
+    second: Arrow_7
+  - first:
+      213: 8327645574207038891
+    second: Arrow_8
+  - first:
+      213: -3620160607179217387
+    second: Arrow_9
+  - first:
+      213: -6351641868636779942
+    second: Arrow_10
+  - first:
+      213: -3737462710807726644
+    second: Arrow_11
+>>>>>>>> Ryan's-Branch:Assets/Sprites/Player/Arrow.png.meta
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,6 +155,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/Terrain/IslandSpriteSheet.png.meta
       name: IslandSpriteSheet_0
       rect:
         serializedVersion: 2
@@ -120,6 +163,15 @@ TextureImporter:
         y: 64
         width: 32
         height: 32
+========
+      name: Arrow_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 8
+        width: 178
+        height: 117
+>>>>>>>> Ryan's-Branch:Assets/Sprites/Player/Arrow.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,13 +180,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
+<<<<<<<< HEAD:Assets/Sprites/Terrain/IslandSpriteSheet.png.meta
       spriteID: e65f32c6b68ba3780800000000000000
       internalID: -8702440558424754834
+========
+      spriteID: ffa7ae2edb90fa3c0800000000000000
+      internalID: -4346244404228752641
+>>>>>>>> Ryan's-Branch:Assets/Sprites/Player/Arrow.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/Terrain/IslandSpriteSheet.png.meta
       name: IslandSpriteSheet_1
       rect:
         serializedVersion: 2
@@ -208,6 +266,15 @@ TextureImporter:
         y: 32
         width: 32
         height: 32
+========
+      name: Arrow_1
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 112
+        width: 40
+        height: 13
+>>>>>>>> Ryan's-Branch:Assets/Sprites/Player/Arrow.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,13 +283,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<<< HEAD:Assets/Sprites/Terrain/IslandSpriteSheet.png.meta
       spriteID: bc546f0252093f54f8fa4d826e59d881
       internalID: -306253073
+========
+      spriteID: 006039e4eafe883a0800000000000000
+      internalID: -6662812116773042688
+>>>>>>>> Ryan's-Branch:Assets/Sprites/Player/Arrow.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/Terrain/IslandSpriteSheet.png.meta
       name: IslandSpriteSheet_5
       rect:
         serializedVersion: 2
@@ -230,6 +303,15 @@ TextureImporter:
         y: 32
         width: 32
         height: 32
+========
+      name: Arrow_2
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 106
+        width: 9
+        height: 13
+>>>>>>>> Ryan's-Branch:Assets/Sprites/Player/Arrow.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,13 +320,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<<< HEAD:Assets/Sprites/Terrain/IslandSpriteSheet.png.meta
       spriteID: 427ff2702e871724cb16f90615dd45fc
       internalID: 511248971
+========
+      spriteID: 500d96c09af9e20e0800000000000000
+      internalID: -2292719611878453243
+>>>>>>>> Ryan's-Branch:Assets/Sprites/Player/Arrow.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/Terrain/IslandSpriteSheet.png.meta
       name: IslandSpriteSheet_6
       rect:
         serializedVersion: 2
@@ -252,21 +340,38 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
+========
+      name: Arrow_3
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 67
+        width: 11
+        height: 13
+>>>>>>>> Ryan's-Branch:Assets/Sprites/Player/Arrow.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
+<<<<<<<< HEAD:Assets/Sprites/Terrain/IslandSpriteSheet.png.meta
       tessellationDetail: 0
       bones: []
       spriteID: c072d8812480480429130d047c1caf34
       internalID: 1073418499
+========
+      tessellationDetail: -1
+      bones: []
+      spriteID: a71c2974e65668250800000000000000
+      internalID: 5946551882310926714
+>>>>>>>> Ryan's-Branch:Assets/Sprites/Player/Arrow.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/Terrain/IslandSpriteSheet.png.meta
       name: IslandSpriteSheet_7
       rect:
         serializedVersion: 2
@@ -274,21 +379,38 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
+========
+      name: Arrow_4
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 67
+        width: 11
+        height: 13
+>>>>>>>> Ryan's-Branch:Assets/Sprites/Player/Arrow.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
+<<<<<<<< HEAD:Assets/Sprites/Terrain/IslandSpriteSheet.png.meta
       tessellationDetail: 0
       bones: []
       spriteID: bf5db22325cb9d549b82d9a3524a0740
       internalID: -2029718571
+========
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50e5749c3e4747d30800000000000000
+      internalID: 4428292855295335941
+>>>>>>>> Ryan's-Branch:Assets/Sprites/Player/Arrow.png.meta
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/Terrain/IslandSpriteSheet.png.meta
       name: IslandSpriteSheet_8
       rect:
         serializedVersion: 2
@@ -296,16 +418,164 @@ TextureImporter:
         y: 0
         width: 32
         height: 32
+========
+      name: Arrow_5
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 43
+        width: 45
+        height: 37
+>>>>>>>> Ryan's-Branch:Assets/Sprites/Player/Arrow.png.meta
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
+<<<<<<<< HEAD:Assets/Sprites/Terrain/IslandSpriteSheet.png.meta
       tessellationDetail: 0
       bones: []
       spriteID: aa987b42158fda34090142a020024ccb
       internalID: 1213225497
+========
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1e28e8d6704b9e90800000000000000
+      internalID: -7017944715137372645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arrow_6
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 73
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9298fdda5c9e8490800000000000000
+      internalID: -7742078795318259045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arrow_7
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 43
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fec28a0afde9d5360800000000000000
+      internalID: 7160053665899228399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arrow_8
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 44
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba5e6f9278db19370800000000000000
+      internalID: 8327645574207038891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arrow_9
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 10
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5166833bb1b92cdc0800000000000000
+      internalID: -3620160607179217387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arrow_10
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 10
+        width: 45
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5a08677f5f6ad7a0800000000000000
+      internalID: -6351641868636779942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Arrow_11
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 11
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc57909677dd12cc0800000000000000
+      internalID: -3737462710807726644
+>>>>>>>> Ryan's-Branch:Assets/Sprites/Player/Arrow.png.meta
       vertices: []
       indices: 
       edges: []
@@ -324,6 +594,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+<<<<<<<< HEAD:Assets/Sprites/Terrain/IslandSpriteSheet.png.meta
       IslandSpriteSheet_0: -8702440558424754834
       IslandSpriteSheet_1: -286964905
       IslandSpriteSheet_2: 280066469
@@ -333,6 +604,20 @@ TextureImporter:
       IslandSpriteSheet_6: 1073418499
       IslandSpriteSheet_7: -2029718571
       IslandSpriteSheet_8: 1213225497
+========
+      Arrow_0: -4346244404228752641
+      Arrow_1: -6662812116773042688
+      Arrow_10: -6351641868636779942
+      Arrow_11: -3737462710807726644
+      Arrow_2: -2292719611878453243
+      Arrow_3: 5946551882310926714
+      Arrow_4: 4428292855295335941
+      Arrow_5: -7017944715137372645
+      Arrow_6: -7742078795318259045
+      Arrow_7: 7160053665899228399
+      Arrow_8: 8327645574207038891
+      Arrow_9: -3620160607179217387
+>>>>>>>> Ryan's-Branch:Assets/Sprites/Player/Arrow.png.meta
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
