@@ -4,12 +4,15 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float movementSpeed;
+    public float lerpSpeed = 10;
     private Rigidbody2D rb;
     private Vector2 input;
 
     Animator anim;
-    private Vector2 lastMoveDirection;
+    public Vector2 lastMoveDirection;
 
+    public Transform aimPoint;
+    bool isWalking = false;
 
     void Start()
     {
@@ -21,15 +24,21 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        Move();
         HandleInputs();
         Animate();
     }
 
-    void FixedUpdate()
+    void Move()
     {
         // Move the player
-
-        rb.linearVelocity = input * movementSpeed;
+        input = input * movementSpeed;
+        rb.linearVelocity = Vector3.Lerp(rb.linearVelocity, input, Time.deltaTime * lerpSpeed);
+        if (isWalking)
+        {
+            Vector3 vector3 = Vector3.left * input.x + Vector3.down * input.y;
+            aimPoint.rotation = Quaternion.LookRotation(Vector3.forward, vector3);
+        }
     }
 
     void HandleInputs()
@@ -40,7 +49,14 @@ public class PlayerController : MonoBehaviour
 
         if (moveDirection == Vector2.zero && input != Vector2.zero)
         {
+            isWalking = false;
             lastMoveDirection = input;
+            Vector3 vector3 = Vector3.left * lastMoveDirection.x + Vector3.down * lastMoveDirection.y;
+            aimPoint.rotation = Quaternion.LookRotation(Vector3.forward, vector3);
+        }
+        else if (moveDirection != Vector2.zero)
+        {
+            isWalking = true;
         }
 
         // Get the input from the player
