@@ -52,6 +52,11 @@ public class ButtonController : MonoBehaviour
         characterCreationMenu.SetActive(true);
     }
 
+    public void LoadPrologue()
+    {
+        SceneManager.LoadScene("Prologue");
+    }
+
     public void ExitGame()
     {
         Application.Quit();
