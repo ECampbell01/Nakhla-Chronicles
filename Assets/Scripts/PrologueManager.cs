@@ -12,16 +12,18 @@ public class PrologueManager : MonoBehaviour
     [System.Serializable]
     public struct PrologueStep
     {
-        [TextArea(3, 5)] public string text; // Text for this step
-        public Sprite image; // Image for this step (can be left empty)
+        [TextArea(3, 5)] public string text; 
+        public Sprite image; 
     }
 
     public PrologueStep[] steps;
     public TextMeshProUGUI prologueText;
     public Image prologueImage;
+    public Image fadePanel;
     public Vector2 centerTextPosition = new Vector2(0, 0);
-    public Vector2 bottomTextPosition = new Vector2(0, -200);
+    public Vector2 bottomTextPosition = new Vector2(0, -300);
     public float displayTime = 10f;
+    public float fadeDuration = 1.5f;
 
     private void Start()
     {
@@ -52,6 +54,8 @@ public class PrologueManager : MonoBehaviour
             yield return new WaitForSeconds(displayTime);
         }
 
+        yield return StartCoroutine(FadeOutScreen());
+
         SceneManager.LoadScene("Hubworld");
     }
 
@@ -69,6 +73,22 @@ public class PrologueManager : MonoBehaviour
             elapsed += Time.deltaTime;
             color.a = Mathf.Lerp(0, 1, elapsed / duration);
             textElement.color = color;
+            yield return null;
+        }
+    }
+
+    private IEnumerator FadeOutScreen()
+    {
+        Color color = fadePanel.color;
+        color.a = 0;
+        fadePanel.gameObject.SetActive(true);
+
+        float elapsed = 0;
+        while (elapsed < fadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            color.a = Mathf.Lerp(0, 1, elapsed / fadeDuration);
+            fadePanel.color = color;
             yield return null;
         }
     }
