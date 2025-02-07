@@ -1,5 +1,6 @@
 // Contributors: Ethan Campbell
 // Created On 1/25/2025
+
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -44,11 +45,6 @@ public class OptionsMenu : MonoBehaviour
     public void SetVolume(float volume) 
     {
         audioMixer.SetFloat("volume", volume);
-    }
-
-    public void SetQuality(int quality)
-    {
-        QualitySettings.SetQualityLevel(quality);
     }
 
     public void SetFullScreen(bool isFullScreen)

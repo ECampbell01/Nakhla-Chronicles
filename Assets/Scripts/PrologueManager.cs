@@ -16,6 +16,9 @@ public class PrologueManager : MonoBehaviour
         public Sprite image; 
     }
 
+    public Button skipButton;
+    public float skipButtonFadeDelay = 5f;
+    public float skipButtonFadeDuration = 1.5f;
     public PrologueStep[] steps;
     public TextMeshProUGUI prologueText;
     public Image prologueImage;
@@ -27,7 +30,12 @@ public class PrologueManager : MonoBehaviour
 
     private void Start()
     {
+        Color buttonColor = skipButton.GetComponentInChildren<TextMeshProUGUI>().color;
+        buttonColor.a = 0;
+        skipButton.GetComponentInChildren<TextMeshProUGUI>().color = buttonColor;
+
         StartCoroutine(ShowPrologue());
+        StartCoroutine(FadeInSkipButton());
     }
 
     private IEnumerator ShowPrologue()
@@ -57,6 +65,23 @@ public class PrologueManager : MonoBehaviour
         yield return StartCoroutine(FadeOutScreen());
 
         SceneManager.LoadScene("Hubworld");
+    }
+
+    private IEnumerator FadeInSkipButton()
+    {
+        yield return new WaitForSeconds(skipButtonFadeDelay);
+
+        TextMeshProUGUI buttonText = skipButton.GetComponentInChildren<TextMeshProUGUI>();
+        Color color = buttonText.color;
+        float elapsed = 0;
+
+        while (elapsed < skipButtonFadeDuration)
+        {
+            elapsed += Time.deltaTime;
+            color.a = Mathf.Lerp(0, 1, elapsed / skipButtonFadeDuration);
+            buttonText.color = color;
+            yield return null;
+        }
     }
 
     private IEnumerator FadeInText(TextMeshProUGUI textElement)
@@ -91,5 +116,11 @@ public class PrologueManager : MonoBehaviour
             fadePanel.color = color;
             yield return null;
         }
+    }
+
+    public void SkipPrologue()
+    {
+        StopAllCoroutines();
+        SceneManager.LoadScene("Hubworld");
     }
 }
