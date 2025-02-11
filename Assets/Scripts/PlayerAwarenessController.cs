@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerAwarenessController : MonoBehaviour
 {
+    public float damage = 1;
+    public float knockbackForce = 50f;
     public bool playerInRange {  get; private set; }
     public Vector2 directionToPlayer { get; private set; }
 
@@ -15,7 +17,7 @@ public class PlayerAwarenessController : MonoBehaviour
 
     private void Awake()
     {
-        player = FindObjectOfType<PlayerController>().transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     // Update is called once per frame
@@ -31,6 +33,20 @@ public class PlayerAwarenessController : MonoBehaviour
         else 
         {
             playerInRange = false;
+        }
+    }
+
+    // Collide with player
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Collider2D collider = collision.collider;
+        DamageableCharacter damageable = collider.GetComponent<DamageableCharacter>();
+
+        if (damageable != null)
+        {
+            Vector2 direction = (collider.transform.position - transform.position).normalized;
+            Vector2 knockback = direction * knockbackForce;
+            damageable.OnHit(damage, knockback);
         }
     }
 }

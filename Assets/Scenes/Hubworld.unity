@@ -218,7 +218,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3314896538915096734, guid: bd07d8d465a390944ae2d75cc72afc48, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1854224656}
   m_SourcePrefab: {fileID: 100100000, guid: bd07d8d465a390944ae2d75cc72afc48, type: 3}
 --- !u!1 &350530315
 GameObject:
@@ -363,6 +366,7 @@ GameObject:
   - component: {fileID: 535824426}
   - component: {fileID: 535824428}
   - component: {fileID: 535824427}
+  - component: {fileID: 535824429}
   m_Layer: 0
   m_Name: Melee Alien
   m_TagString: Untagged
@@ -560,7 +564,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 395e8f37b837cea4cb2f87a2936bfea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 1
+  knockbackForce: 50
   playerAwarenessDistance: 5
+--- !u!114 &535824429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 535824420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecf61672a559314da0fb72aaba99a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &554654500
 GameObject:
   m_ObjectHideFlags: 0
@@ -3821,6 +3839,23 @@ Transform:
   - {fileID: 1657178252}
   m_Father: {fileID: 350530317}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1854224649 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3314896538915096734, guid: bd07d8d465a390944ae2d75cc72afc48, type: 3}
+  m_PrefabInstance: {fileID: 307449039}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1854224656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854224649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecf61672a559314da0fb72aaba99a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1873000979
 GameObject:
   m_ObjectHideFlags: 0
