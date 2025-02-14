@@ -564,7 +564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 395e8f37b837cea4cb2f87a2936bfea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 20
   knockbackForce: 50
   playerAwarenessDistance: 5
 --- !u!114 &535824429
@@ -579,6 +579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecf61672a559314da0fb72aaba99a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth: 100
 --- !u!1 &554654500
 GameObject:
   m_ObjectHideFlags: 0
@@ -3856,6 +3857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecf61672a559314da0fb72aaba99a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth: 100
 --- !u!1 &1873000979
 GameObject:
   m_ObjectHideFlags: 0

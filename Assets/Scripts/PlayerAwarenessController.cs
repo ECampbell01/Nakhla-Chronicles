@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerAwarenessController : MonoBehaviour
 {
-    public float damage = 1;
+    public float damage = 20f;
     public float knockbackForce = 50f;
     public bool playerInRange {  get; private set; }
     public Vector2 directionToPlayer { get; private set; }
