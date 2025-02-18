@@ -1,0 +1,810 @@
+fileFormatVersion: 2
+guid: 7584b990e282a3f4e8146df78bfc4680
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6632721536027482757
+    second: Map01_0
+  - first:
+      213: 1560405883193798889
+    second: Map01_1
+  - first:
+      213: -5088529910875858171
+    second: Map01_2
+  - first:
+      213: -3582266933167423907
+    second: Map01_3
+  - first:
+      213: 5586925651602893218
+    second: Map01_4
+  - first:
+      213: -1108916442952960867
+    second: Map01_5
+  - first:
+      213: 318950081237363339
+    second: Map01_6
+  - first:
+      213: -3919512811175972705
+    second: Map01_7
+  - first:
+      213: -3070480871379406556
+    second: Map01_8
+  - first:
+      213: 4821804549655494829
+    second: Map01_9
+  - first:
+      213: 2923344326559001242
+    second: Map01_10
+  - first:
+      213: 4018783256144836266
+    second: Map01_11
+  - first:
+      213: 4651825179515302148
+    second: Map01_12
+  - first:
+      213: -6967548990602849977
+    second: Map01_13
+  - first:
+      213: -7286191870016870439
+    second: Map01_14
+  - first:
+      213: 193749477201422137
+    second: Map01_15
+  - first:
+      213: 4958966844805859534
+    second: Map01_16
+  - first:
+      213: 5983364384292623176
+    second: Map01_17
+  - first:
+      213: 1891980172553529189
+    second: Map01_18
+  - first:
+      213: -131568252847709688
+    second: Map01_19
+  - first:
+      213: 3147482469709690494
+    second: Map01_20
+  - first:
+      213: 7259052352978287002
+    second: Map01_21
+  - first:
+      213: 8763106378223457122
+    second: Map01_22
+  - first:
+      213: 2037366419973653051
+    second: Map01_23
+  - first:
+      213: 4426103405473701641
+    second: Map01_24
+  - first:
+      213: -4168791690857970821
+    second: Map01_25
+  - first:
+      213: -8603086125949009692
+    second: Map01_26
+  - first:
+      213: -7947513132431316524
+    second: Map01_27
+  - first:
+      213: -7484942150303730830
+    second: Map01_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Floor_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75aff697e6d3f3a0800000000000000
+      internalID: -6632721536027482757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e0323522eca7a510800000000000000
+      internalID: 1560405883193798889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NE_CornerWall
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b5b499109e169b0800000000000000
+      internalID: -5088529910875858171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N_Wall
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5e7de5343b394ec0800000000000000
+      internalID: -3582266933167423907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NW_CornerWall
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a9ee42874fb88d40800000000000000
+      internalID: 5586925651602893218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SE_InteriorCornerWall
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d94f234de565c90f0800000000000000
+      internalID: -1108916442952960867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SW_InteriorCornerWall
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4217cc36ae57365d0800000000000000
+      internalID: -3070480871379406556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0049ed0bd7ae240800000000000000
+      internalID: 4821804549655494829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Floor_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: -16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: 16}
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ae3bc2d2ec19820800000000000000
+      internalID: 2923344326559001242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W_Wall
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa6fccb341695c730800000000000000
+      internalID: 4018783256144836266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Circle_Wall
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4013a36ba5a9e8040800000000000000
+      internalID: 4651825179515302148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: E_Wall
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7415cf3db1b4e4f90800000000000000
+      internalID: -6967548990602849977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SE_CornerWall
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e76b0df41aa1eab20800000000000000
+      internalID: 3147482469709690494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_Wall
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a99fb39a7a55db460800000000000000
+      internalID: 7259052352978287002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SW_CornerWall
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 224
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26318f272decc9970800000000000000
+      internalID: 8763106378223457122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: E_DeadEndWall
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 105aad290963ffc4cb84d6826f877990
+      internalID: 581155831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WE_DeadEndWall
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d84b4fe857a0fe468d94c777afbc883
+      internalID: 134007674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: W_DeadEndWall
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01158eb80af8da741a937d6e8fccb029
+      internalID: -1325841243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NE_InteriorCornerWall
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f8834ebb48e1c247b10262a3b951227
+      internalID: 1837187846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NW_InteriorCornerWall
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46161574373652340b16f49be322be22
+      internalID: -643459535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: S_DeadEndWall
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ab301a0494876543979a826c5c258a2
+      internalID: 1716118362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NS_DeadEndWall
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4fde419091305f4aa8810cc5890c594
+      internalID: -1052160719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: N_DeadEndWall
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4156673b9e11d5649a1551c2f0e4ed56
+      internalID: -1617320785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1eacef40f1aaa654cb09fbf77b742baa
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Circle_Wall: 4651825179515302148
+      E_DeadEndWall: 581155831
+      E_Wall: -6967548990602849977
+      Floor_0: -6632721536027482757
+      Floor_1: 1560405883193798889
+      Floor_2: 4821804549655494829
+      Floor_3: 2923344326559001242
+      Map01_14: -7286191870016870439
+      Map01_15: 193749477201422137
+      Map01_16: 4958966844805859534
+      Map01_17: 5983364384292623176
+      Map01_18: 1891980172553529189
+      Map01_19: -131568252847709688
+      Map01_23: 2037366419973653051
+      Map01_24: 4426103405473701641
+      Map01_25: -4168791690857970821
+      Map01_26: -8603086125949009692
+      Map01_27: -7947513132431316524
+      Map01_28: -7484942150303730830
+      Map01_33: 1689045616
+      Map01_34: -1646196819
+      Map01_36: 1687583927
+      Map01_37: 1290920872
+      Map01_38: -1104912673
+      Map01_39: -267186554
+      Map01_40: -728097539
+      Map01_42: 1268012393
+      Map01_43: 1877143036
+      Map01_44: -2057091892
+      Map01_45: 204215950
+      Map01_46: 1565889388
+      Map01_47: -1754309981
+      Map01_48: 1476462652
+      Map01_49: -690079563
+      Map01_51: -1576167751
+      Map01_52: 1926060596
+      Map01_53: 1867598525
+      Map01_54: -747769686
+      Map01_55: 960799116
+      Map01_56: 1707215695
+      Map01_57: -772715364
+      Map01_58: -2144649416
+      Map01_6: 318950081237363339
+      Map01_60: 546928678
+      Map01_61: 289078999
+      Map01_62: -1595007170
+      Map01_63: 373118834
+      Map01_64: -390611186
+      Map01_65: 227899569
+      Map01_66: 116512395
+      Map01_67: 2051269568
+      Map01_68: -924009489
+      Map01_69: -402525786
+      Map01_7: -3919512811175972705
+      Map01_70: -1780384421
+      Map01_71: -953004470
+      Map01_72: -1488541227
+      Map01_73: 1895134665
+      Map01_74: -583609231
+      Map01_75: -640313740
+      Map01_76: 837696356
+      Map01_77: -2139807112
+      Map01_78: -1955542460
+      Map01_79: 91782556
+      Map01_80: -1263042693
+      Map01_81: 1912371613
+      Map01_82: 488235397
+      Map01_83: -894849640
+      NE_CornerWall: -5088529910875858171
+      NE_InteriorCornerWall: 1837187846
+      NS_DeadEndWall: -1052160719
+      NW_CornerWall: 5586925651602893218
+      NW_InteriorCornerWall: -643459535
+      N_DeadEndWall: -1617320785
+      N_Wall: -3582266933167423907
+      SE_CornerWall: 3147482469709690494
+      SE_InteriorCornerWall: -1108916442952960867
+      SW_CornerWall: 8763106378223457122
+      SW_InteriorCornerWall: -3070480871379406556
+      S_DeadEndWall: 1716118362
+      S_Wall: 7259052352978287002
+      WE_DeadEndWall: 134007674
+      W_DeadEndWall: -1325841243
+      W_Wall: 4018783256144836266
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
