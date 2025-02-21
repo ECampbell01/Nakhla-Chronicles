@@ -1,15 +1,28 @@
+using System;
 using UnityEngine;
+
+
 
 
 
 public class MapPlayerTracker : MonoBehaviour
 {
+
+    public RectTransform hubWorldMap;
     public Transform player;
     public RectTransform playerIcon;
-    public float mapWidth = 643f;
-    public float mapHeight = 722f;
+    private float mapWidth;
+    private float mapHeight;
     public float hubWorldWidth = 33f;
     public float hubWorldHeight = 34f;
+
+    void Start()
+    {
+        mapWidth = hubWorldMap.rect.width;
+        mapHeight = hubWorldMap.rect.height;
+    }
+
+
     void Update()
     {
         if (player != null && playerIcon != null)
@@ -22,25 +35,17 @@ public class MapPlayerTracker : MonoBehaviour
 
             // Convert world position to UI map position using scaling factors
             float mapX = playerPosition.x * scaleX;
-
-            // Clamp the Y value and invert for UI
-            float clampedY = Mathf.Clamp(playerPosition.y, 0, hubWorldHeight); // Ensure it's within the height range
-            float mapY = mapHeight + (clampedY * scaleY); // Adjust Y position for UI
+            float mapY = playerPosition.y * scaleY;
 
             // Set the player icon position
             playerIcon.anchoredPosition = new Vector2(mapX, mapY);
 
             // Debug logs to track positions
-            Debug.Log($"Player Position: {playerPosition}, Clamped Y: {clampedY}, ScaleX: {scaleX}, ScaleY: {scaleY}, Map Position: ({mapX}, {mapY})");
+            // Debug.Log($"Player Position: {playerPosition}, Clamped Y: {clampedY}, ScaleX: {scaleX}, ScaleY: {scaleY}, Map Position: ({mapX}, {mapY})");
             Debug.Log($"Player Icon Position: {playerIcon.anchoredPosition}");
             Debug.Log($"Player Icon Position (Before Check): {playerIcon.anchoredPosition}");
 
         }
-    }
-
-    void Start()
-    {
-        playerIcon.position = new Vector3(-50, -50, 0);
     }
 
 

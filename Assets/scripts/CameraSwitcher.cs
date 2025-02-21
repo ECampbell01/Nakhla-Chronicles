@@ -8,10 +8,6 @@ public class CameraSwitcher : MonoBehaviour
 
     void Start()
     {
-        //making sure cameras persists across scene loads
-        DontDestroyOnLoad(mainCamera.gameObject);
-        DontDestroyOnLoad(mapCamera.gameObject);
-
         // Initialize Cameras variables
         mainCamera.enabled = true;
         mapCamera.enabled = false;
