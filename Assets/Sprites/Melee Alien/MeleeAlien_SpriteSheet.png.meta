@@ -1,31 +1,43 @@
 fileFormatVersion: 2
-guid: 3e71223862f955f4ea21e568c1c96970
+guid: 4637db343d9f8bf4ea689d26948152a8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3452184099422082508
-    second: Game Over!_0
+      213: -2923964997737747421
+    second: MeleeAlien_SpriteSheet_0
   - first:
-      213: -1183884286164242875
-    second: Game Over!_1
+      213: -6856539140148808119
+    second: MeleeAlien_SpriteSheet_1
   - first:
-      213: -6060259314627837758
-    second: Game Over!_2
+      213: 7360310536715842977
+    second: MeleeAlien_SpriteSheet_2
   - first:
-      213: -746054095800203806
-    second: Game Over!_3
+      213: -3633549608424235371
+    second: MeleeAlien_SpriteSheet_3
   - first:
-      213: 8010829072254730056
-    second: Game Over!_4
+      213: 2227596294598557794
+    second: MeleeAlien_SpriteSheet_4
   - first:
-      213: 1434165099448213574
-    second: Game Over!_5
+      213: -5516411056571896718
+    second: MeleeAlien_SpriteSheet_5
   - first:
-      213: -6443023634448248024
-    second: Game Over!_6
+      213: 194128151313225104
+    second: MeleeAlien_SpriteSheet_6
   - first:
-      213: 4978534455912784958
-    second: Game Over!_7
+      213: -890975959597016655
+    second: MeleeAlien_SpriteSheet_7
+  - first:
+      213: 4540620372314979400
+    second: MeleeAlien_SpriteSheet_8
+  - first:
+      213: 4127650132024710044
+    second: MeleeAlien_SpriteSheet_9
+  - first:
+      213: -7455524885372044081
+    second: MeleeAlien_SpriteSheet_10
+  - first:
+      213: -2303527544391676855
+    second: MeleeAlien_SpriteSheet_11
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +70,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +84,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -96,7 +108,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -134,13 +146,189 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Game Over!_0
+      name: MeleeAlien_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32c6a2e835dfb67d0800000000000000
+      internalID: -2923964997737747421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAlien_SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9463ed2cafda8d0a0800000000000000
+      internalID: -6856539140148808119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAlien_SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a53381cf63152660800000000000000
+      internalID: 7360310536715842977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAlien_SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59e1d1ce1e9039dc0800000000000000
+      internalID: -3633549608424235371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAlien_SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 260068217030aee10800000000000000
+      internalID: 2227596294598557794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAlien_SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27caef90f55c173b0800000000000000
+      internalID: -5516411056571896718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAlien_SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0959deb668ea1b200800000000000000
+      internalID: 194128151313225104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAlien_SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b99ec8d51e92a3f0800000000000000
+      internalID: -890975959597016655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MeleeAlien_SpriteSheet_8
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 5
-        height: 5
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +337,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cc51e41e52f98ef20800000000000000
-      internalID: 3452184099422082508
+      spriteID: 84c7cbfdb26830f30800000000000000
+      internalID: 4540620372314979400
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game Over!_1
+      name: MeleeAlien_SpriteSheet_9
       rect:
         serializedVersion: 2
-        x: 4
+        x: 32
         y: 0
-        width: 6
-        height: 5
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +359,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 54e6304a38ff19fe0800000000000000
-      internalID: -1183884286164242875
+      spriteID: c935d640deb584930800000000000000
+      internalID: 4127650132024710044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game Over!_2
+      name: MeleeAlien_SpriteSheet_10
       rect:
         serializedVersion: 2
-        x: 9
+        x: 64
         y: 0
-        width: 7
-        height: 5
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +381,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2c00bd01342a5eba0800000000000000
-      internalID: -6060259314627837758
+      spriteID: fcc70592e97a88890800000000000000
+      internalID: -7455524885372044081
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Game Over!_3
+      name: MeleeAlien_SpriteSheet_11
       rect:
         serializedVersion: 2
-        x: 15
+        x: 96
         y: 0
-        width: 6
-        height: 5
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,96 +403,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2e58a9ca0cb75a5f0800000000000000
-      internalID: -746054095800203806
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Game Over!_4
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 0
-        width: 6
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 84f7d18199e2c2f60800000000000000
-      internalID: 8010829072254730056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Game Over!_5
-      rect:
-        serializedVersion: 2
-        x: 27
-        y: 0
-        width: 7
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 640afd53f8d27e310800000000000000
-      internalID: 1434165099448213574
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Game Over!_6
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 0
-        width: 6
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 823144d1428c596a0800000000000000
-      internalID: -6443023634448248024
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Game Over!_7
-      rect:
-        serializedVersion: 2
-        x: 38
-        y: 0
-        width: 8
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e3469b2d5be471540800000000000000
-      internalID: 4978534455912784958
+      spriteID: 94cc43a27e93800e0800000000000000
+      internalID: -2303527544391676855
       vertices: []
       indices: 
       edges: []
@@ -313,7 +413,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b383921b177c1224993d403d6a4a9f10
     internalID: 0
     vertices: []
     indices: 
@@ -323,14 +423,18 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Game Over!_0: 3452184099422082508
-      Game Over!_1: -1183884286164242875
-      Game Over!_2: -6060259314627837758
-      Game Over!_3: -746054095800203806
-      Game Over!_4: 8010829072254730056
-      Game Over!_5: 1434165099448213574
-      Game Over!_6: -6443023634448248024
-      Game Over!_7: 4978534455912784958
+      MeleeAlien_SpriteSheet_0: -2923964997737747421
+      MeleeAlien_SpriteSheet_1: -6856539140148808119
+      MeleeAlien_SpriteSheet_10: -7455524885372044081
+      MeleeAlien_SpriteSheet_11: -2303527544391676855
+      MeleeAlien_SpriteSheet_2: 7360310536715842977
+      MeleeAlien_SpriteSheet_3: -3633549608424235371
+      MeleeAlien_SpriteSheet_4: 2227596294598557794
+      MeleeAlien_SpriteSheet_5: -5516411056571896718
+      MeleeAlien_SpriteSheet_6: 194128151313225104
+      MeleeAlien_SpriteSheet_7: -890975959597016655
+      MeleeAlien_SpriteSheet_8: 4540620372314979400
+      MeleeAlien_SpriteSheet_9: 4127650132024710044
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

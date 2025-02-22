@@ -17,5 +17,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Hubworld.unity
     guid: 0a37a27df9ba5ed45a220d0027081b3b
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: be955aef74860fc45b68b0d3158c601a
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
