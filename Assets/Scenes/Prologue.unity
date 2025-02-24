@@ -466,8 +466,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 22
+  m_fontSizeBase: 22
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -555,43 +555,43 @@ MonoBehaviour:
     image: {fileID: 0}
   - text: 'One night, a meteorite streaked across the night sky, and most people
       barely took notice. '
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 195df652db05eca44af49dc0c18e73d5, type: 3}
   - text: Some caught glimpses of it, but the event faded from public attention.
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 195df652db05eca44af49dc0c18e73d5, type: 3}
   - text: 'The meteorite landed in a desert in New Mexico. The government was alerted
       to its impact and sent agents to secure the area. '
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 6cf49036c0250fc43b2ec97cfa2d194b, type: 3}
   - text: The meteorite was transported to a top-secret lab not far from the crash
       site to begin research. It was later identified as the Nakhla Meteorite
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 6bad39c8aea734e48a87ecb89d5feb27, type: 3}
   - text: "Research on the meteorite began, and eventually revealed a shocking discovery
       \u2014 inside it lived a creature unlike anything anyone had ever seen before."
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 6bad39c8aea734e48a87ecb89d5feb27, type: 3}
   - text: "The creature was a humanoid figure, its body was encased in a strange
       organic armor. Along with it were futuristic weapons and tools, crafted from
       materials and technology beyond human comprehension.\r"
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 57222b6b90c74834c834f7930b3628ce, type: 3}
   - text: "It became apparent that the government wasn\u2019t just dealing with a
       meteorite, it was dealing with an alien. "
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 57222b6b90c74834c834f7930b3628ce, type: 3}
   - text: The research was kept secret from the public, and the scientists continued
       their work, eager to learn more about the creature. The alien's race was named
       the "Nakhla."
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: b0c110b70eafa554991b73621a17d966, type: 3}
   - text: For years, the research continued, until one day... it all went wrong.
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: b0c110b70eafa554991b73621a17d966, type: 3}
   - text: "Satellites began malfunctioning, communication networks fell into disarray,
       and then\u2026 UFOs descended upon Earth. The aliens had arrived... and they
       were not here for peace."
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 73ac2c2a77dbc2748a60498672aa1e9a, type: 3}
   - text: As the world descends into chaos, a lone survivor managed to escape to
       a small, isolated island. The island has become a makeshift safe haven from
       the alien forces sweeping the mainland.
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 010d3b1a1d3d15e4e888cfbea8c7a666, type: 3}
   - text: "Though the survivor has lived in relative peace for some time, they cannot
       escape the inevitable \u2014 the alien invasion is closing in, and it\u2019s
       only a matter of time before the island is under attack."
-    image: {fileID: 0}
+    image: {fileID: 21300000, guid: 010d3b1a1d3d15e4e888cfbea8c7a666, type: 3}
   prologueText: {fileID: 2131509902}
   prologueImage: {fileID: 1364007253}
   fadePanel: {fileID: 546278626}
@@ -649,7 +649,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 102}
-  m_SizeDelta: {x: 600, y: 600}
+  m_SizeDelta: {x: 800, y: 550}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1364007253
 MonoBehaviour:
@@ -725,7 +725,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 850, y: -351}
+  m_AnchoredPosition: {x: 850, y: -396}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1552429920
