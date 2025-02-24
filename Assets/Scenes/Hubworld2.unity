@@ -1767,8 +1767,6 @@ MonoBehaviour:
   hubWorldMap: {fileID: 1324893810}
   player: {fileID: 393822454}
   playerIcon: {fileID: 454506955}
-  hubWorldWidth: 38
-  hubWorldHeight: 44
 --- !u!114 &454506957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59782,8 +59780,8 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
+  far clip plane: 900
+  field of view: 45.9
   orthographic: 1
   orthographic size: 360
   m_Depth: -1
@@ -59810,7 +59808,7 @@ Transform:
   m_GameObject: {fileID: 1169889966}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 654, y: 14, z: -6.580061}
+  m_LocalPosition: {x: 654, y: 16, z: -6.580061}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -59892,7 +59890,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 653769184993215619, guid: 11de4e00d5d40ec4d9de19d4aa8d790d, type: 3}
+  m_Sprite: {fileID: -2554518414040825157, guid: 01849e7e11030be4895878621f927328, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -60844,6 +60842,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 1550412613}
   mapCamera: {fileID: 1169889969}
+  healthBar: {fileID: 1588724141}
 --- !u!4 &1601491678
 Transform:
   m_ObjectHideFlags: 0

@@ -1,60 +1,70 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
-
-
-
-
+using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class MapPlayerTracker : MonoBehaviour
 {
-
+    // UI map representation
     public RectTransform hubWorldMap;
+
+    // Player's transform in the world
     public Transform player;
+
+    // UI icon representing the player on the map
     public RectTransform playerIcon;
+
+    // Dimensions of the UI map
     private float mapWidth;
     private float mapHeight;
-    public float hubWorldWidth = 33f;
-    public float hubWorldHeight = 34f;
+
+    // Dimensions of the tile-based hub world
+    private float hubWorldWidth;
+    private float hubWorldHeight;
 
     void Start()
     {
+        // Get UI map dimensions in pixels
         mapWidth = hubWorldMap.rect.width;
         mapHeight = hubWorldMap.rect.height;
-    }
 
+        // Find the tilemap GameObject in the scene
+        GameObject GroundBackground = GameObject.Find("GroundBackground");
+
+        // Get the Tilemap component
+        Tilemap tilemapSize = GroundBackground.GetComponent<Tilemap>();
+
+        // Get the total size of the tilemap in tiles
+        BoundsInt bounds = tilemapSize.cellBounds;
+        hubWorldWidth = bounds.size.x;  // Number of tiles in width
+        hubWorldHeight = bounds.size.y; // Number of tiles in height
+
+        Debug.Log($"Tilemap Width: {hubWorldWidth}, Height: {hubWorldHeight}");
+    }
 
     void Update()
     {
+        // Ensure player and player icon exist before proceeding
         if (player != null && playerIcon != null)
         {
+            // Get player's position in world space
             Vector3 playerPosition = player.position;
 
-            // Calculate the scaling factors
-            float scaleX = mapWidth / hubWorldWidth;  // e.g., 643.6908 / 34
-            float scaleY = mapHeight / hubWorldHeight; // e.g., 722.1547 / 35
+            // Calculate scaling factors from world to UI map
+            float scaleX = mapWidth / hubWorldWidth;
+            float scaleY = mapHeight / hubWorldHeight;
 
-            // Convert world position to UI map position using scaling factors
+            // Convert player world position to UI map position
             float mapX = playerPosition.x * scaleX;
             float mapY = playerPosition.y * scaleY;
 
-            // Set the player icon position
+            // Set the player icon's position on the UI map
             playerIcon.anchoredPosition = new Vector2(mapX, mapY);
 
             // Debug logs to track positions
-            // Debug.Log($"Player Position: {playerPosition}, Clamped Y: {clampedY}, ScaleX: {scaleX}, ScaleY: {scaleY}, Map Position: ({mapX}, {mapY})");
             Debug.Log($"Player Icon Position: {playerIcon.anchoredPosition}");
             Debug.Log($"Player Icon Position (Before Check): {playerIcon.anchoredPosition}");
-
         }
     }
-
-
-
-
-
-
-
-
 }
-
-

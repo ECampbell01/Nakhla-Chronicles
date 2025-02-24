@@ -1,10 +1,13 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 public class CameraSwitcher : MonoBehaviour
 {
     public Camera mainCamera; // variable for main camera
     public Camera mapCamera; // variabnle for map camera
-    private bool isMapActive = false; // bool for showing map
+    private bool isMapActive = false; // bool for showing map\
+    private bool isHealthActive = false;
+    public GameObject healthBar;
 
     void Start()
     {
@@ -21,6 +24,8 @@ public class CameraSwitcher : MonoBehaviour
             isMapActive = !isMapActive;
             mainCamera.enabled = !isMapActive;
             mapCamera.enabled = isMapActive;
+            healthBar.SetActive(isHealthActive);
+            isHealthActive = !isHealthActive;
 
         }
     }
