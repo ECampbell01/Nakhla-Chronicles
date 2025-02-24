@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5776647834404087237}
   - component: {fileID: 1566912444335525990}
   - component: {fileID: 1986670551549561761}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53cd1086a75bbe24eabc53f87000a115, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stabCooldown: 0.1
+  stabCooldown: 1
   shootCooldown: 0.1
   aimPoint: {fileID: 6665209960840500887}
   bullet: {fileID: 4187883161975756274}
@@ -222,7 +222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6665209960840500887}
   - component: {fileID: 2530301713121274301}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AimPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -310,6 +310,10 @@ PrefabInstance:
     - target: {fileID: 211678937147589280, guid: c168be0003b909e43a829338ce595269, type: 3}
       propertyPath: m_Name
       value: Bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 211678937147589280, guid: c168be0003b909e43a829338ce595269, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4127938935509873083, guid: c168be0003b909e43a829338ce595269, type: 3}
       propertyPath: m_LocalPosition.x
