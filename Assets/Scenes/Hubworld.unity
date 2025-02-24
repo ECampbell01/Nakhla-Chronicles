@@ -1760,7 +1760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hubWorldMap: {fileID: 1324893810}
-  player: {fileID: 0}
+  player: {fileID: 1792401486}
   playerIcon: {fileID: 454506955}
 --- !u!114 &454506957
 MonoBehaviour:
