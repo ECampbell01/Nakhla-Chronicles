@@ -1,3 +1,5 @@
+// Contributions: Ryan Lebato and Ethan Campbell
+
 using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
@@ -6,7 +8,11 @@ public class PlayerCombat : MonoBehaviour
     public float stabCooldown = 0.1f;
     public float shootCooldown = 0.1f;
     float timer = 0f;
+    bool isAttacking = false;
+    float attackDuration = 0.3f;
+    float attackTimer = 0f;
 
+    public GameObject melee;
     public Transform aimPoint;
     public GameObject bullet;
     public float bulletVelocity = 10f;
@@ -20,23 +26,31 @@ public class PlayerCombat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        CheckMeleeTimer();
         HandleStab();
         HandleShoot();
     }
 
     void Stab()
     {
-        anim.SetTrigger("Stab");
-
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, -aimPoint.up, 1f, LayerMask.GetMask("Enemy"));
-
-        if (hit.collider != null)
+        if (!isAttacking)
         {
-            EnemyHealth enemy = hit.collider.GetComponent<EnemyHealth>();
-            if (enemy != null)
+            melee.SetActive(true);
+            isAttacking = true;
+            anim.SetTrigger("Stab");
+        }
+    }
+
+    void CheckMeleeTimer()
+    {
+        if (isAttacking)
+        {
+            attackTimer += Time.deltaTime;
+            if (attackTimer >= attackDuration) 
             {
-                Vector2 knockback = (-aimPoint.up) * 5f; // Knockback force
-                enemy.OnHit(20f, knockback); // Deal 20 damage
+                attackTimer = 0;
+                isAttacking = false;
+                melee.SetActive(false);
             }
         }
     }

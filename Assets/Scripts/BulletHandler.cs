@@ -10,6 +10,7 @@ public class BulletHandler : MonoBehaviour
     {
         anim = GetComponent<Animator>();
     }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         EnemyHealth enemy = collision.collider.GetComponent<EnemyHealth>();
