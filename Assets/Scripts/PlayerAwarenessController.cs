@@ -40,7 +40,7 @@ public class PlayerAwarenessController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Collider2D collider = collision.collider;
-        DamageableCharacter damageable = collider.GetComponent<DamageableCharacter>();
+        PlayerHealth damageable = collider.GetComponent<PlayerHealth>();
 
         if (damageable != null)
         {

@@ -27,6 +27,18 @@ public class PlayerCombat : MonoBehaviour
     void Stab()
     {
         anim.SetTrigger("Stab");
+
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, -aimPoint.up, 1f, LayerMask.GetMask("Enemy"));
+
+        if (hit.collider != null)
+        {
+            EnemyHealth enemy = hit.collider.GetComponent<EnemyHealth>();
+            if (enemy != null)
+            {
+                Vector2 knockback = (-aimPoint.up) * 5f; // Knockback force
+                enemy.OnHit(20f, knockback); // Deal 20 damage
+            }
+        }
     }
 
     void Shoot()
