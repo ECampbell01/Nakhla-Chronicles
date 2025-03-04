@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public float maxHealth = 100f;
     private float currentHealth;
     public HealthBar healthBar;
 
@@ -15,8 +14,8 @@ public class PlayerHealth : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        currentHealth = StatsManager.Instance.HP;
+        healthBar.SetMaxHealth(StatsManager.Instance.HP);
     }
 
     public void OnHit(float damage, Vector2 knockback)

@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float movementSpeed;
     public float lerpSpeed = 10;
     private Rigidbody2D rb;
     private Vector2 input;
@@ -32,7 +31,7 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         // Move the player
-        input = input * movementSpeed;
+        input = input * StatsManager.Instance.agility;
         rb.linearVelocity = Vector3.Lerp(rb.linearVelocity, input, Time.deltaTime * lerpSpeed);
 
         if (isWalking)

@@ -18,7 +18,7 @@ public class BulletHandler : MonoBehaviour
         if (enemy != null)
         {
             Vector2 knockbackDirection = (collision.transform.position - transform.position).normalized;
-            enemy.OnHit(15f, knockbackDirection);
+            enemy.OnHit(StatsManager.Instance.rangedDamage, knockbackDirection);
         }
 
         Animate();
