@@ -17,11 +17,12 @@ public class BulletHandler : MonoBehaviour
 
         if (enemy != null)
         {
-            enemy.OnHit(15f, Vector2.zero);
+            Vector2 knockbackDirection = (collision.transform.position - transform.position).normalized;
+            enemy.OnHit(15f, knockbackDirection);
         }
 
         Animate();
-        Destroy(gameObject, 0.5f);
+        Destroy(gameObject);
     }
     void Animate()
     {

@@ -34,9 +34,16 @@ public class PlayerController : MonoBehaviour
         // Move the player
         input = input * movementSpeed;
         rb.linearVelocity = Vector3.Lerp(rb.linearVelocity, input, Time.deltaTime * lerpSpeed);
+
         if (isWalking)
         {
             Vector3 vector3 = Vector3.left * input.x + Vector3.down * input.y;
+            aimPoint.rotation = Quaternion.LookRotation(Vector3.forward, vector3);
+        }
+        else
+        {
+            // Make sure the aim point stays in the direction the player last moved when not moving
+            Vector3 vector3 = Vector3.left * lastMoveDirection.x + Vector3.down * lastMoveDirection.y;
             aimPoint.rotation = Quaternion.LookRotation(Vector3.forward, vector3);
         }
     }

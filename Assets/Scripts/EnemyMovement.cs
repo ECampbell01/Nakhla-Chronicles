@@ -13,31 +13,55 @@ public class EnemyMovement : MonoBehaviour
     private Vector2 targetDirection;
     private Animator animator;
 
-    private void Awake()
+    private bool isKnockedBack = false;
+    private float knockbackTimer = 0f;
+    private float knockbackDuration = 0.2f;
+
+    void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
         controller = GetComponent<PlayerAwarenessController>();
         animator = GetComponent<Animator>();
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
-        UpdateTargetDirection();
-        SetVelocity();
-        UpdateAnimation();
+        if (isKnockedBack)
+        {
+            knockbackTimer -= Time.deltaTime;
+            if (knockbackTimer <= 0)
+            {
+                isKnockedBack = false;
+            }
+        }
+        else
+        {
+            UpdateTargetDirection();
+            SetVelocity();
+            UpdateAnimation();
+        }
     }
 
-    private void UpdateTargetDirection() 
+    public void ApplyKnockback(Vector2 force)
+    {
+        rigidbody.linearVelocity = Vector2.zero;
+        rigidbody.AddForce(force, ForceMode2D.Impulse);
+        isKnockedBack = true;
+        knockbackTimer = knockbackDuration;
+    }
+
+    private void UpdateTargetDirection()
     {
         if (controller.playerInRange)
         {
             targetDirection = controller.directionToPlayer;
         }
-        else 
+        else
         {
             targetDirection = Vector2.zero;
         }
     }
+
     private void UpdateAnimation()
     {
         animator.SetFloat("InputX", targetDirection.x);
@@ -47,7 +71,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void SetVelocity()
     {
-        if(targetDirection == Vector2.zero)
+        if (targetDirection == Vector2.zero)
         {
             rigidbody.linearVelocity = Vector2.zero;
         }

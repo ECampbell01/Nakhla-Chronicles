@@ -18,12 +18,12 @@ public class EnemyHealth : MonoBehaviour
 
     public void OnHit(float damage, Vector2 knockback)
     {
-        TakeDamage(damage, knockback);
+        TakeDamage(damage);
+        GetComponent<EnemyMovement>().ApplyKnockback(knockback);
     }
 
-    private void TakeDamage(float damage, Vector2 knockback)
+    private void TakeDamage(float damage)
     {
-        rb.AddForce(knockback, ForceMode2D.Impulse);
         currentHealth -= damage;
 
         if (currentHealth <= 0)
