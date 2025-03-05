@@ -216,6 +216,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
+  rotationSpeed: 0
+  obstacleCheckRadius: 0.45
+  obstacleCheckDistance: 1
+  obstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &8212440441520642388
 MonoBehaviour:
   m_ObjectHideFlags: 0
