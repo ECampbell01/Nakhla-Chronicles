@@ -40,7 +40,7 @@ public class MapPlayerTracker : MonoBehaviour
         hubWorldWidth = bounds.size.x;  // Number of tiles in width
         hubWorldHeight = bounds.size.y; // Number of tiles in height
 
-        Debug.Log($"Tilemap Width: {hubWorldWidth}, Height: {hubWorldHeight}");
+       // Debug.Log($"Tilemap Width: {hubWorldWidth}, Height: {hubWorldHeight}");
     }
 
     void Update()
@@ -63,8 +63,8 @@ public class MapPlayerTracker : MonoBehaviour
             playerIcon.anchoredPosition = new Vector2(mapX, mapY);
 
             // Debug logs to track positions
-            Debug.Log($"Player Icon Position: {playerIcon.anchoredPosition}");
-            Debug.Log($"Player Icon Position (Before Check): {playerIcon.anchoredPosition}");
+           // Debug.Log($"Player Icon Position: {playerIcon.anchoredPosition}");
+           // Debug.Log($"Player Icon Position (Before Check): {playerIcon.anchoredPosition}");
         }
     }
 }
