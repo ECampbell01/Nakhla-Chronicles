@@ -15,6 +15,12 @@ public class PlayerHealth : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
         currentHealth = StatsManager.Instance.HP;
+
+        if (healthBar == null)
+        {
+            healthBar = FindObjectOfType<HealthBar>();
+        }
+
         healthBar.SetMaxHealth(StatsManager.Instance.HP);
     }
 

@@ -7,7 +7,9 @@ public class CameraSwitcher : MonoBehaviour
     public Camera mapCamera; // variabnle for map camera
     private bool isMapActive = false; // bool for showing map\
     private bool isHealthActive = false;
+    private bool isXpActive = false;
     public GameObject healthBar;
+    public GameObject xpBar;
 
     void Start()
     {
@@ -25,6 +27,8 @@ public class CameraSwitcher : MonoBehaviour
             mainCamera.enabled = !isMapActive;
             mapCamera.enabled = isMapActive;
             healthBar.SetActive(isHealthActive);
+            xpBar.SetActive(isXpActive);
+            isXpActive = !isXpActive;
             isHealthActive = !isHealthActive;
 
         }
