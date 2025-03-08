@@ -28,14 +28,6 @@ public class ExperienceManager : MonoBehaviour
         UpdateUI();
     }
 
-    void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            AddExperience(5);
-        }
-    }
-
     public void AddExperience(int amount)
     {
         totalExperience += amount;
@@ -77,5 +69,10 @@ public class ExperienceManager : MonoBehaviour
         }
 
         levelText.text = currentLevel.ToString();
+    }
+
+    public int GetPlayerLevel()
+    {
+        return currentLevel;
     }
 }

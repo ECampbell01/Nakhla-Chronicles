@@ -234,4 +234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade1f20530db1794dbea02587deaad2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  experiencePoint: {fileID: 8633082520157059324, guid: b54ba839ceedc304e983eac7a3096852, type: 3}
+  baseXP: 5
+  xpDropCount: 1
   maxHealth: 50
