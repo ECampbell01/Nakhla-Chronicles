@@ -197,6 +197,61 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2134898097317099352, guid: bd07d8d465a390944ae2d75cc72afc48, type: 3}
   m_PrefabInstance: {fileID: 392200791}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &486615344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 486615346}
+  - component: {fileID: 486615345}
+  m_Layer: 0
+  m_Name: RoomsFirstDungeonGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &486615345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486615344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e27bf03169f3094dad7af7bd1452489, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemapVisualizer: {fileID: 1831416652}
+  startPosition: {x: -20, y: -20}
+  iterations: 1
+  walkLength: 50
+  startRandomlyEachIteration: 0
+  minRoomWidth: 10
+  minRoomHeight: 10
+  dungeonWidth: 70
+  dungeonHeight: 70
+  offset: 1
+  randomWalkRooms: 0
+--- !u!4 &486615346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 486615344}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.5494783, y: 12.697763, z: -0.17282255}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &657400731
 GameObject:
   m_ObjectHideFlags: 0
@@ -577,11 +632,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9717c68f8f5585c499c3cf632f996361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tilemapVisualizer: {fileID: 1831416652}
   startPosition: {x: 0, y: 0}
   iterations: 20
   walkLength: 50
   startRandomlyEachIteration: 0
-  tilemapVisualizer: {fileID: 1831416652}
 --- !u!1 &1575102554
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,9 +720,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1235355285}
-        m_TargetAssemblyTypeName: RandomWalkGeneration, Assembly-CSharp
-        m_MethodName: RunProceduralGeneration
+      - m_Target: {fileID: 486615345}
+        m_TargetAssemblyTypeName: AbstractDungeonGenerator, Assembly-CSharp
+        m_MethodName: GenerateDungeon
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1126,6 +1181,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1235355284}
+  - {fileID: 486615346}
   - {fileID: 1831416651}
   - {fileID: 671122869}
   - {fileID: 2074999277}
