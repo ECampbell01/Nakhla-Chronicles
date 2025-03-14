@@ -15,11 +15,11 @@ GameObject:
   - component: {fileID: 6669432391681676032}
   - component: {fileID: 6635159107627647239}
   - component: {fileID: 7986510884295238684}
-  - component: {fileID: 5173313318443367626}
   - component: {fileID: 126904313921489773}
+  - component: {fileID: 3777288537823988835}
   m_Layer: 0
   m_Name: Ranged Alien
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 395e8f37b837cea4cb2f87a2936bfea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 10
   knockbackForce: 50
   playerAwarenessDistance: 5
 --- !u!114 &7986510884295238684
@@ -219,20 +219,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
---- !u!114 &5173313318443367626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 993084297212088161}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecf61672a559314da0fb72aaba99a60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealth: 100
-  healthBar: {fileID: 0}
+  rotationSpeed: 0
+  obstacleCheckRadius: 0.45
+  obstacleCheckDistance: 1
+  obstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!114 &126904313921489773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,6 +241,22 @@ MonoBehaviour:
   aimPoint: {fileID: 7588075272472366561}
   fireRate: 1.5
   shootingRange: 5
+--- !u!114 &3777288537823988835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993084297212088161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ade1f20530db1794dbea02587deaad2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  experiencePoint: {fileID: 8633082520157059324, guid: b54ba839ceedc304e983eac7a3096852, type: 3}
+  baseXP: 5
+  xpDropCount: 3
+  maxHealth: 50
 --- !u!1 &2881101911539138347
 GameObject:
   m_ObjectHideFlags: 0
