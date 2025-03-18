@@ -61969,7 +61969,7 @@ Tilemap:
       - {fileID: 652224514, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: -1638227662, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: -1921442583, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
-      m_AnimationSpeed: 1.5000001
+      m_AnimationSpeed: 1.5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -6, y: 10, z: 0}
@@ -61991,7 +61991,7 @@ Tilemap:
       - {fileID: -2048681207, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: -2144496012, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: 1221583534, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
-      m_AnimationSpeed: 1.5
+      m_AnimationSpeed: 1.5000001
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -78703,6 +78703,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1137513345217657108, guid: e514e14f3dfff354e997f17cf08d57b5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966990192475674013, guid: e514e14f3dfff354e997f17cf08d57b5, type: 3}
+      propertyPath: luck
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966990192475674013, guid: e514e14f3dfff354e997f17cf08d57b5, type: 3}
+      propertyPath: defense
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8020903213638412666, guid: e514e14f3dfff354e997f17cf08d57b5, type: 3}

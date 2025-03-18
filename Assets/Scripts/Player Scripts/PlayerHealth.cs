@@ -26,7 +26,15 @@ public class PlayerHealth : MonoBehaviour
 
     public void OnHit(float damage, Vector2 knockback)
     {
-        TakeDamage(damage, knockback);
+        float reducedDamage = ApplyDefense(damage);
+        TakeDamage(reducedDamage, knockback);
+    }
+
+    private float ApplyDefense(float damage)
+    {
+        int defense = StatsManager.Instance.defense;
+        float finalDamage = damage / (1 + (defense / 10f));
+        return finalDamage;
     }
 
     private void TakeDamage(float damage, Vector2 knockback)

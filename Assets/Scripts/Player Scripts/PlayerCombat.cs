@@ -19,7 +19,6 @@ public class PlayerCombat : MonoBehaviour
 
     void Start()
     {
-        // Get the components
         anim = GetComponent<Animator>();
     }
 
