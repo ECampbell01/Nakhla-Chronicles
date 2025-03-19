@@ -14,6 +14,7 @@ public class CameraSwitcher : MonoBehaviour
     public GameObject healthBar;
     public GameObject xpBar;
     public GameObject pauseMenu;
+    public PauseMenuController pauseMenuController;
 
     void Start()
     {
@@ -41,6 +42,7 @@ public class CameraSwitcher : MonoBehaviour
         {
             isPauseMenuActive = !isPauseMenuActive;
             pauseMenu.SetActive(isPauseMenuActive);
+            pauseMenuController.UpdateStatsUI();
 
             if (isPauseMenuActive)
             {

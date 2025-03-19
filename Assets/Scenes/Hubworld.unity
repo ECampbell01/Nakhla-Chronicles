@@ -60496,7 +60496,7 @@ Tilemap:
       - {fileID: 587036754, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: 1450491786, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: -1667000059, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
-      m_AnimationSpeed: 1.5
+      m_AnimationSpeed: 1.5000001
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -6, y: 9, z: 0}
@@ -60797,9 +60797,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 1550412613}
   mapCamera: {fileID: 1169889969}
+  isPauseMenuActive: 0
   healthBar: {fileID: 1950362766}
   xpBar: {fileID: 430209108}
   pauseMenu: {fileID: 5557211984483150401}
+  pauseMenuController: {fileID: 5557211984483150406}
 --- !u!4 &1601491678
 Transform:
   m_ObjectHideFlags: 0
@@ -77022,6 +77024,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 599754424}
     m_Modifications:
+    - target: {fileID: 721282917087028171, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 721282917087028171, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
+      propertyPath: m_margin.z
+      value: -183.36082
+      objectReference: {fileID: 0}
     - target: {fileID: 839591711371343720, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
       propertyPath: m_Name
       value: Pause Menu
@@ -77029,6 +77039,14 @@ PrefabInstance:
     - target: {fileID: 839591711371343720, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108261161786619967, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2108261161786619967, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
+      propertyPath: m_margin.z
+      value: -336.049
       objectReference: {fileID: 0}
     - target: {fileID: 2628758927798195315, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
       propertyPath: m_Pivot.x
@@ -77109,6 +77127,38 @@ PrefabInstance:
     - target: {fileID: 2628758927798195315, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3828007245898046398, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3828007245898046398, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
+      propertyPath: m_margin.z
+      value: -273.05957
+      objectReference: {fileID: 0}
+    - target: {fileID: 3861227169176205411, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3861227169176205411, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
+      propertyPath: m_margin.z
+      value: -318.0521
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846949908588697875, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4846949908588697875, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
+      propertyPath: m_margin.z
+      value: -154.77411
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098399518877923791, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7098399518877923791, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
+      propertyPath: m_margin.z
+      value: -285.65762
       objectReference: {fileID: 0}
     - target: {fileID: 7789978642572534819, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
       propertyPath: m_text
