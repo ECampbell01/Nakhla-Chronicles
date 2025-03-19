@@ -16,10 +16,12 @@ public class PlayerCombat : MonoBehaviour
     public Transform aimPoint;
     public GameObject bullet;
     public float bulletVelocity = 10f;
+    private CameraSwitcher cameraSwitcher;
 
     void Start()
     {
         anim = GetComponent<Animator>();
+        cameraSwitcher = FindObjectOfType<CameraSwitcher>();
     }
 
     // Update is called once per frame
@@ -32,7 +34,7 @@ public class PlayerCombat : MonoBehaviour
 
     void Stab()
     {
-        if (!isAttacking)
+        if (!isAttacking && !cameraSwitcher.isPauseMenuActive)
         {
             melee.SetActive(true);
             isAttacking = true;

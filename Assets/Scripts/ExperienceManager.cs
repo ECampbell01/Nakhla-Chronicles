@@ -16,8 +16,10 @@ public class ExperienceManager : MonoBehaviour
     int totalExperience;
     int previousLevelExperience;
     int nextLevelExperience;
+    int availablePoints = 0;
 
     [SerializeField] TextMeshProUGUI levelText;
+    [SerializeField] TextMeshProUGUI availablePointsText;
     [SerializeField] Slider experienceFill;
 
     void Start()
@@ -40,6 +42,7 @@ public class ExperienceManager : MonoBehaviour
         while (totalExperience >= nextLevelExperience)
         {
             currentLevel++;
+            availablePoints++;
             UpdateLevel();
         }
     }
@@ -69,6 +72,7 @@ public class ExperienceManager : MonoBehaviour
         }
 
         levelText.text = currentLevel.ToString();
+        availablePointsText.text = $"Available Points: {availablePoints}";
     }
 
     public int GetPlayerLevel()
