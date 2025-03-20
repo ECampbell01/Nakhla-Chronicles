@@ -79,4 +79,18 @@ public class ExperienceManager : MonoBehaviour
     {
         return currentLevel;
     }
+
+    public bool HasAvailablePoints()
+    {
+        return availablePoints > 0;
+    }
+
+    public void SpendPoint()
+    {
+        if (availablePoints > 0)
+        {
+            availablePoints--;
+            UpdateUI();
+        }
+    }
 }
