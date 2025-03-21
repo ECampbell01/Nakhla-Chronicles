@@ -7,8 +7,14 @@ using UnityEngine;
 public class PauseMenuController : MonoBehaviour
 {
     public GameObject pauseMenu;
+    public GameObject hpButton;
+    public GameObject agilityButton;
+    public GameObject defenseButton;
+    public GameObject luckButton;
+    public GameObject meleeButton;
+    public GameObject rangedButton;
     private CameraSwitcher cameraSwitcher;
-    private ExperienceManager experienceManager;
+    public ExperienceManager experienceManager;
 
     [SerializeField] TextMeshProUGUI hpText;
     [SerializeField] TextMeshProUGUI agilityText;
@@ -20,7 +26,6 @@ public class PauseMenuController : MonoBehaviour
     void Start()
     {
         cameraSwitcher = FindObjectOfType<CameraSwitcher>();
-        experienceManager = FindObjectOfType<ExperienceManager>();
     }
 
     public void ClosePauseMenu()
@@ -47,9 +52,10 @@ public class PauseMenuController : MonoBehaviour
     {
         if (experienceManager.HasAvailablePoints())
         {
-            StatsManager.Instance.HP += 5; // Increase HP (adjust the value as needed)
+            StatsManager.Instance.HP += 5; // Increase HP
             experienceManager.SpendPoint();
             UpdateStatsUI();
+            UpdateButtonStates();
         }
     }
 
@@ -60,6 +66,7 @@ public class PauseMenuController : MonoBehaviour
             StatsManager.Instance.agility += 1; // Increase agility
             experienceManager.SpendPoint();
             UpdateStatsUI();
+            UpdateButtonStates();
         }
     }
 
@@ -70,6 +77,7 @@ public class PauseMenuController : MonoBehaviour
             StatsManager.Instance.defense += 1; // Increase defense
             experienceManager.SpendPoint();
             UpdateStatsUI();
+            UpdateButtonStates();
         }
     }
 
@@ -80,6 +88,7 @@ public class PauseMenuController : MonoBehaviour
             StatsManager.Instance.luck += 1; // Increase luck
             experienceManager.SpendPoint();
             UpdateStatsUI();
+            UpdateButtonStates();
         }
     }
 
@@ -90,6 +99,7 @@ public class PauseMenuController : MonoBehaviour
             StatsManager.Instance.meleeDamage += 2; // Increase melee damage
             experienceManager.SpendPoint();
             UpdateStatsUI();
+            UpdateButtonStates();
         }
     }
 
@@ -100,6 +110,19 @@ public class PauseMenuController : MonoBehaviour
             StatsManager.Instance.rangedDamage += 2; // Increase ranged damage
             experienceManager.SpendPoint();
             UpdateStatsUI();
+            UpdateButtonStates();
         }
+    }
+    public void UpdateButtonStates()
+    {
+        // If the player has no available points to spend, hide the buttons
+        bool hasPoints = experienceManager.HasAvailablePoints();
+
+        hpButton.gameObject.SetActive(hasPoints);
+        agilityButton.gameObject.SetActive(hasPoints);
+        defenseButton.gameObject.SetActive(hasPoints);
+        luckButton.gameObject.SetActive(hasPoints);
+        meleeButton.gameObject.SetActive(hasPoints);
+        rangedButton.gameObject.SetActive(hasPoints);
     }
 }

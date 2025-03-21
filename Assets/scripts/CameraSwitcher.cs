@@ -6,7 +6,7 @@ using UnityEngine;
 public class CameraSwitcher : MonoBehaviour
 {
     public Camera mainCamera; // variable for main camera
-    public Camera mapCamera; // variabnle for map camera
+    public Camera mapCamera; // variable for map camera
     private bool isMapActive = false; // bool for showing map
     private bool isHealthActive = false;
     private bool isXpActive = false;
@@ -43,6 +43,7 @@ public class CameraSwitcher : MonoBehaviour
             isPauseMenuActive = !isPauseMenuActive;
             pauseMenu.SetActive(isPauseMenuActive);
             pauseMenuController.UpdateStatsUI();
+            pauseMenuController.UpdateButtonStates();
 
             if (isPauseMenuActive)
             {
