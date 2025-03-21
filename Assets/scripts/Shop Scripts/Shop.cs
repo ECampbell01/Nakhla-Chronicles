@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using PlayerCoins;
 using Unity.VisualScripting;
+using System.Collections;
 
 public class ShopScroll : MonoBehaviour
 {
@@ -24,12 +25,16 @@ public class ShopScroll : MonoBehaviour
     GameObject g;
     [SerializeField] Transform ShopScrollView;
     Button buyBtn;
+    [SerializeField] GameObject popupPanel;
+    [SerializeField] TextMeshProUGUI popupMessageText;
+    [SerializeField] GameObject shopUI;
+
 
     void Start()
     {
         ItemTemplate = ShopScrollView.GetChild(0).gameObject;
         ItemTemplate.SetActive(false);
-
+        popupPanel.SetActive(true);
 
         int len = ShopItemsList.Count;
 
@@ -100,12 +105,12 @@ public class ShopScroll : MonoBehaviour
 
         if (coins.DeductCoins(item.itemPrice))
         {
-            Debug.Log($"Purchased {item.itemName} for {item.itemPrice} coins!");
+            ShowPopup($"Purchased {item.itemName} for {item.itemPrice} coins!", Color.green);
             UpdateCoinBalance();
         }
         else
         {
-            Debug.Log("Not enough coins!");
+            ShowPopup("Not enough coins!", Color.red);
         }
     }
 
@@ -114,4 +119,20 @@ public class ShopScroll : MonoBehaviour
         Debug.Log("Current Coin Balance: " + coins.coinBalance);
         coinBalanceText.text = coins.coinBalance.ToString();
     }
+
+    void ShowPopup(string message, Color textColor)
+    {
+        popupMessageText.text = message;
+        popupMessageText.color = textColor;
+        popupPanel.SetActive(true);
+
+        StartCoroutine(HidePopupAfterDelay(2f));
+    }
+
+    IEnumerator HidePopupAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        popupPanel.SetActive(false);
+    }
+
 }
