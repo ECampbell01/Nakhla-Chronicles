@@ -7,15 +7,14 @@ using PlayerCoins;
 using Unity.VisualScripting;
 using System.Collections;
 
-public class ShopScroll : MonoBehaviour
+public class PetShopScroll : MonoBehaviour
 {
     [System.Serializable]
     class ShopItem
     {
-        public string itemName;
-        public Sprite itemImage;
-        public int itemPrice;
-
+        public string petName;
+        public Sprite petImage;
+        public int petPrice;
     }
 
     [SerializeField] List<ShopItem> ShopItemsList;
@@ -75,11 +74,11 @@ public class ShopScroll : MonoBehaviour
 
             ShopItem currentItem = ShopItemsList[i];
 
-            var itemNameText = g.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = ShopItemsList[i].itemName;
+            var itemNameText = g.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = ShopItemsList[i].petName;
             if (itemNameText == null) Debug.LogError("🚨 TextMeshPro for item name is missing!");
-            var itemImage = g.transform.GetChild(1).GetComponent<Image>().sprite = ShopItemsList[i].itemImage;
+            var itemImage = g.transform.GetChild(1).GetComponent<Image>().sprite = ShopItemsList[i].petImage;
             if (itemImage == null) Debug.LogError("🚨 Image for item image is missing!");
-            var itemPriceText = g.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = ShopItemsList[i].itemPrice.ToString();
+            var itemPriceText = g.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = ShopItemsList[i].petPrice.ToString();
             if (itemPriceText == null) Debug.LogError("🚨 TextMeshPro for item price is missing!");
 
             buyBtn = g.transform.GetChild(4).GetComponent<Button>();
@@ -101,9 +100,9 @@ public class ShopScroll : MonoBehaviour
     {
         // Debug.Log($"Purchased {item.itemName} for {item.itemPrice}!");
 
-        if (coins.DeductCoins(item.itemPrice))
+        if (coins.DeductCoins(item.petPrice))
         {
-            ShowPopup($"Purchased {item.itemName} for {item.itemPrice} coins!", Color.green);
+            ShowPopup($"Purchased {item.petName} for {item.petPrice} coins!", Color.green);
             UpdateCoinBalance();
         }
         else
