@@ -233,10 +233,17 @@ MonoBehaviour:
   startRandomlyEachIteration: 0
   minRoomWidth: 10
   minRoomHeight: 10
-  dungeonWidth: 70
-  dungeonHeight: 70
+  dungeonWidth: 50
+  dungeonHeight: 50
   offset: 1
   randomWalkRooms: 0
+  enemyPrefabs:
+  - {fileID: 1504224799072722550, guid: 083fdadc1650df1419c9cc8a160dacf1, type: 3}
+  - {fileID: 993084297212088161, guid: 8606bbf4a65face418450d7ae2ebcc7f, type: 3}
+  minEnemiesPerRoom: 1
+  maxEnemiesPerRoom: 1
+  spawnRadius: 2
+  playerPrefab: {fileID: 1772996178}
 --- !u!4 &486615346
 Transform:
   m_ObjectHideFlags: 0
@@ -849,6 +856,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1764655376}
   m_CullTransparentMesh: 1
+--- !u!1 &1772996178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3314896538915096734, guid: bd07d8d465a390944ae2d75cc72afc48, type: 3}
+  m_PrefabInstance: {fileID: 392200791}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1831416650
 GameObject:
   m_ObjectHideFlags: 0

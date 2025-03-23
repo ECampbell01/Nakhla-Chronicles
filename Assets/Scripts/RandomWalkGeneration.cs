@@ -40,7 +40,6 @@ public class RandomWalkGeneration : AbstractDungeonGenerator
         }
 
         // Clean up unnecessary tiles to refine the map
-        floorPositions = ExpandBorderTiles(floorPositions);
         floorPositions = CleanUpTiles(floorPositions);
 
         return floorPositions;
@@ -99,7 +98,7 @@ public class RandomWalkGeneration : AbstractDungeonGenerator
         } while (changesMade);
 
         // Expand the border tiles after cleanup to smooth out edges
-        //filteredPositions = ExpandBorderTiles(filteredPositions);
+        filteredPositions = ExpandBorderTiles(filteredPositions);
 
         return filteredPositions;
     }

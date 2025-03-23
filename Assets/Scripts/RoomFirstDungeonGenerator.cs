@@ -15,6 +15,16 @@ public class RoomFirstDungeonGenerator : RandomWalkGeneration
     [SerializeField]
     private bool randomWalkRooms = false;
 
+    [SerializeField]
+    private GameObject[] enemyPrefabs;
+    [SerializeField]
+    private int minEnemiesPerRoom = 1, maxEnemiesPerRoom = 3;
+    [SerializeField]
+    private float spawnRadius = 2.0f;
+    [SerializeField]
+    private GameObject playerPrefab;
+
+
     protected override void RunProceduralGeneration()
     {
         CreateRooms();
@@ -22,32 +32,84 @@ public class RoomFirstDungeonGenerator : RandomWalkGeneration
 
     private void CreateRooms()
     {
-        var roomsList = ProceduralGenAlgorithms.BinarySpacePartitioning(new BoundsInt((Vector3Int)startPosition, new Vector3Int
-            (dungeonWidth, dungeonHeight, 0)), minRoomWidth, minRoomHeight);
-        HashSet<Vector2Int> floor = new HashSet<Vector2Int>();
+        var roomsList = ProceduralGenAlgorithms.BinarySpacePartitioning(new BoundsInt((Vector3Int)startPosition,
+            new Vector3Int(dungeonWidth, dungeonHeight, 0)), minRoomWidth, minRoomHeight);
 
-        if (randomWalkRooms)
+        Debug.Log($"Rooms generated: {roomsList.Count}");
+        if (roomsList.Count == 0)
         {
-            floor = CreateRoomsRandomly(roomsList);
-        }
-        else
-        {
-            floor = CreateSimpleRooms(roomsList);
+            Debug.LogError("No rooms were generated! Check BSP settings.");
+            return;
         }
 
-        //floor = CreateSimpleRooms(roomsList);
+        HashSet<Vector2Int> floor = randomWalkRooms ? CreateRoomsRandomly(roomsList) : CreateSimpleRooms(roomsList);
 
         List<Vector2Int> roomCenters = new List<Vector2Int>();
 
         foreach (var room in roomsList)
         {
-            roomCenters.Add((Vector2Int)Vector3Int.RoundToInt(room.center));
+            Vector2Int center = new Vector2Int(
+                Mathf.RoundToInt(room.center.x),
+                Mathf.RoundToInt(room.center.y)
+            );
+
+            roomCenters.Add(center);
+            Debug.Log($"Room center added: {center}");
+        }
+
+        if (roomCenters.Count > 0)
+        {
+            SpawnPlayer(roomCenters[0]);
+        }
+        else
+        {
+            Debug.LogError("No valid room centers found, skipping player spawn.");
+        }
+
+        if (roomCenters.Count > 2)
+        {
+            SpawnEnemies(roomCenters);
+        }
+        else
+        {
+            Debug.LogWarning("Not enough rooms to exclude first and last. Skipping enemy spawn.");
         }
 
         HashSet<Vector2Int> corridors = ConnectRooms(roomCenters);
         floor.UnionWith(corridors);
 
         tilemapVisualizer.PaintFloorTiles(floor);
+    }
+
+    private void SpawnPlayer(Vector2Int spawnPosition)
+    {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        Vector3 playerSpawnPos = new Vector3(spawnPosition.x, spawnPosition.y, 0);
+        player.transform.position = playerSpawnPos;
+    }
+
+
+    private void SpawnEnemies(List<Vector2Int> roomCenters)
+    {
+        if (roomCenters.Count <= 2)
+        {
+            Debug.LogWarning("Not enough rooms to exclude first and last. Skipping enemy spawn.");
+            return;
+        }
+
+        List<Vector2Int> validRooms = roomCenters.GetRange(1, roomCenters.Count - 2);
+
+        foreach (var center in validRooms)
+        {
+            int enemyCount = Random.Range(minEnemiesPerRoom, maxEnemiesPerRoom + 1);
+            for (int i = 0; i < enemyCount; i++)
+            {
+                Vector2 spawnPosition = (Vector2)center + Random.insideUnitCircle * spawnRadius;
+                GameObject enemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
+
+                Instantiate(enemyPrefab, new Vector3(spawnPosition.x, spawnPosition.y, 0), Quaternion.identity);
+            }
+        }
     }
 
     private HashSet<Vector2Int> CreateRoomsRandomly(List<BoundsInt> roomsList)
@@ -97,19 +159,17 @@ public class RoomFirstDungeonGenerator : RandomWalkGeneration
             corridor.Add(pos); // Center tile
             if (horizontal)
             {
-                // Horizontal movement: add tiles above and below to span 4 tiles vertically
-                corridor.Add(pos + Vector2Int.up);     // 1 tile above
-                corridor.Add(pos + Vector2Int.up * 2); // 2 tiles above
-                corridor.Add(pos + Vector2Int.down);   // 1 tile below
-                corridor.Add(pos + Vector2Int.down * 2); // 2 tiles above
+                corridor.Add(pos + Vector2Int.up);
+                corridor.Add(pos + Vector2Int.up * 2);
+                corridor.Add(pos + Vector2Int.down);
+                corridor.Add(pos + Vector2Int.down * 2);
             }
             else
             {
-                // Vertical movement: add tiles left and right to span 4 tiles horizontally
-                corridor.Add(pos + Vector2Int.left);     // 1 tile left
-                corridor.Add(pos + Vector2Int.left * 2); // 2 tiles left
-                corridor.Add(pos + Vector2Int.right);    // 1 tile right
-                corridor.Add(pos + Vector2Int.right * 2); // 2 tiles left
+                corridor.Add(pos + Vector2Int.left);
+                corridor.Add(pos + Vector2Int.left * 2);
+                corridor.Add(pos + Vector2Int.right);
+                corridor.Add(pos + Vector2Int.right * 2);
             }
         }
 
