@@ -36,7 +36,14 @@ public class ShopScroll : MonoBehaviour
         PopulateShop();
         UpdateCoinBalance();
 
+        coins.OnCoinBalanceChanged += UpdateCoinBalance;
+
         Destroy(itemTemplate);
+    }
+
+    void OnDestroy()
+    {
+        coins.OnCoinBalanceChanged -= UpdateCoinBalance;
     }
 
     private void PopulateShop()

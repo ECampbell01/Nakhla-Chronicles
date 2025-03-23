@@ -15,7 +15,6 @@ public class PetShopTrigger : MonoBehaviour
             petshopUI.SetActive(true);
         }
     }
-
     void OnTriggerExit2D(Collider2D other)
     {
         if (petshopUI != null && other.CompareTag("Player"))
