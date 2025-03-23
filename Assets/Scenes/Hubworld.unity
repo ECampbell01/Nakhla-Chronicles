@@ -62936,21 +62936,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ShopItemsList:
-  - itemName: Peacock
-    itemImage: {fileID: 4271502992344097794, guid: 9e76a4a7be63bda42887fe0f8ba825ac, type: 3}
+  - itemName: Bird
+    itemImage: {fileID: -6282043166299537173, guid: 285e2f18135e1ae47a31156f94cdda21, type: 3}
     itemPrice: 100
-  - itemName: Porcupine
-    itemImage: {fileID: 1665387854915601429, guid: e267f229aecf3f84898bb8f990fa4d05, type: 3}
+  - itemName: Cat
+    itemImage: {fileID: 8930072284066470257, guid: 8eb04277d8ea3f243831316421c8eed2, type: 3}
     itemPrice: 100
-  - itemName: Rabbit
-    itemImage: {fileID: -5986076536372221526, guid: 7d0fd4f2146c716449731cd823d9c89a, type: 3}
-    itemPrice: 50
-  - itemName: 
-    itemImage: {fileID: -5986076536372221526, guid: 7d0fd4f2146c716449731cd823d9c89a, type: 3}
-    itemPrice: 300
-  - itemName: Potion
-    itemImage: {fileID: -5986076536372221526, guid: 7d0fd4f2146c716449731cd823d9c89a, type: 3}
-    itemPrice: 300
+  - itemName: Fox
+    itemImage: {fileID: 8270805526955518731, guid: deaa5abd520678a4399cf293ac2328ff, type: 3}
+    itemPrice: 100
+  - itemName: Racoon
+    itemImage: {fileID: 4687556977089906120, guid: 2e74ebdb3fa37e34e8c1a21e91562f4d, type: 3}
+    itemPrice: 100
   coins: {fileID: 1792401494}
   coinBalanceText: {fileID: 306662036}
   ShopScrollView: {fileID: 309108822}
@@ -64890,7 +64887,7 @@ Tilemap:
       - {fileID: -2048681207, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: -2144496012, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: 1221583534, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
-      m_AnimationSpeed: 1.5000001
+      m_AnimationSpeed: 1.5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   m_TileAssetArray:
@@ -65330,7 +65327,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d18635a8136c28847999e5ae07365b35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shopUI: {fileID: 1224321193}
+  petshopUI: {fileID: 1224321193}
 --- !u!1 &1656778874
 GameObject:
   m_ObjectHideFlags: 0

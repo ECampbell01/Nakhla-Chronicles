@@ -18,7 +18,7 @@ public class ShopTrigger : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (shopUI != null && other.CompareTag("Player"))
         {
             shopUI.SetActive(false);
         }
