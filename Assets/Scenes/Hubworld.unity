@@ -1845,6 +1845,10 @@ PrefabInstance:
       value: Melee Alien
       objectReference: {fileID: 0}
     - target: {fileID: 1504224799072722550, guid: 36681c7d4ac377743ba7384bd4a70f26, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1504224799072722550, guid: 36681c7d4ac377743ba7384bd4a70f26, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -60797,21 +60801,17 @@ PrefabInstance:
       value: Ranged Alien
       objectReference: {fileID: 0}
     - target: {fileID: 993084297212088161, guid: e44be74748156e44ebc489dddc97e4f5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 3777288537823988835, guid: e44be74748156e44ebc489dddc97e4f5, type: 3}
-      propertyPath: baseXP
-      value: 300
+    - target: {fileID: 2881101911539138347, guid: e44be74748156e44ebc489dddc97e4f5, type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 3777288537823988835, guid: e44be74748156e44ebc489dddc97e4f5, type: 3}
-      propertyPath: xpDropCount
-      value: 5
+    - target: {fileID: 3582047263335610156, guid: e44be74748156e44ebc489dddc97e4f5, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
-    - target: {fileID: 3777288537823988835, guid: e44be74748156e44ebc489dddc97e4f5, type: 3}
-      propertyPath: experiencePoint
-      value: 
-      objectReference: {fileID: 8633082520157059324, guid: b54ba839ceedc304e983eac7a3096852, type: 3}
     - target: {fileID: 4601849672274312223, guid: e44be74748156e44ebc489dddc97e4f5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.05

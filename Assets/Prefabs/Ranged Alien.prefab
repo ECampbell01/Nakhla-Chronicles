@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7986510884295238684}
   - component: {fileID: 126904313921489773}
   - component: {fileID: 3777288537823988835}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Ranged Alien
   m_TagString: Enemy
   m_Icon: {fileID: 0}
