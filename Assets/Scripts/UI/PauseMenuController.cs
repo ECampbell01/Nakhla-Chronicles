@@ -13,6 +13,10 @@ public class PauseMenuController : MonoBehaviour
     public GameObject luckButton;
     public GameObject meleeButton;
     public GameObject rangedButton;
+    public GameObject achievementsMenu;
+    public GameObject playerStatsMenu;
+    public GameObject playerInventory;
+    public GameObject playerToolbar;
     private CameraSwitcher cameraSwitcher;
     public ExperienceManager experienceManager;
 
@@ -31,6 +35,7 @@ public class PauseMenuController : MonoBehaviour
     public void ClosePauseMenu()
     {
         pauseMenu.SetActive(false);
+        playerToolbar.SetActive(true);
         cameraSwitcher.isPauseMenuActive = false;
         Time.timeScale = 1; // Resume the game
     }
@@ -124,5 +129,34 @@ public class PauseMenuController : MonoBehaviour
         luckButton.gameObject.SetActive(hasPoints);
         meleeButton.gameObject.SetActive(hasPoints);
         rangedButton.gameObject.SetActive(hasPoints);
+    }
+
+    public void ShowAchievementsMenu() 
+    {
+        achievementsMenu.SetActive(true);
+        playerStatsMenu.SetActive(false);
+        playerInventory.SetActive(false);
+        playerToolbar.SetActive(false);
+    }
+
+    public void ShowPlayerStatsMenu() 
+    {
+        playerStatsMenu.SetActive(true);
+        achievementsMenu.SetActive(false);
+        playerInventory.SetActive(false);
+        playerToolbar.SetActive(false);
+    }
+
+    public void ShowPlayerInventory() 
+    {
+        playerInventory.SetActive(true);
+        achievementsMenu.SetActive(false);
+        playerStatsMenu.SetActive(false);
+        playerToolbar.SetActive(true);
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }

@@ -47,11 +47,13 @@ public class CameraSwitcher : MonoBehaviour
 
             if (isPauseMenuActive)
             {
+                pauseMenuController.ShowPlayerInventory(); // Ensure that everytime the player pauses the game, it opens with the inventory menu
                 Time.timeScale = 0; // Freeze game
             }
             else
             {
                 Time.timeScale = 1; // Resume game
+                pauseMenuController.playerToolbar.SetActive(true); // Show toolbar after exiting pause menu
             }
         }
     }
