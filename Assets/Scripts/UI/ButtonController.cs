@@ -2,6 +2,7 @@
 // Date Created: 1/18/2025
 
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class ButtonController : MonoBehaviour
@@ -12,6 +13,15 @@ public class ButtonController : MonoBehaviour
     public GameObject creditsScreen;
     public GameObject howToPlayScreen;
     public GameObject characterCreationMenu;
+    public Button continueButton;
+
+    private void Start()
+    {
+        // Later will check if the player has a saved game or not. If the player has a saved
+        // game the button will be enabled, if the player doesn't have a saved game it will
+        // be disabled.
+        continueButton.interactable = false;
+    }
 
     public void ShowMainMenu()
     {

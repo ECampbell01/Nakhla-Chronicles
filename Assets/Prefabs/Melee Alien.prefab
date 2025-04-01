@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8120344266938457045}
   - component: {fileID: 1031914900275508753}
   - component: {fileID: 8212440441520642388}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Melee Alien
   m_TagString: Enemy
   m_Icon: {fileID: 0}
