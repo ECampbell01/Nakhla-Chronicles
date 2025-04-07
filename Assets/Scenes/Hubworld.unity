@@ -63458,7 +63458,7 @@ Tilemap:
       - {fileID: 328096430, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: 1344971898, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: 364264221, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
-      m_AnimationSpeed: 1.5000001
+      m_AnimationSpeed: 1.5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -5, y: 9, z: 0}
@@ -80974,6 +80974,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b50ba9fff19246c4090f7ac6847e000f, type: 3}
+--- !u!114 &3194073152024156240 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3552352409466199460, guid: b50ba9fff19246c4090f7ac6847e000f, type: 3}
+  m_PrefabInstance: {fileID: 3194073152024156239}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430209108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 322886528987f174a8a5e6d1777059b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3705018142638450287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81458,11 +81469,11 @@ PrefabInstance:
     - target: {fileID: 5962410882855159779, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
       propertyPath: playerToolbar
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 782696833}
     - target: {fileID: 5962410882855159779, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
       propertyPath: experienceManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 3194073152024156240}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
