@@ -15,10 +15,10 @@ GameObject:
   - component: {fileID: 4471377712501896620}
   - component: {fileID: 8120344266938457045}
   - component: {fileID: 1031914900275508753}
-  - component: {fileID: 1657861629142116568}
-  m_Layer: 0
+  - component: {fileID: 8212440441520642388}
+  m_Layer: 9
   m_Name: Melee Alien
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -216,7 +216,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.5
---- !u!114 &1657861629142116568
+  rotationSpeed: 0
+  obstacleCheckRadius: 0.45
+  obstacleCheckDistance: 1
+  obstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 64
+--- !u!114 &8212440441520642388
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -225,8 +231,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1504224799072722550}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecf61672a559314da0fb72aaba99a60, type: 3}
+  m_Script: {fileID: 11500000, guid: ade1f20530db1794dbea02587deaad2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 100
-  healthBar: {fileID: 0}
+  experiencePoint: {fileID: 8633082520157059324, guid: b54ba839ceedc304e983eac7a3096852, type: 3}
+  baseXP: 5
+  xpDropCount: 1
+  maxHealth: 50

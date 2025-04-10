@@ -33,7 +33,7 @@ public class RangedEnemyProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        DamageableCharacter damageable = collision.GetComponent<DamageableCharacter>();
+        PlayerHealth damageable = collision.GetComponent<PlayerHealth>();
         if (damageable != null)
         {
             Vector2 knockback = direction * knockbackForce;

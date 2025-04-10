@@ -1,3 +1,5 @@
+// Contributions: Ryan Lebato and Ethan Campbell
+
 using UnityEngine;
 
 public class PlayerCombat : MonoBehaviour
@@ -6,27 +8,52 @@ public class PlayerCombat : MonoBehaviour
     public float stabCooldown = 0.1f;
     public float shootCooldown = 0.1f;
     float timer = 0f;
+    bool isAttacking = false;
+    float attackDuration = 0.3f;
+    float attackTimer = 0f;
 
+    public GameObject melee;
     public Transform aimPoint;
     public GameObject bullet;
     public float bulletVelocity = 10f;
+    private CameraSwitcher cameraSwitcher;
 
     void Start()
     {
-        // Get the components
         anim = GetComponent<Animator>();
+        cameraSwitcher = FindObjectOfType<CameraSwitcher>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        CheckMeleeTimer();
         HandleStab();
         HandleShoot();
     }
 
     void Stab()
     {
-        anim.SetTrigger("Stab");
+        if (!isAttacking && !cameraSwitcher.isPauseMenuActive)
+        {
+            melee.SetActive(true);
+            isAttacking = true;
+            anim.SetTrigger("Stab");
+        }
+    }
+
+    void CheckMeleeTimer()
+    {
+        if (isAttacking)
+        {
+            attackTimer += Time.deltaTime;
+            if (attackTimer >= attackDuration) 
+            {
+                attackTimer = 0;
+                isAttacking = false;
+                melee.SetActive(false);
+            }
+        }
     }
 
     void Shoot()

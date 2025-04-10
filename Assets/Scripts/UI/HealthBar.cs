@@ -21,7 +21,7 @@ public class HealthBar : MonoBehaviour
 
         if (health <= 0)
         {
-            canvasGroup.alpha = 0f;
+            canvasGroup.alpha = (health <= 0) ? 0f : 1f;
         }
         else
         {
