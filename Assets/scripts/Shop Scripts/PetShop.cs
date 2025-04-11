@@ -134,6 +134,7 @@ class PetShopScroll : MonoBehaviour
             UpdateCoinBalance();  // Update the coin balance display after the purchase
             globalSellButton.gameObject.SetActive(true);
             buyBtn.interactable = false;
+            DisableOtherBuyButtons(item.petName);
         }
         else
         {
@@ -154,7 +155,9 @@ class PetShopScroll : MonoBehaviour
                 item.companionPrefab.SetActive(false);
                 currentActiveCompanion = null;
 
-                ShowPopup("Companion sold!", Color.white);
+                coins.AddCoins(item.petPrice);
+                ShowPopup($"Sold {item.petName} for {item.petPrice} coins!", Color.white);
+                UpdateCoinBalance();
                 globalSellButton.gameObject.SetActive(false);
 
                 // Reactivate buy buttons
@@ -207,6 +210,26 @@ class PetShopScroll : MonoBehaviour
                     {
                         buyBtn.interactable = true;
                     }
+                }
+            }
+        }
+    }
+
+    private void DisableOtherBuyButtons(string purchasedPetName)
+    {
+        for (int i = 0; i < ShopScrollView.childCount; i++)
+        {
+            GameObject item = ShopScrollView.GetChild(i).gameObject;
+            if (!item.activeSelf) continue;
+
+            string itemName = item.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text;
+
+            if (itemName != purchasedPetName)
+            {
+                Button buyBtn = item.transform.GetChild(4).GetComponent<Button>();
+                if (buyBtn != null)
+                {
+                    buyBtn.interactable = false;
                 }
             }
         }

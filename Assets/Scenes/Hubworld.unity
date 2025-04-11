@@ -82864,11 +82864,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6040078138814584216, guid: 15e9c6b0732a2d34ea8b0b46777831bf, type: 3}
       propertyPath: followOffset.x
-      value: -1.3
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6040078138814584216, guid: 15e9c6b0732a2d34ea8b0b46777831bf, type: 3}
       propertyPath: followOffset.y
-      value: -1.3
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6040078138814584216, guid: 15e9c6b0732a2d34ea8b0b46777831bf, type: 3}
       propertyPath: playerAnimator
@@ -82937,11 +82937,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8614650947732960097, guid: abd468167b95ef544a2f33a958e3495a, type: 3}
       propertyPath: followOffset.x
-      value: -1.7
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8614650947732960097, guid: abd468167b95ef544a2f33a958e3495a, type: 3}
       propertyPath: followOffset.y
-      value: -1.7
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8614650947732960097, guid: abd468167b95ef544a2f33a958e3495a, type: 3}
       propertyPath: playerAnimator
@@ -83054,11 +83054,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8143316305077919828, guid: 364f5b8906454294eab771438ddc695c, type: 3}
       propertyPath: followOffset.x
-      value: -0.9
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8143316305077919828, guid: 364f5b8906454294eab771438ddc695c, type: 3}
       propertyPath: followOffset.y
-      value: -0.9
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8143316305077919828, guid: 364f5b8906454294eab771438ddc695c, type: 3}
       propertyPath: playerAnimator
