@@ -83,7 +83,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 4723107735738678597, guid: e5ef34ab33182f94d8c9aa2a4022455c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -156,7 +156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0c350bdab5301942a889eaf5e6e3c85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 3
   lerpSpeed: 15
   lastMoveDirection: {x: 0, y: 0}
   aimPoint: {fileID: 6665209960840500887}
@@ -226,7 +225,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecf61672a559314da0fb72aaba99a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
   healthBar: {fileID: 0}
 --- !u!1 &4187883161975756274
 GameObject:
@@ -567,7 +565,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73a534f137b00c46bcc5dc0e6843a82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 15
   knockbackForce: 5
 --- !u!1 &8990133047914847707
 GameObject:
