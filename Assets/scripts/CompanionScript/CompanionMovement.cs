@@ -30,11 +30,6 @@ public class CompanionMovement : MonoBehaviour
 
     }
 
-    void Awake()
-    {
-        QualitySettings.vSyncCount = 1; // Limit to 60 FPS
-    }
-
     void LateUpdate()
     {
         Vector3 targetPos = playerTransform.position + followOffset;
