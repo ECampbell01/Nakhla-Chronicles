@@ -31,6 +31,8 @@ public class ShopScroll : MonoBehaviour
     [SerializeField] private TextMeshProUGUI popupMessageText;
 
     private GameObject itemTemplate;
+    public InventoryManager inventoryManager;
+    public Item[] itemsToPickup;
 
     // ------------------- Start Method -------------------
     // This method runs when the script is first initialized, setting up the shop
@@ -106,6 +108,12 @@ public class ShopScroll : MonoBehaviour
             // If not enough coins, show error message
             ShowPopup("Not enough coins!", Color.red);
         }
+    }
+
+    // Add item to toolbar/inventory
+    public void PickupItem(int id) 
+    {
+        bool result = inventoryManager.AddItem(itemsToPickup[id]);
     }
 
     // ------------------- UpdateCoinBalance Method -------------------
