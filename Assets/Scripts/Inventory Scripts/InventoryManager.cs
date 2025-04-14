@@ -10,6 +10,13 @@ public class InventoryManager : MonoBehaviour
     public GameObject inventoryItemPrefab;
     int selectedSlot = -1;
 
+    public static InventoryManager Instance;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     private void Start()
     {
         ChangeSelectedSlot(0);
