@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &68936549 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3314896538915096734, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
+  m_PrefabInstance: {fileID: 1792401485}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &135699117
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,7 +135,7 @@ GameObject:
   - component: {fileID: 135699118}
   - component: {fileID: 135699120}
   - component: {fileID: 135699119}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PetShopBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -725,7 +730,7 @@ GameObject:
   - component: {fileID: 298428491}
   - component: {fileID: 298428493}
   - component: {fileID: 298428492}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PetShopBackgroundBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1669,7 +1674,7 @@ GameObject:
   m_Component:
   - component: {fileID: 350530317}
   - component: {fileID: 350530316}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1845,6 +1850,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1031914900275508753, guid: 36681c7d4ac377743ba7384bd4a70f26, type: 3}
+      propertyPath: obstacleLayerMask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1504224799072722550, guid: 36681c7d4ac377743ba7384bd4a70f26, type: 3}
       propertyPath: m_Name
       value: Melee Alien
@@ -1917,7 +1926,7 @@ GameObject:
   - component: {fileID: 554654501}
   - component: {fileID: 554654503}
   - component: {fileID: 554654502}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: DungeonCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2023,7 +2032,7 @@ GameObject:
   - component: {fileID: 581350756}
   - component: {fileID: 581350758}
   - component: {fileID: 581350757}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: ShopTopBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2591,7 +2600,7 @@ GameObject:
   - component: {fileID: 631531318}
   - component: {fileID: 631531317}
   - component: {fileID: 631531316}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: FenceCollisionRightSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2789,7 +2798,7 @@ GameObject:
   - component: {fileID: 681622668}
   - component: {fileID: 681622670}
   - component: {fileID: 681622669}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PetShopBottomCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2895,7 +2904,7 @@ GameObject:
   - component: {fileID: 725030393}
   - component: {fileID: 725030395}
   - component: {fileID: 725030394}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: SimPod
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3030,7 +3039,7 @@ GameObject:
   - component: {fileID: 789384345}
   - component: {fileID: 789384347}
   - component: {fileID: 789384346}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59175,7 +59184,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 997933910}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Dungeon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59212,7 +59221,7 @@ GameObject:
   - component: {fileID: 1042401414}
   - component: {fileID: 1042401413}
   - component: {fileID: 1042401412}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: FenceCollisionLeftSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59410,7 +59419,7 @@ GameObject:
   - component: {fileID: 1066542749}
   - component: {fileID: 1066542751}
   - component: {fileID: 1066542750}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: ShopBottomBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59937,7 +59946,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1257127403}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60189,7 +60198,7 @@ GameObject:
   - component: {fileID: 1513545525}
   - component: {fileID: 1513545527}
   - component: {fileID: 1513545526}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PetShop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60341,7 +60350,7 @@ GameObject:
   - component: {fileID: 1549600361}
   - component: {fileID: 1549600363}
   - component: {fileID: 1549600362}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: ShopMaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60505,7 +60514,7 @@ Tilemap:
       - {fileID: 652224514, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: -1638227662, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: -1921442583, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
-      m_AnimationSpeed: 1.5
+      m_AnimationSpeed: 1.5000001
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -6, y: 10, z: 0}
@@ -60516,7 +60525,7 @@ Tilemap:
       - {fileID: 1136951151, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: 1164225359, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: -1354267872, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
-      m_AnimationSpeed: 1.5
+      m_AnimationSpeed: 1.5000001
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -5, y: 10, z: 0}
@@ -60812,6 +60821,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 126904313921489773, guid: e44be74748156e44ebc489dddc97e4f5, type: 3}
+      propertyPath: projectilePrefab
+      value: 
+      objectReference: {fileID: 639066715310359171, guid: fa3b44ff661f9084493f4556add4c393, type: 3}
     - target: {fileID: 993084297212088161, guid: e44be74748156e44ebc489dddc97e4f5, type: 3}
       propertyPath: m_Name
       value: Ranged Alien
@@ -60826,12 +60839,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3582047263335610156, guid: e44be74748156e44ebc489dddc97e4f5, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3777288537823988835, guid: e44be74748156e44ebc489dddc97e4f5, type: 3}
       propertyPath: baseXP
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 3777288537823988835, guid: e44be74748156e44ebc489dddc97e4f5, type: 3}
+      propertyPath: experiencePoint
+      value: 
+      objectReference: {fileID: 8633082520157059324, guid: b54ba839ceedc304e983eac7a3096852, type: 3}
     - target: {fileID: 4601849672274312223, guid: e44be74748156e44ebc489dddc97e4f5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.05
@@ -60872,6 +60889,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7986510884295238684, guid: e44be74748156e44ebc489dddc97e4f5, type: 3}
+      propertyPath: obstacleLayerMask.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -60891,7 +60912,7 @@ GameObject:
   - component: {fileID: 1657178257}
   - component: {fileID: 1657178256}
   - component: {fileID: 1657178255}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: GroundCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62742,7 +62763,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1657194408}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62777,7 +62798,7 @@ GameObject:
   - component: {fileID: 1781557697}
   - component: {fileID: 1781557699}
   - component: {fileID: 1781557698}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: SimPodBottomCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62884,6 +62905,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 461496791}
+    - target: {fileID: 1986670551549561761, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 576
+      objectReference: {fileID: 0}
     - target: {fileID: 2134898097317099352, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -62931,13 +62956,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3314896538915096734, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
+      insertIndex: 6
+      addedObject: {fileID: 1792401494}
   m_SourcePrefab: {fileID: 100100000, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
 --- !u!4 &1792401486 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2134898097317099352, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
   m_PrefabInstance: {fileID: 1792401485}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1792401494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 68936549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecf61672a559314da0fb72aaba99a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 461496791}
 --- !u!1 &1873000979
 GameObject:
   m_ObjectHideFlags: 0
@@ -62949,7 +62990,7 @@ GameObject:
   - component: {fileID: 1873000980}
   - component: {fileID: 1873000982}
   - component: {fileID: 1873000981}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: DungeonBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64000,7 +64041,7 @@ GameObject:
   - component: {fileID: 1891099142}
   - component: {fileID: 1891099144}
   - component: {fileID: 1891099143}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: SimPodBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64361,7 +64402,7 @@ GameObject:
   - component: {fileID: 1947791383}
   - component: {fileID: 1947791384}
   - component: {fileID: 1947791385}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: ShopBottomCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64472,7 +64513,7 @@ GameObject:
   - component: {fileID: 2020011218}
   - component: {fileID: 2020011220}
   - component: {fileID: 2020011219}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: GroundBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77301,6 +77342,10 @@ PrefabInstance:
     - target: {fileID: 839591711371343720, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
       propertyPath: m_Name
       value: Pause Menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 1777262064524311577, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -25.611328
       objectReference: {fileID: 0}
     - target: {fileID: 2628758927798195315, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
       propertyPath: m_Pivot.x

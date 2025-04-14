@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2484902407742613176}
   - component: {fileID: 967518875436111450}
   - component: {fileID: 4632281036568015512}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Experience Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}

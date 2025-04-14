@@ -16,6 +16,7 @@ public class BulletHandler : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        Animate();
         EnemyHealth enemy = collision.collider.GetComponent<EnemyHealth>();
 
         if (enemy != null)
@@ -31,7 +32,6 @@ public class BulletHandler : MonoBehaviour
             enemy.OnHit(damage, knockbackDirection);
         }
 
-        Animate();
         Destroy(gameObject);
     }
 

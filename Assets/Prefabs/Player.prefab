@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5776647834404087237}
   - component: {fileID: 1566912444335525990}
   - component: {fileID: 1986670551549561761}
+  - component: {fileID: 849643311814038722}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -155,7 +156,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0c350bdab5301942a889eaf5e6e3c85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 3
   lerpSpeed: 15
   lastMoveDirection: {x: 0, y: 0}
   aimPoint: {fileID: 6665209960840500887}
@@ -193,7 +193,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 576
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -213,6 +213,52 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0.0010603666, y: -0.30645764}
   m_Radius: 0.13288212
+--- !u!61 &849643311814038722
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3314896538915096734}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 1470
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.53125, y: 0.90625}
+    newSize: {x: 0.53125, y: 0.90625}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.53125, y: 0.90625}
+  m_EdgeRadius: 0
 --- !u!1 &4187883161975756274
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,6 +425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c12c9fc3abfdc2f41b6e97aeb0d807e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  critMultiplier: 1.5
 --- !u!95 &7802053104819942094
 Animator:
   serializedVersion: 7
@@ -552,8 +599,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73a534f137b00c46bcc5dc0e6843a82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 15
   knockbackForce: 5
+  critMultiplier: 1.5
 --- !u!1 &8990133047914847707
 GameObject:
   m_ObjectHideFlags: 0

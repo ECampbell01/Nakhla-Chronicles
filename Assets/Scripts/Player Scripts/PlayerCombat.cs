@@ -34,7 +34,8 @@ public class PlayerCombat : MonoBehaviour
 
     void Stab()
     {
-        if (!isAttacking && !cameraSwitcher.isPauseMenuActive)
+        //if (!isAttacking && !cameraSwitcher.isPauseMenuActive)
+        if (!isAttacking)
         {
             melee.SetActive(true);
             isAttacking = true;
