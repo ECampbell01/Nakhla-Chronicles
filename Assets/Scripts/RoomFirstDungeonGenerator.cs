@@ -25,6 +25,12 @@ public class RoomFirstDungeonGenerator : RandomWalkGeneration
     private GameObject playerPrefab;
 
 
+    private void Start()
+    {
+        RunProceduralGeneration();
+    }
+
+
     protected override void RunProceduralGeneration()
     {
         CreateRooms();
