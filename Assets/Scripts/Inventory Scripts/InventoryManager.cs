@@ -31,6 +31,11 @@ public class InventoryManager : MonoBehaviour
             {
                 ChangeSelectedSlot(number - 1);
             }
+
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                UseSelectedItem();
+            }
         }
     }
 
@@ -102,5 +107,14 @@ public class InventoryManager : MonoBehaviour
             return item;
         }
         return null;
+    }
+
+    void UseSelectedItem()
+    {
+        Item item = GetSelectedItem(true);
+        if (item != null)
+        {
+            item.Use(GameObject.FindWithTag("Player"));
+        }
     }
 }

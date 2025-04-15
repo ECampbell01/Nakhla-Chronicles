@@ -16,3 +16,5 @@ MonoBehaviour:
   image: {fileID: -2757887451555568444, guid: 6b078b8d0ed50184c947260dadf0f399, type: 3}
   type: 1
   stackable: 0
+  healAmount: 20
+  defenseBoost: 1

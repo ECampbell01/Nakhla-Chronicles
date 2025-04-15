@@ -12,6 +12,12 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     [HideInInspector] public Item item;
     [HideInInspector] public int count = 1;
     [HideInInspector] public Transform parentAfterDrag;
+    private CameraSwitcher cameraSwitcher;
+
+    void Start()
+    {
+        cameraSwitcher = FindObjectOfType<CameraSwitcher>();
+    }
 
     public void InitializeItem(Item newItem) 
     {
@@ -28,6 +34,8 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     }
     public void OnBeginDrag(PointerEventData eventData) 
     {
+        // Don't allow drag and drop outside of pause menu
+        if (!cameraSwitcher.isPauseMenuActive) return;
         image.raycastTarget = false;
         countText.raycastTarget = false;
         parentAfterDrag = transform.parent;
@@ -36,11 +44,15 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
     public void OnDrag(PointerEventData eventData)
     {
+        // Don't allow drag and drop outside of pause menu
+        if (!cameraSwitcher.isPauseMenuActive) return;
         transform.position = Input.mousePosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
+        // Don't allow drag and drop outside of pause menu
+        if (!cameraSwitcher.isPauseMenuActive) return;
         image.raycastTarget = true;
         countText.raycastTarget = true;
         transform.SetParent(parentAfterDrag);

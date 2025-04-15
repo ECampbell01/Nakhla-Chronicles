@@ -6,6 +6,7 @@ using UnityEngine;
 public class PetShopTrigger : MonoBehaviour
 {
     [SerializeField] GameObject petshopUI;
+    public bool isPetShopOpen { get; private set; } = false;
 
     void Start()
     {
@@ -16,6 +17,7 @@ public class PetShopTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             petshopUI.SetActive(true);
+            isPetShopOpen = true;
         }
     }
     void OnTriggerExit2D(Collider2D other)
@@ -23,6 +25,7 @@ public class PetShopTrigger : MonoBehaviour
         if (petshopUI != null && other.CompareTag("Player"))
         {
             petshopUI.SetActive(false);
+            isPetShopOpen = false;
         }
     }
 

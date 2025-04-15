@@ -15,6 +15,8 @@ public class CameraSwitcher : MonoBehaviour
     public GameObject xpBar;
     public GameObject pauseMenu;
     public PauseMenuController pauseMenuController;
+    public ShopTrigger shopTrigger;
+    public PetShopTrigger petShopTrigger;
 
     void Start()
     {
@@ -25,8 +27,8 @@ public class CameraSwitcher : MonoBehaviour
 
     void Update()
     {
-        // Toggle Map if "M" key is pressed, if Pause Menu is not open
-        if (Input.GetKeyDown(KeyCode.M) && !isPauseMenuActive)
+        // Toggle Map if "M" key is pressed, if Pause Menu is not open and shop UI isn't open
+        if (Input.GetKeyDown(KeyCode.M) && !isPauseMenuActive && !shopTrigger.isShopOpen && !petShopTrigger.isPetShopOpen)
         {
             isMapActive = !isMapActive;
             mainCamera.enabled = !isMapActive;
@@ -37,8 +39,8 @@ public class CameraSwitcher : MonoBehaviour
             isHealthActive = !isHealthActive;
         }
 
-        // Toggle Pause Menu if "F" key is pressed, if Map is not open
-        if (Input.GetKeyDown(KeyCode.F) && !isMapActive)
+        // Toggle Pause Menu if "F" key is pressed, if Map is not open and shop UI isn't open
+        if (Input.GetKeyDown(KeyCode.F) && !isMapActive && !shopTrigger.isShopOpen && !petShopTrigger.isPetShopOpen)
         {
             isPauseMenuActive = !isPauseMenuActive;
             pauseMenu.SetActive(isPauseMenuActive);

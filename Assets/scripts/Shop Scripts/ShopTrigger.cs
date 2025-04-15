@@ -6,6 +6,7 @@ using UnityEngine;
 public class ShopTrigger : MonoBehaviour
 {
     [SerializeField] GameObject shopUI;
+    public bool isShopOpen { get; private set; } = false;
 
     void Start()
     {
@@ -16,6 +17,7 @@ public class ShopTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             shopUI.SetActive(true);
+            isShopOpen = true;
         }
     }
 
@@ -24,6 +26,7 @@ public class ShopTrigger : MonoBehaviour
         if (shopUI != null && other.CompareTag("Player"))
         {
             shopUI.SetActive(false);
+            isShopOpen = false;
         }
     }
 
