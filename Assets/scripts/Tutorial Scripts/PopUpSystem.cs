@@ -7,8 +7,8 @@ public class Pop : MonoBehaviour
     public Animator animator;
     public TMP_Text popUpText;
 
-    string triggerText = "Now get ready for enemies\n" + "\nUse right click to melee\n" +
-     "\nUse left click to shoot\n";
+    string triggerText = "Now get ready for enemies\n" + "\nUse right click to shoot\n" +
+     "\nUse left click to melee\n";
 
     bool hasTriggered = false;
     bool hasSpawned = false;
