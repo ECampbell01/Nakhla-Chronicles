@@ -21,7 +21,7 @@ public class PlayerCombat : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        cameraSwitcher = FindObjectOfType<CameraSwitcher>();
+        cameraSwitcher = GetComponent<CameraSwitcher>();
     }
 
     // Update is called once per frame
