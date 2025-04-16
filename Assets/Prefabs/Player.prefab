@@ -159,6 +159,7 @@ MonoBehaviour:
   lerpSpeed: 15
   lastMoveDirection: {x: 0, y: 0}
   aimPoint: {fileID: 6665209960840500887}
+  playerData: {fileID: 0}
 --- !u!114 &1566912444335525990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -426,6 +427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   critMultiplier: 1.5
+  playerData: {fileID: 11400000, guid: e697d61607f0ae44a95fdacce9de283e, type: 2}
 --- !u!95 &7802053104819942094
 Animator:
   serializedVersion: 7

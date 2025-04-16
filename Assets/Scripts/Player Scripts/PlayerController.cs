@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     public Transform aimPoint;
     bool isWalking = false;
 
+    [SerializeField] PlayerData playerData;
+
     void Start()
     {
         // Get the components
@@ -31,7 +33,7 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         // Move the player
-        input = input * StatsManager.Instance.agility;
+        input = input * playerData.Agility;
         rb.linearVelocity = Vector3.Lerp(rb.linearVelocity, input, Time.deltaTime * lerpSpeed);
 
         if (isWalking)

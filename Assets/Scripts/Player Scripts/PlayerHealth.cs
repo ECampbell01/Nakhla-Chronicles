@@ -10,18 +10,21 @@ public class PlayerHealth : MonoBehaviour
     private float currentHealth;
     public HealthBar healthBar;
 
+    [SerializeField]
+    private PlayerData playerData;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
-        currentHealth = StatsManager.Instance.HP;
+        currentHealth = playerData.HP;
 
         if (healthBar == null)
         {
             healthBar = FindObjectOfType<HealthBar>();
         }
 
-        healthBar.SetMaxHealth(StatsManager.Instance.HP);
+        healthBar.SetMaxHealth(playerData.HP);
     }
 
     public void OnHit(float damage, Vector2 knockback)
@@ -32,7 +35,7 @@ public class PlayerHealth : MonoBehaviour
 
     private float ApplyDefense(float damage)
     {
-        int defense = StatsManager.Instance.defense;
+        int defense = playerData.Defense;
         float finalDamage = damage / (1 + (defense / 10f));
         return finalDamage;
     }
@@ -51,6 +54,15 @@ public class PlayerHealth : MonoBehaviour
 
     private void Die()
     {
+        playerData.HP = 100;
+        playerData.Agility = 2;
+        playerData.Defense = 0;
+        playerData.Luck = 1;
+        playerData.MeleeDamage = 10;
+        playerData.RangedDamage = 10;
+        playerData.Level = 1;
+        playerData.Experience = 0;
+        playerData.AvailablePoints = 0;
         SceneManager.LoadScene("GameOver"); // Load Game Over screen
     }
 }
