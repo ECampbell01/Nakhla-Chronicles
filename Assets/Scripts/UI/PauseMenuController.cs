@@ -31,7 +31,7 @@ public class PauseMenuController : MonoBehaviour
 
     void Start()
     {
-        cameraSwitcher = FindObjectOfType<CameraSwitcher>();
+        cameraSwitcher = GetComponent<CameraSwitcher>();
     }
 
     public void ClosePauseMenu()
