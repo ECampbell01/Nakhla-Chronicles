@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -13,16 +14,28 @@ public class PlayerController : MonoBehaviour
     public Transform aimPoint;
     bool isWalking = false;
 
+    public bool canMove;
+
     void Start()
     {
         // Get the components
-
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        string currentScene = SceneManager.GetActiveScene().name;
+
+        if (currentScene == "Tutorial")
+        {
+            canMove = false;
+        }
+        else
+        {
+            canMove = true;
+        }
     }
 
     void Update()
     {
+        if (!canMove) return;
         Move();
         HandleInputs();
         Animate();
@@ -81,6 +94,12 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("MoveMagnitude", input.magnitude);
         anim.SetFloat("LastMoveX", lastMoveDirection.x);
         anim.SetFloat("LastMoveY", lastMoveDirection.y);
+    }
+
+    public void StopMovement()
+    {
+        input = Vector2.zero;
+        rb.linearVelocity = Vector2.zero;
     }
 }
 

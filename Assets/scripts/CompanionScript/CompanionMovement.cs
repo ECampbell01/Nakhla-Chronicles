@@ -1,3 +1,6 @@
+// contributions: Chance Daigle
+// date: 3/23/25
+
 using UnityEngine;
 
 public class CompanionMovement : MonoBehaviour
