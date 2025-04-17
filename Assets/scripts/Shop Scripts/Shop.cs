@@ -19,6 +19,7 @@ public class ShopScroll : MonoBehaviour
         public string itemName;
         public Sprite itemImage;
         public int itemPrice;
+        public Item itemToGive;
     }
 
     // ------------------- Serialized Fields -------------------
@@ -31,6 +32,8 @@ public class ShopScroll : MonoBehaviour
     [SerializeField] private TextMeshProUGUI popupMessageText;
 
     private GameObject itemTemplate;
+    public InventoryManager inventoryManager;
+    public Item[] itemsToPickup;
 
     // ------------------- Start Method -------------------
     // This method runs when the script is first initialized, setting up the shop
@@ -100,6 +103,11 @@ public class ShopScroll : MonoBehaviour
         {
             ShowPopup($"Purchased {item.itemName} for {item.itemPrice} coins!", Color.green);
             UpdateCoinBalance();  // Update coin balance after purchase
+            bool added = inventoryManager.AddItem(item.itemToGive);
+            if (!added)
+            {
+                ShowPopup("Inventory full!", Color.red);
+            }
         }
         else
         {
