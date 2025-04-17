@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5947211251669398086}
-  - component: {fileID: 4034605155502595257}
   - component: {fileID: 3010161799063772809}
   - component: {fileID: 8386215886868143115}
+  - component: {fileID: 1050572771281233045}
   m_Layer: 5
   m_Name: Toolbar
   m_TagString: Untagged
@@ -45,14 +45,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 59}
   m_SizeDelta: {x: 750, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &4034605155502595257
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9001603859132396358}
-  m_CullTransparentMesh: 1
 --- !u!114 &3010161799063772809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,6 +99,14 @@ MonoBehaviour:
   m_Spacing: {x: 20, y: 20}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!222 &1050572771281233045
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9001603859132396358}
+  m_CullTransparentMesh: 1
 --- !u!1001 &758072261772732328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -811,11 +811,73 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory Slot
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8824936828462910406, guid: 6ebbb7e2cbbe5304ba8d2b84474cf2ef, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6972056602417682198, guid: 6ebbb7e2cbbe5304ba8d2b84474cf2ef, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6437261366849698120}
+    - targetCorrespondingSourceObject: {fileID: 6972056602417682198, guid: 6ebbb7e2cbbe5304ba8d2b84474cf2ef, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4918177810034981496}
   m_SourcePrefab: {fileID: 100100000, guid: 6ebbb7e2cbbe5304ba8d2b84474cf2ef, type: 3}
+--- !u!1 &1398056977255789364 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6972056602417682198, guid: 6ebbb7e2cbbe5304ba8d2b84474cf2ef, type: 3}
+  m_PrefabInstance: {fileID: 8333732868032537634}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6437261366849698120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398056977255789364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a8695521f0d02e499659fee002a26c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_StartCorner: 0
+  m_StartAxis: 0
+  m_CellSize: {x: 40, y: 40}
+  m_Spacing: {x: 0, y: 0}
+  m_Constraint: 0
+  m_ConstraintCount: 2
+--- !u!114 &4918177810034981496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398056977255789364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb5e1bd741159014994a7b3ca508400d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image: {fileID: 1869039901711671393}
+  selectedColor: {r: 0.26666668, g: 0.4, b: 0.4862745, a: 1}
+  notSelectedColor: {r: 0.21176471, g: 0.27058825, b: 0.30980393, a: 1}
+--- !u!114 &1869039901711671393 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7662720838111429699, guid: 6ebbb7e2cbbe5304ba8d2b84474cf2ef, type: 3}
+  m_PrefabInstance: {fileID: 8333732868032537634}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398056977255789364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &8797134183865432470 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 698883735112457652, guid: 6ebbb7e2cbbe5304ba8d2b84474cf2ef, type: 3}

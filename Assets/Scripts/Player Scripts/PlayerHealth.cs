@@ -49,6 +49,15 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
+    public void RestoreHealth(float amount)
+    {
+        currentHealth += amount;
+        if (currentHealth > StatsManager.Instance.HP)
+            currentHealth = StatsManager.Instance.HP;
+
+        healthBar.SetHealth(currentHealth);
+    }
+
     private void Die()
     {
         SceneManager.LoadScene("GameOver"); // Load Game Over screen
