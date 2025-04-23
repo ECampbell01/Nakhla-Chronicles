@@ -1,0 +1,58 @@
+using System.Linq.Expressions;
+using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+
+public class TutorialPromptTrigger : MonoBehaviour
+{
+    private bool playerInRange = false;
+    public GameObject prompt;
+    private bool isMapOpen = false;
+
+    private void Start()
+    {
+        prompt.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            isMapOpen = !isMapOpen;
+
+            if (isMapOpen)
+            {
+                prompt.SetActive(false);
+            }
+            else if (playerInRange)
+            {
+                prompt.SetActive(true);
+            }
+        }
+
+        if (playerInRange && !isMapOpen && Input.GetKeyDown(KeyCode.E))
+        {
+            SceneManager.LoadScene("Tutorial");
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            prompt.SetActive(true);
+            playerInRange = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            prompt.SetActive(false);
+            playerInRange = false;
+        }
+    }
+}
+
+
