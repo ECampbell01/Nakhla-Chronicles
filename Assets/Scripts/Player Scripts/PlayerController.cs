@@ -23,7 +23,7 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
         string currentScene = SceneManager.GetActiveScene().name;
 
-        if (currentScene == "Tutorial")
+        if (currentScene == "TutorialNew")
         {
             canMove = false;
         }

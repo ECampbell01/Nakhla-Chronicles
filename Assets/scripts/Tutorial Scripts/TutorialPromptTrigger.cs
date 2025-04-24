@@ -8,6 +8,7 @@ public class TutorialPromptTrigger : MonoBehaviour
     private bool playerInRange = false;
     public GameObject prompt;
     private bool isMapOpen = false;
+    private bool isInventoryOpen = false;
 
     private void Start()
     {
@@ -30,7 +31,20 @@ public class TutorialPromptTrigger : MonoBehaviour
             }
         }
 
-        if (playerInRange && !isMapOpen && Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            isInventoryOpen = !isInventoryOpen;
+            if (isInventoryOpen)
+            {
+                prompt.SetActive(false);
+            }
+            else if (playerInRange)
+            {
+                prompt.SetActive(true);
+            }
+        }
+
+        if (playerInRange && !isMapOpen && !isInventoryOpen && Input.GetKeyDown(KeyCode.E))
         {
             SceneManager.LoadScene("Tutorial");
         }
