@@ -8,6 +8,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using PlayerCoins;
+using System.Runtime.CompilerServices;
+using System.Linq.Expressions;
 
 class PetShopScroll : MonoBehaviour
 {
@@ -21,6 +23,7 @@ class PetShopScroll : MonoBehaviour
         public int petPrice;
         public GameObject companionPrefab;
         [HideInInspector] public bool isPurchased = false;
+        [HideInInspector] public Vector3 originalPosition;
     }
 
     // ------------------- Serialized Fields -------------------
@@ -32,10 +35,15 @@ class PetShopScroll : MonoBehaviour
     [SerializeField] private GameObject popupPanel;
     [SerializeField] private TextMeshProUGUI popupMessageText;
     [SerializeField] private Button globalSellButton;
+    [SerializeField] private Transform playerTransform;
+    private Dictionary<string, GameObject> petNameToUIItem = new Dictionary<string, GameObject>();
+
+
 
 
     private GameObject itemTemplate;
-    private GameObject currentActiveCompanion = null;
+    private GameObject currentSpawnedCompanion = null;
+    private ShopItem currentItem = null;
 
     // ------------------- Start Method -------------------
     // Initializes the pet shop by setting up the UI and updating the coin balance
@@ -57,6 +65,14 @@ class PetShopScroll : MonoBehaviour
         coins.OnCoinBalanceChanged += UpdateCoinBalance;
         globalSellButton.onClick.AddListener(OnGlobalSellButtonClicked);
         globalSellButton.gameObject.SetActive(false);
+
+        foreach (var item in ShopItemsList)
+        {
+            if (item.companionPrefab != null)
+            {
+                item.originalPosition = item.companionPrefab.transform.position;
+            }
+        }
 
         // Destroy the item template as it is no longer needed after instantiation
         Destroy(itemTemplate);
@@ -83,17 +99,12 @@ class PetShopScroll : MonoBehaviour
             // Instantiate a new item from the template and make it visible
             GameObject newItem = Instantiate(itemTemplate, ShopScrollView);
             newItem.SetActive(true);
+            petNameToUIItem[item.petName] = newItem;
 
             // Set item details in the UI (name, image, and price)
             newItem.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = item.petName;
             newItem.transform.GetChild(1).GetComponent<Image>().sprite = item.petImage;
             newItem.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = item.petPrice.ToString();
-
-            // Deactivate the companion prefab at the start
-            if (item.companionPrefab != null)
-            {
-                item.companionPrefab.SetActive(false);  // Deactivate the companion prefab initially
-            }
 
             // Find the Buy button and add the event listener to handle clicks
             Button buyBtn = newItem.transform.GetChild(4).GetComponent<Button>();
@@ -114,7 +125,7 @@ class PetShopScroll : MonoBehaviour
             return;
         }
 
-        if (currentActiveCompanion != null)
+        if (currentSpawnedCompanion != null)
         {
             ShowPopup("You can only have on companion at a time!", Color.yellow);
         }
@@ -123,11 +134,20 @@ class PetShopScroll : MonoBehaviour
         if (coins.DeductCoins(item.petPrice))
         {
             item.isPurchased = true;
-            currentActiveCompanion = item.companionPrefab;
+            currentSpawnedCompanion = item.companionPrefab;
 
-            if (item.companionPrefab != null)
+            if (item.companionPrefab != null && playerTransform != null)
             {
-                item.companionPrefab.SetActive(true);
+                currentSpawnedCompanion = Instantiate(item.companionPrefab, playerTransform);
+                currentSpawnedCompanion.transform.localPosition = Vector3.zero;
+                currentItem = item;
+
+            }
+            CompanionMovement movementScript = currentSpawnedCompanion.GetComponent<CompanionMovement>();
+            if (movementScript != null)
+            {
+                movementScript.playerTransform = playerTransform;
+                movementScript.playerAnimator = playerTransform.GetComponent<Animator>();
             }
 
             ShowPopup($"Purchased {item.petName} for {item.petPrice} coins!", Color.green);
@@ -145,26 +165,23 @@ class PetShopScroll : MonoBehaviour
 
     private void OnGlobalSellButtonClicked()
     {
-        if (currentActiveCompanion == null) return;
+        if (currentSpawnedCompanion == null || currentItem == null) return;
+        // Save info before nulling things out
+        int refundAmount = currentItem.petPrice;
+        string petName = currentItem.petName;
 
-        foreach (var item in ShopItemsList)
-        {
-            if (item.companionPrefab == currentActiveCompanion)
-            {
-                item.isPurchased = false;
-                item.companionPrefab.SetActive(false);
-                currentActiveCompanion = null;
+        currentItem.isPurchased = false;
 
-                coins.AddCoins(item.petPrice);
-                ShowPopup($"Sold {item.petName} for {item.petPrice} coins!", Color.white);
-                UpdateCoinBalance();
-                globalSellButton.gameObject.SetActive(false);
+        Destroy(currentSpawnedCompanion);
+        currentSpawnedCompanion = null;
+        currentItem = null;
 
-                // Reactivate buy buttons
-                ResetBuyButtons();
-                return;
-            }
-        }
+        coins.AddCoins(refundAmount);
+        ShowPopup($"Sold {petName} for {refundAmount} coins!", Color.white);
+        UpdateCoinBalance();
+        globalSellButton.gameObject.SetActive(false);
+
+        ResetBuyButtons();  // Reactivate all buy buttons
     }
 
     // ------------------- UpdateCoinBalance Method -------------------
@@ -194,22 +211,19 @@ class PetShopScroll : MonoBehaviour
 
     private void ResetBuyButtons()
     {
-        for (int i = 0; i < ShopScrollView.childCount; i++)
+        foreach (var kvp in petNameToUIItem)
         {
-            GameObject item = ShopScrollView.GetChild(i).gameObject;
-            if (!item.activeSelf) continue;
+            string petName = kvp.Key;
+            GameObject uiItem = kvp.Value;
 
-            string itemName = item.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text;
+            ShopItem shopItem = ShopItemsList.Find(item => item.petName == petName);
 
-            foreach (var shopItem in ShopItemsList)
+            if (shopItem != null && !shopItem.isPurchased)
             {
-                if (shopItem.petName == itemName && !shopItem.isPurchased)
+                Button buyBtn = uiItem.transform.GetChild(4).GetComponent<Button>();
+                if (buyBtn != null)
                 {
-                    Button buyBtn = item.transform.GetChild(4).GetComponent<Button>();
-                    if (buyBtn != null)
-                    {
-                        buyBtn.interactable = true;
-                    }
+                    buyBtn.interactable = true;
                 }
             }
         }

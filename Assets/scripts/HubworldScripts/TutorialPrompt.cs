@@ -15,7 +15,7 @@ public class TutorialPrompt : MonoBehaviour
     {
         if (playerInRange && Input.GetKeyDown(KeyCode.E))
         {
-            SceneManager.LoadScene("Tutorial");
+            SceneManager.LoadScene("TutorialNew");
         }
     }
 
