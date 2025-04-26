@@ -12,14 +12,14 @@ GameObject:
   - component: {fileID: 6508723121419833156}
   - component: {fileID: 2025032028164959640}
   - component: {fileID: 5661816043778529992}
-  - component: {fileID: 8614650947732960097}
+  - component: {fileID: 2738684967019586740}
   m_Layer: 0
   m_Name: RacoonCompanion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8758240910383031704
 Transform:
   m_ObjectHideFlags: 0
@@ -139,7 +139,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8614650947732960097
+--- !u!114 &2738684967019586740
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,5 +153,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerAnimator: {fileID: 0}
   playerTransform: {fileID: 0}
-  followSpeed: 1
+  followSpeed: 3
   followOffset: {x: -0.5, y: -0.5, z: 0}

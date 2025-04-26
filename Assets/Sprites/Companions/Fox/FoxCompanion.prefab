@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1669726403755651472}
   - component: {fileID: 6750336303039990304}
   - component: {fileID: 2169744161269720182}
-  - component: {fileID: 4219053993673775609}
+  - component: {fileID: 6196345367956935456}
   m_Layer: 0
   m_Name: FoxCompanion
   m_TagString: Untagged
@@ -139,7 +139,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &4219053993673775609
+--- !u!114 &6196345367956935456
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

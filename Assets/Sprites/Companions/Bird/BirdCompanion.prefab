@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6537500613143917305}
   - component: {fileID: 2066171879113585591}
   - component: {fileID: 1705647597776393666}
-  - component: {fileID: 8143316305077919828}
+  - component: {fileID: -1814335132385998495}
   m_Layer: 0
   m_Name: BirdCompanion
   m_TagString: Untagged
@@ -139,7 +139,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &8143316305077919828
+--- !u!114 &-1814335132385998495
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
