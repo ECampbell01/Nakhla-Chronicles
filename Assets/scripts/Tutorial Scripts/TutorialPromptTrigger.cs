@@ -46,7 +46,7 @@ public class TutorialPromptTrigger : MonoBehaviour
 
         if (playerInRange && !isMapOpen && !isInventoryOpen && Input.GetKeyDown(KeyCode.E))
         {
-            SceneManager.LoadScene("TutorialNew");
+            SceneManager.LoadScene("Tutorial");
         }
     }
 
