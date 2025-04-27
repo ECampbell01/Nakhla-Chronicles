@@ -50,11 +50,23 @@ public class TutorialExitPromptTrigger : MonoBehaviour
         }
     }
 
+    public void CloseInventory()
+    {
+        isInventoryOpen = false;
+        if (playerInRange)
+        {
+            prompt.SetActive(true);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            prompt.SetActive(true);
+            if (prompt != null)
+            {
+                prompt.SetActive(true);
+            }
             playerInRange = true;
         }
     }
@@ -63,7 +75,10 @@ public class TutorialExitPromptTrigger : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            prompt.SetActive(false);
+            if (prompt != null)
+            {
+                prompt.SetActive(false);
+            }
             playerInRange = false;
         }
     }

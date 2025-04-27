@@ -19,6 +19,8 @@ public class PauseMenuController : MonoBehaviour
     public GameObject playerToolbar;
     private CameraSwitcher cameraSwitcher;
     public ExperienceManager experienceManager;
+    public TutorialPromptTrigger tutorialPromptTrigger;
+    public TutorialExitPromptTrigger exitPromptTrigger;
 
     [SerializeField] TextMeshProUGUI hpText;
     [SerializeField] TextMeshProUGUI agilityText;
@@ -38,6 +40,16 @@ public class PauseMenuController : MonoBehaviour
         playerToolbar.SetActive(true);
         cameraSwitcher.isPauseMenuActive = false;
         Time.timeScale = 1; // Resume the game
+
+        if (tutorialPromptTrigger != null)
+        {
+            tutorialPromptTrigger.CloseInventory();
+        }
+
+        if (exitPromptTrigger != null)
+        {
+            exitPromptTrigger.CloseInventory();
+        }
     }
 
     public void UpdateStatsUI()

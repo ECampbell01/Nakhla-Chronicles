@@ -878,6 +878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab77939ab9e8e8345a2ebb662c987857, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInRange: 0
   prompt: {fileID: 1272070121}
 --- !u!61 &210301820
 BoxCollider2D:
@@ -60735,10 +60736,10 @@ RectTransform:
   - {fileID: 339472144}
   m_Father: {fileID: 1511847604}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 205, y: -50}
-  m_SizeDelta: {x: 410, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &839263992
 MonoBehaviour:
@@ -66652,10 +66653,10 @@ RectTransform:
   - {fileID: 1386888398}
   m_Father: {fileID: 309108822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 205, y: -50}
-  m_SizeDelta: {x: 410, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1676122467
 MonoBehaviour:
@@ -82019,14 +82020,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause Menu
       objectReference: {fileID: 0}
-    - target: {fileID: 1777262064524311577, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1777262064524311577, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -25.611328
-      objectReference: {fileID: 0}
     - target: {fileID: 2628758927798195315, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -82115,6 +82108,10 @@ PrefabInstance:
       propertyPath: experienceManager
       value: 
       objectReference: {fileID: 3194073152024156240}
+    - target: {fileID: 5962410882855159779, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
+      propertyPath: tutorialPromptTrigger
+      value: 
+      objectReference: {fileID: 210301819}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
