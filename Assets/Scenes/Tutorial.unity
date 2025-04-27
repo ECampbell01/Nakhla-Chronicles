@@ -65607,7 +65607,7 @@ Tilemap:
       - {fileID: 587036754, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: 1450491786, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: -1667000059, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
-      m_AnimationSpeed: 1.5
+      m_AnimationSpeed: 1.5000001
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -6, y: 9, z: 0}
@@ -84454,6 +84454,10 @@ PrefabInstance:
       propertyPath: playerToolbar
       value: 
       objectReference: {fileID: 782696833}
+    - target: {fileID: 5962410882855159779, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
+      propertyPath: exitPromptTrigger
+      value: 
+      objectReference: {fileID: 210301821}
     - target: {fileID: 5962410882855159779, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
       propertyPath: experienceManager
       value: 
