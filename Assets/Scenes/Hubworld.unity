@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 135699118}
   - component: {fileID: 135699120}
   - component: {fileID: 135699119}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PetShopBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -969,7 +969,7 @@ GameObject:
   - component: {fileID: 298428491}
   - component: {fileID: 298428493}
   - component: {fileID: 298428492}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PetShopBackgroundBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2338,7 +2338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 350530317}
   - component: {fileID: 350530316}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2697,7 +2697,7 @@ GameObject:
   - component: {fileID: 554654501}
   - component: {fileID: 554654503}
   - component: {fileID: 554654502}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: DungeonCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2939,7 +2939,7 @@ GameObject:
   - component: {fileID: 581350756}
   - component: {fileID: 581350758}
   - component: {fileID: 581350757}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: ShopTopBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3508,7 +3508,7 @@ GameObject:
   - component: {fileID: 631531318}
   - component: {fileID: 631531317}
   - component: {fileID: 631531316}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: FenceCollisionRightSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3706,7 +3706,7 @@ GameObject:
   - component: {fileID: 681622668}
   - component: {fileID: 681622670}
   - component: {fileID: 681622669}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PetShopBottomCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3898,7 +3898,7 @@ GameObject:
   - component: {fileID: 725030393}
   - component: {fileID: 725030395}
   - component: {fileID: 725030394}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: SimPod
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4442,7 +4442,7 @@ GameObject:
   - component: {fileID: 789384345}
   - component: {fileID: 789384347}
   - component: {fileID: 789384346}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60962,7 +60962,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 997933910}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Dungeon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60984,6 +60984,7 @@ Transform:
   m_Children:
   - {fileID: 1873000980}
   - {fileID: 554654501}
+  - {fileID: 1492393317}
   m_Father: {fileID: 350530317}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &998697920 stripped
@@ -61010,7 +61011,7 @@ GameObject:
   - component: {fileID: 1042401414}
   - component: {fileID: 1042401413}
   - component: {fileID: 1042401412}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: FenceCollisionLeftSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61219,7 +61220,7 @@ GameObject:
   - component: {fileID: 1066542749}
   - component: {fileID: 1066542751}
   - component: {fileID: 1066542750}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: ShopBottomBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62399,7 +62400,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1257127403}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63519,7 +63520,7 @@ GameObject:
   - component: {fileID: 1513545525}
   - component: {fileID: 1513545527}
   - component: {fileID: 1513545526}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PetShop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63944,7 +63945,7 @@ GameObject:
   - component: {fileID: 1549600361}
   - component: {fileID: 1549600363}
   - component: {fileID: 1549600362}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: ShopMaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64738,7 +64739,7 @@ GameObject:
   - component: {fileID: 1657178257}
   - component: {fileID: 1657178256}
   - component: {fileID: 1657178255}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: GroundCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66589,7 +66590,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1657194408}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66961,7 +66962,7 @@ GameObject:
   - component: {fileID: 1781557697}
   - component: {fileID: 1781557699}
   - component: {fileID: 1781557698}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: SimPodBottomCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67064,6 +67065,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 244049267159561634, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: e697d61607f0ae44a95fdacce9de283e, type: 2}
     - target: {fileID: 1695822233648863508, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
       propertyPath: healthBar
       value: 
@@ -67320,7 +67325,7 @@ GameObject:
   - component: {fileID: 1873000980}
   - component: {fileID: 1873000982}
   - component: {fileID: 1873000981}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: DungeonBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68371,7 +68376,7 @@ GameObject:
   - component: {fileID: 1891099142}
   - component: {fileID: 1891099144}
   - component: {fileID: 1891099143}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: SimPodBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68732,7 +68737,7 @@ GameObject:
   - component: {fileID: 1947791383}
   - component: {fileID: 1947791384}
   - component: {fileID: 1947791385}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: ShopBottomCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69073,7 +69078,7 @@ GameObject:
   - component: {fileID: 2020011218}
   - component: {fileID: 2020011220}
   - component: {fileID: 2020011219}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: GroundBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81787,6 +81792,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3552352409466199460, guid: b50ba9fff19246c4090f7ac6847e000f, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: e697d61607f0ae44a95fdacce9de283e, type: 2}
+    - target: {fileID: 3552352409466199460, guid: b50ba9fff19246c4090f7ac6847e000f, type: 3}
       propertyPath: availablePointsText
       value: 
       objectReference: {fileID: 5557211984483150400}
@@ -82319,6 +82328,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5962410882855159779, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: e697d61607f0ae44a95fdacce9de283e, type: 2}
     - target: {fileID: 5962410882855159779, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
       propertyPath: playerToolbar
       value: 

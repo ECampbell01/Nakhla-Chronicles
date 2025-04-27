@@ -2,11 +2,8 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class RandomWalkGeneration : MonoBehaviour
+public class RandomWalkGeneration : AbstractDungeonGenerator
 {
-    [SerializeField]
-    protected Vector2Int startPosition = Vector2Int.zero; // Starting position for the random walk
-
     [SerializeField]
     private int iterations = 10; // Number of times to perform the random walk
 
@@ -16,21 +13,18 @@ public class RandomWalkGeneration : MonoBehaviour
     [SerializeField]
     public bool startRandomlyEachIteration = true; // Determines if each iteration starts at a random position
 
-    [SerializeField]
-    private TilemapVisualizer tilemapVisualizer; // Reference to the tilemap visualizer
-
     // Main function to run procedural generation
-    public void RunProceduralGeneration()
+    protected override void RunProceduralGeneration()
     {
-        HashSet<Vector2Int> floorPositions = RunRandomWalk();
+        HashSet<Vector2Int> floorPositions = RunRandomWalk(startPosition);
         tilemapVisualizer.Clear(); // Clear previous tiles
         tilemapVisualizer.PaintFloorTiles(floorPositions); // Paint new tiles
     }
 
     // Executes multiple random walks and merges the results
-    protected HashSet<Vector2Int> RunRandomWalk()
+    protected HashSet<Vector2Int> RunRandomWalk(Vector2Int position)
     {
-        var currentPosition = startPosition;
+        var currentPosition = position;
         HashSet<Vector2Int> floorPositions = new HashSet<Vector2Int>();
 
         for (int i = 0; i < iterations; i++)
