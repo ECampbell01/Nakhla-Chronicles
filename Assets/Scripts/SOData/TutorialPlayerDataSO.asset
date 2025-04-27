@@ -19,5 +19,5 @@ MonoBehaviour:
   _meleeDamage: 10
   _rangedDamage: 10
   _level: 1
-  _experience: 12
+  _experience: 0
   _availablePoints: 0

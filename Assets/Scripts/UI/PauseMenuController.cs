@@ -17,7 +17,7 @@ public class PauseMenuController : MonoBehaviour
     public GameObject playerStatsMenu;
     public GameObject playerInventory;
     public GameObject playerToolbar;
-    private CameraSwitcher cameraSwitcher;
+    public CameraSwitcher cameraSwitcher;
     public ExperienceManager experienceManager;
 
     [SerializeField] PlayerData playerData;
@@ -31,7 +31,7 @@ public class PauseMenuController : MonoBehaviour
 
     void Start()
     {
-        cameraSwitcher = GetComponent<CameraSwitcher>();
+        //cameraSwitcher = GetComponent<CameraSwitcher>();
     }
 
     public void ClosePauseMenu()

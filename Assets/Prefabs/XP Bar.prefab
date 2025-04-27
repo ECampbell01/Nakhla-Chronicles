@@ -351,6 +351,7 @@ MonoBehaviour:
   levelText: {fileID: 7993973221094042040}
   availablePointsText: {fileID: 0}
   experienceFill: {fileID: 1190858448485561407}
+  playerData: {fileID: 11400000, guid: e697d61607f0ae44a95fdacce9de283e, type: 2}
 --- !u!1 &2091965212932641125
 GameObject:
   m_ObjectHideFlags: 0
@@ -429,7 +430,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 5512980221799154472}
   m_FillRect: {fileID: 2466474821928190823}
   m_HandleRect: {fileID: 1143502264663533314}
