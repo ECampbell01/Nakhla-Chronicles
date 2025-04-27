@@ -23,6 +23,8 @@ public class RoomFirstDungeonGenerator : RandomWalkGeneration
     private float spawnRadius = 2.0f;
     [SerializeField]
     private GameObject playerPrefab;
+    [SerializeField]
+    private GameObject exitPrefab;
 
 
     private void Start()
@@ -41,7 +43,6 @@ public class RoomFirstDungeonGenerator : RandomWalkGeneration
         var roomsList = ProceduralGenAlgorithms.BinarySpacePartitioning(new BoundsInt((Vector3Int)startPosition,
             new Vector3Int(dungeonWidth, dungeonHeight, 0)), minRoomWidth, minRoomHeight);
 
-        Debug.Log($"Rooms generated: {roomsList.Count}");
         if (roomsList.Count == 0)
         {
             Debug.LogError("No rooms were generated! Check BSP settings.");
@@ -60,7 +61,6 @@ public class RoomFirstDungeonGenerator : RandomWalkGeneration
             );
 
             roomCenters.Add(center);
-            Debug.Log($"Room center added: {center}");
         }
 
         if (roomCenters.Count > 0)
@@ -103,7 +103,7 @@ public class RoomFirstDungeonGenerator : RandomWalkGeneration
             return;
         }
 
-        List<Vector2Int> validRooms = roomCenters.GetRange(1, roomCenters.Count - 2);
+        List<Vector2Int> validRooms = roomCenters.GetRange(1, roomCenters.Count - 3);
 
         foreach (var center in validRooms)
         {
@@ -111,11 +111,16 @@ public class RoomFirstDungeonGenerator : RandomWalkGeneration
             for (int i = 0; i < enemyCount; i++)
             {
                 Vector2 spawnPosition = (Vector2)center + Random.insideUnitCircle * spawnRadius;
-                GameObject enemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
+                GameObject enemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length - 1)];
 
                 Instantiate(enemyPrefab, new Vector3(spawnPosition.x, spawnPosition.y, 0), Quaternion.identity);
             }
         }
+        Vector2 bossSpawnPosition = (Vector2)roomCenters[roomCenters.Count - 2] + Random.insideUnitCircle * spawnRadius;
+        Instantiate(enemyPrefabs[2], new Vector3(bossSpawnPosition.x, bossSpawnPosition.y), Quaternion.identity);
+
+        Vector2 exitSpawnPosition = (Vector2)roomCenters[roomCenters.Count - 1];
+        Instantiate(exitPrefab, new Vector3(exitSpawnPosition.x, exitSpawnPosition.y), Quaternion.identity);
     }
 
     private HashSet<Vector2Int> CreateRoomsRandomly(List<BoundsInt> roomsList)

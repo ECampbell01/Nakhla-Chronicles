@@ -671,10 +671,12 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 993084297212088161, guid: e44be74748156e44ebc489dddc97e4f5, type: 3}
   - {fileID: 1504224799072722550, guid: 36681c7d4ac377743ba7384bd4a70f26, type: 3}
+  - {fileID: 1504224799072722550, guid: b1a16e81b484dff409ee574d35d701a0, type: 3}
   minEnemiesPerRoom: 1
   maxEnemiesPerRoom: 1
   spawnRadius: 2
   playerPrefab: {fileID: 1202479682}
+  exitPrefab: {fileID: 160687249518070241, guid: c585d27c7a41a1142a8b0148f756a15d, type: 3}
 --- !u!4 &486615346
 Transform:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class TutorialExitPromptTrigger : MonoBehaviour
     public GameObject prompt;
     private bool isMapOpen = false;
     private bool isInventoryOpen = false;
+    [SerializeField] PlayerData playerData;
 
     private void Start()
     {
@@ -46,6 +47,15 @@ public class TutorialExitPromptTrigger : MonoBehaviour
 
         if (playerInRange && !isMapOpen && !isInventoryOpen && Input.GetKeyDown(KeyCode.E))
         {
+            playerData.HP = 100;
+            playerData.Agility = 2;
+            playerData.Defense = 1;
+            playerData.Luck = 1;
+            playerData.MeleeDamage = 10;
+            playerData.RangedDamage = 10;
+            playerData.Experience = 0;
+            playerData.Level = 1;
+            playerData.AvailablePoints = 0;
             SceneManager.LoadScene("Hubworld");
         }
     }
