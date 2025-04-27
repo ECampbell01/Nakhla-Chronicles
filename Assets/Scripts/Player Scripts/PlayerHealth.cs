@@ -72,6 +72,14 @@ public class PlayerHealth : MonoBehaviour
         playerData.Level = 1;
         playerData.Experience = 0;
         playerData.AvailablePoints = 0;
-        SceneManager.LoadScene("GameOver"); // Load Game Over screen
+
+        if (SceneManager.GetActiveScene().name == "Tutorial")
+        {
+            SceneManager.LoadScene("Tutorial");
+        }
+        else
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }

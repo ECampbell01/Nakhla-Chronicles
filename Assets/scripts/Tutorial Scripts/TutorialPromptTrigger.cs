@@ -63,7 +63,10 @@ public class TutorialPromptTrigger : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            prompt.SetActive(false);
+            if (prompt != null)
+            {
+                prompt.SetActive(false);
+            }
             playerInRange = false;
         }
     }
