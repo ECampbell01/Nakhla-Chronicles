@@ -2,6 +2,7 @@
 
 using System;
 using UnityEngine;
+using System.Collections;
 
 public class BulletHandler : MonoBehaviour
 {
@@ -26,7 +27,6 @@ public class BulletHandler : MonoBehaviour
             Vector2 knockbackDirection = (collision.transform.position - transform.position).normalized;
             int damage = playerData.RangedDamage;
 
-            // Check if shot is a critical hit
             if (IsCriticalHit())
             {
                 damage = Mathf.RoundToInt(damage * critMultiplier);
@@ -34,13 +34,29 @@ public class BulletHandler : MonoBehaviour
             enemy.OnHit(damage, knockbackDirection);
         }
 
-        Destroy(gameObject);
+        // Disable collider so it doesn't trigger more collisions
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null)
+        {
+            col.enabled = false;
+        }
+
+        // Start coroutine to destroy after animation finishes
+        StartCoroutine(DestroyAfterAnimation());
     }
 
     void Animate()
     {
         anim.SetTrigger("Impact");
     }
+
+    IEnumerator DestroyAfterAnimation()
+    {
+        yield return new WaitForSeconds(0.2f);
+
+        Destroy(gameObject);
+    }
+
 
     bool IsCriticalHit()
     {
