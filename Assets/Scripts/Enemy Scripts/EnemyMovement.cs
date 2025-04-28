@@ -20,7 +20,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField]
     private LayerMask obstacleLayerMask;
 
-    private Rigidbody2D rigidbody;
+    private Rigidbody2D rb;
     private PlayerAwarenessController controller;
     private Vector2 targetDirection;
     private Animator animator;
@@ -34,7 +34,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Awake()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         controller = GetComponent<PlayerAwarenessController>();
         animator = GetComponent<Animator>();
         obstacleCollisions = new RaycastHit2D[10];
@@ -60,8 +60,8 @@ public class EnemyMovement : MonoBehaviour
 
     public void ApplyKnockback(Vector2 force)
     {
-        rigidbody.linearVelocity = Vector2.zero;
-        rigidbody.AddForce(force, ForceMode2D.Impulse);
+        rb.linearVelocity = Vector2.zero;
+        rb.AddForce(force, ForceMode2D.Impulse);
         isKnockedBack = true;
         knockbackTimer = knockbackDuration;
     }
@@ -139,11 +139,11 @@ public class EnemyMovement : MonoBehaviour
     {
         if (targetDirection == Vector2.zero)
         {
-            rigidbody.linearVelocity = Vector2.zero;
+            rb.linearVelocity = Vector2.zero;
         }
         else
         {
-            rigidbody.linearVelocity = targetDirection * speed;
+            rb.linearVelocity = targetDirection * speed;
         }
     }
 }

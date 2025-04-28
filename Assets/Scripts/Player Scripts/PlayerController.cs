@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     bool isWalking = false;
 
     public bool canMove;
+    [SerializeField] PlayerData playerData;
 
     void Start()
     {
@@ -44,7 +45,7 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         // Move the player
-        input = input * StatsManager.Instance.agility;
+        input = input * playerData.Agility;
         rb.linearVelocity = Vector3.Lerp(rb.linearVelocity, input, Time.deltaTime * lerpSpeed);
 
         if (isWalking)

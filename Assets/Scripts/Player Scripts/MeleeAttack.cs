@@ -7,6 +7,7 @@ public class MeleeAttack : MonoBehaviour
 {
     public float knockbackForce = 5f;
     public float critMultiplier = 1.5f; // Critical hit deals 1.5x damage
+    [SerializeField] PlayerData playerData;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -14,7 +15,7 @@ public class MeleeAttack : MonoBehaviour
         if (enemy != null)
         {
             Vector2 knockbackDirection = (collision.transform.position - transform.position).normalized;
-            int damage = StatsManager.Instance.meleeDamage;
+            int damage = playerData.MeleeDamage;
 
             // Determine if the hit is a critical hit
             if (IsCriticalHit())
@@ -28,7 +29,7 @@ public class MeleeAttack : MonoBehaviour
 
     bool IsCriticalHit()
     {
-        int luck = StatsManager.Instance.luck;
+        int luck = playerData.Luck;
         float critChance = luck * 0.01f;
 
         return Random.value < critChance;

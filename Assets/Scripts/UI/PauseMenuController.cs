@@ -17,8 +17,10 @@ public class PauseMenuController : MonoBehaviour
     public GameObject playerStatsMenu;
     public GameObject playerInventory;
     public GameObject playerToolbar;
-    private CameraSwitcher cameraSwitcher;
+    public CameraSwitcher cameraSwitcher;
     public ExperienceManager experienceManager;
+
+    [SerializeField] PlayerData playerData;
 
     [SerializeField] TextMeshProUGUI hpText;
     [SerializeField] TextMeshProUGUI agilityText;
@@ -29,7 +31,7 @@ public class PauseMenuController : MonoBehaviour
 
     void Start()
     {
-        cameraSwitcher = FindObjectOfType<CameraSwitcher>();
+        //cameraSwitcher = GetComponent<CameraSwitcher>();
     }
 
     public void ClosePauseMenu()
@@ -42,22 +44,19 @@ public class PauseMenuController : MonoBehaviour
 
     public void UpdateStatsUI()
     {
-        if (StatsManager.Instance != null)
-        {
-            hpText.text = "HP: " + StatsManager.Instance.HP;
-            agilityText.text = "Agility: " + StatsManager.Instance.agility;
-            defenseText.text = "Defense: " + StatsManager.Instance.defense;
-            luckText.text = "Luck: " + StatsManager.Instance.luck;
-            meleeText.text = "Melee: " + StatsManager.Instance.meleeDamage;
-            rangedText.text = "Ranged: " + StatsManager.Instance.rangedDamage;
-        }
+        hpText.text = "HP: " + playerData.HP;
+        agilityText.text = "Agility: " + playerData.Agility;
+        defenseText.text = "Defense: " + playerData.Defense;
+        luckText.text = "Luck: " + playerData.Luck;
+        meleeText.text = "Melee: " + playerData.MeleeDamage;
+        rangedText.text = "Ranged: " + playerData.RangedDamage;
     }
 
     public void UpgradeHP()
     {
         if (experienceManager.HasAvailablePoints())
         {
-            StatsManager.Instance.HP += 5; // Increase HP
+            playerData.HP += 5; // Increase HP
             experienceManager.SpendPoint();
             UpdateStatsUI();
             UpdateButtonStates();
@@ -68,7 +67,7 @@ public class PauseMenuController : MonoBehaviour
     {
         if (experienceManager.HasAvailablePoints())
         {
-            StatsManager.Instance.agility += 1; // Increase agility
+            playerData.Agility += 1; // Increase agility
             experienceManager.SpendPoint();
             UpdateStatsUI();
             UpdateButtonStates();
@@ -79,7 +78,7 @@ public class PauseMenuController : MonoBehaviour
     {
         if (experienceManager.HasAvailablePoints())
         {
-            StatsManager.Instance.defense += 1; // Increase defense
+            playerData.Defense += 1; // Increase defense
             experienceManager.SpendPoint();
             UpdateStatsUI();
             UpdateButtonStates();
@@ -90,7 +89,7 @@ public class PauseMenuController : MonoBehaviour
     {
         if (experienceManager.HasAvailablePoints())
         {
-            StatsManager.Instance.luck += 1; // Increase luck
+            playerData.Luck += 1; // Increase luck
             experienceManager.SpendPoint();
             UpdateStatsUI();
             UpdateButtonStates();
@@ -101,7 +100,7 @@ public class PauseMenuController : MonoBehaviour
     {
         if (experienceManager.HasAvailablePoints())
         {
-            StatsManager.Instance.meleeDamage += 2; // Increase melee damage
+            playerData.MeleeDamage += 2; // Increase melee damage
             experienceManager.SpendPoint();
             UpdateStatsUI();
             UpdateButtonStates();
@@ -112,7 +111,7 @@ public class PauseMenuController : MonoBehaviour
     {
         if (experienceManager.HasAvailablePoints())
         {
-            StatsManager.Instance.rangedDamage += 2; // Increase ranged damage
+            playerData.RangedDamage += 2; // Increase ranged damage
             experienceManager.SpendPoint();
             UpdateStatsUI();
             UpdateButtonStates();

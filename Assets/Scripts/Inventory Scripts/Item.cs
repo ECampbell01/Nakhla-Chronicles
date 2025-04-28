@@ -14,6 +14,7 @@ public class Item : ScriptableObject
     public bool stackable = true;
     public int healAmount = 20; // For Health Potions
     public int defenseBoost = 1; // For Armor
+    [SerializeField] PlayerData playerData;
 
     public enum ItemType 
     {
@@ -33,7 +34,7 @@ public class Item : ScriptableObject
         }
         else if (type == ItemType.Tool)
         {
-            StatsManager.Instance.defense += defenseBoost;
+            playerData.Defense += defenseBoost;
         }
     }
 }

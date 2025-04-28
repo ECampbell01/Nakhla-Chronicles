@@ -151,5 +151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e73a534f137b00c46bcc5dc0e6843a82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 15
   knockbackForce: 5
+  critMultiplier: 1.5
+  playerData: {fileID: 11400000, guid: e697d61607f0ae44a95fdacce9de283e, type: 2}

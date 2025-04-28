@@ -1,2 +1,14 @@
 fileFormatVersion: 2
 guid: 33b767ba5140883439adc44c0358c022
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - tile: {instanceID: 0}
+  - image: {instanceID: 0}
+  - playerData: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

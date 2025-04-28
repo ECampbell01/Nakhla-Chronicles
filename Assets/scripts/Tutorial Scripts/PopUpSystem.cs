@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -51,12 +52,21 @@ public class Pop : MonoBehaviour
     {
         if (collision.CompareTag("Player") && !hasSpawned)
         {
-            foreach (GameObject prefab in prefabsToSpawn)
+            Vector3 baseSpawnPos = spawnPoint != null ? spawnPoint.position : transform.position;
+            float radius = 1f;
+            int enemyCount = prefabsToSpawn.Length;
+
+            for (int i = 0; i < enemyCount; i++)
             {
-                if (prefab != null)
+                if (prefabsToSpawn[i] != null)
                 {
-                    Vector3 spawnPos = spawnPoint != null ? spawnPoint.position : transform.position;
-                    Instantiate(prefab, spawnPos, Quaternion.identity);
+                    float angle = i * Mathf.PI * 2f / enemyCount;
+                    float spawnX = Mathf.Cos(angle) * radius;
+                    float spawnY = Mathf.Sin(angle) * radius;
+
+                    Vector3 spawnPos = baseSpawnPos + new Vector3(spawnX, spawnY, 0f);
+
+                    Instantiate(prefabsToSpawn[i], spawnPos, Quaternion.identity);
                 }
             }
             hasSpawned = true;
