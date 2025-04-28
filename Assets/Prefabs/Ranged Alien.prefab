@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  knockbackForce: 50
+  knockbackForce: 20
   playerAwarenessDistance: 5
 --- !u!114 &7986510884295238684
 MonoBehaviour:
@@ -240,7 +240,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 639066715310359171, guid: fa3b44ff661f9084493f4556add4c393, type: 3}
   aimPoint: {fileID: 7588075272472366561}
   fireRate: 1
-  shootingRange: 5
+  shootingRange: 10
 --- !u!114 &3777288537823988835
 MonoBehaviour:
   m_ObjectHideFlags: 0

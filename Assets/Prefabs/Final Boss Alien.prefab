@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 395e8f37b837cea4cb2f87a2936bfea9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 50
   knockbackForce: 50
   playerAwarenessDistance: 5
 --- !u!114 &1031914900275508753
@@ -237,4 +237,4 @@ MonoBehaviour:
   experiencePoint: {fileID: 8633082520157059324, guid: b54ba839ceedc304e983eac7a3096852, type: 3}
   baseXP: 20
   xpDropCount: 2
-  maxHealth: 50
+  maxHealth: 200
