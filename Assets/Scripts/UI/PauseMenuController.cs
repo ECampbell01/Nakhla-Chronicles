@@ -19,6 +19,8 @@ public class PauseMenuController : MonoBehaviour
     public GameObject playerToolbar;
     public CameraSwitcher cameraSwitcher;
     public ExperienceManager experienceManager;
+    public TutorialPromptTrigger promptTrigger;
+    public TutorialExitPromptTrigger exitTrigger;
 
     [SerializeField] PlayerData playerData;
 
@@ -40,6 +42,16 @@ public class PauseMenuController : MonoBehaviour
         playerToolbar.SetActive(true);
         cameraSwitcher.isPauseMenuActive = false;
         Time.timeScale = 1; // Resume the game
+
+        if (promptTrigger != null) 
+        {
+            promptTrigger.CloseInventory();
+        }
+
+        if (exitTrigger != null)
+        {
+            exitTrigger.CloseInventory();
+        }
     }
 
     public void UpdateStatsUI()

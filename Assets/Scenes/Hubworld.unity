@@ -82116,6 +82116,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 782696833}
     - target: {fileID: 5962410882855159779, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
+      propertyPath: promptTrigger
+      value: 
+      objectReference: {fileID: 210301819}
+    - target: {fileID: 5962410882855159779, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
       propertyPath: cameraSwitcher
       value: 
       objectReference: {fileID: 1360496910}

@@ -84580,9 +84580,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 54eef3bebed73e74dabdbd5ec4824572, type: 2}
     - target: {fileID: 5962410882855159779, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
+      propertyPath: exitTrigger
+      value: 
+      objectReference: {fileID: 210301821}
+    - target: {fileID: 5962410882855159779, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
       propertyPath: playerToolbar
       value: 
       objectReference: {fileID: 782696833}
+    - target: {fileID: 5962410882855159779, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
+      propertyPath: cameraSwitcher
+      value: 
+      objectReference: {fileID: 1601491677}
     - target: {fileID: 5962410882855159779, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
       propertyPath: experienceManager
       value: 

@@ -60,6 +60,15 @@ public class TutorialExitPromptTrigger : MonoBehaviour
         }
     }
 
+    public void CloseInventory()
+    {
+        isInventoryOpen = false;
+        if (playerInRange)
+        {
+            prompt.SetActive(true);
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
