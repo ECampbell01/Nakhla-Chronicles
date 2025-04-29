@@ -26,6 +26,9 @@ public class RoomFirstDungeonGenerator : RandomWalkGeneration
     [SerializeField]
     private GameObject exitPrefab;
 
+    [SerializeField]
+    private PlayerData playerData;
+
 
     private void Start()
     {
@@ -92,6 +95,16 @@ public class RoomFirstDungeonGenerator : RandomWalkGeneration
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         Vector3 playerSpawnPos = new Vector3(spawnPosition.x, spawnPosition.y, 0);
         player.transform.position = playerSpawnPos;
+
+        if (playerData.CompanionPrefab != null) {
+            GameObject companion = Instantiate(playerData.CompanionPrefab, player.transform);
+            CompanionMovement movementScript = companion.GetComponent<CompanionMovement>();
+            if (movementScript != null)
+            {
+                movementScript.playerTransform = player.transform;
+                movementScript.playerAnimator = player.GetComponent<Animator>();
+            }
+        }
     }
 
 

@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: PlayerDataSO
   m_EditorClassIdentifier: 
   _HP: 100
-  _agility: 2
-  _defense: 0
+  _agility: 3
+  _defense: 1
   _luck: 1
   _meleeDamage: 10
   _rangedDamage: 10
   _level: 1
   _experience: 0
   _availablePoints: 0
+  _companionPrefab: {fileID: 6162367854493576755, guid: 364f5b8906454294eab771438ddc695c, type: 3}

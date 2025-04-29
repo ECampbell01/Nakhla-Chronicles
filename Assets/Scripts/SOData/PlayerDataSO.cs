@@ -31,6 +31,9 @@ public class PlayerData : ScriptableObject
     [SerializeField]
     private int _availablePoints;
 
+    [SerializeField]
+    private GameObject _companionPrefab;
+
     public int HP
     {
         get { return _HP; }
@@ -83,6 +86,12 @@ public class PlayerData : ScriptableObject
     {
         get { return _availablePoints; }
         set { _availablePoints = value; }
+    }
+
+    public GameObject CompanionPrefab
+    {
+        get { return _companionPrefab; }
+        set { _companionPrefab = value; }
     }
 }
 

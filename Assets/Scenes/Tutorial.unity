@@ -63757,8 +63757,8 @@ MonoBehaviour:
   popupPanel: {fileID: 909170255}
   popupMessageText: {fileID: 1766024857}
   globalSellButton: {fileID: 1759117436}
-  playerTransform: {fileID: 1792401486}
-  playerData: {fileID: 11400000, guid: e697d61607f0ae44a95fdacce9de283e, type: 2}
+  player: {fileID: 437503131}
+  playerData: {fileID: 11400000, guid: 54eef3bebed73e74dabdbd5ec4824572, type: 2}
 --- !u!1 &1232594625
 GameObject:
   m_ObjectHideFlags: 0
@@ -65737,7 +65737,7 @@ Tilemap:
       - {fileID: 587036754, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: 1450491786, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: -1667000059, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
-      m_AnimationSpeed: 1.5
+      m_AnimationSpeed: 1.5000001
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -6, y: 9, z: 0}
@@ -68980,6 +68980,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 244049267159561634, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 54eef3bebed73e74dabdbd5ec4824572, type: 2}
     - target: {fileID: 849643311814038722, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 136
@@ -68998,11 +69002,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2134898097317099352, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18
+      value: 2.12
       objectReference: {fileID: 0}
     - target: {fileID: 2134898097317099352, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.68
+      value: 24.28
       objectReference: {fileID: 0}
     - target: {fileID: 2134898097317099352, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
       propertyPath: m_LocalPosition.z

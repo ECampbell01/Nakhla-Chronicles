@@ -677,6 +677,7 @@ MonoBehaviour:
   spawnRadius: 2
   playerPrefab: {fileID: 1202479682}
   exitPrefab: {fileID: 160687249518070241, guid: c585d27c7a41a1142a8b0148f756a15d, type: 3}
+  playerData: {fileID: 11400000, guid: e697d61607f0ae44a95fdacce9de283e, type: 2}
 --- !u!4 &486615346
 Transform:
   m_ObjectHideFlags: 0
