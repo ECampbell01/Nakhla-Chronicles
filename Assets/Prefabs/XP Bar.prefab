@@ -351,6 +351,7 @@ MonoBehaviour:
   levelText: {fileID: 7993973221094042040}
   availablePointsText: {fileID: 0}
   experienceFill: {fileID: 1190858448485561407}
+  playerData: {fileID: 11400000, guid: e697d61607f0ae44a95fdacce9de283e, type: 2}
 --- !u!1 &2091965212932641125
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,3 +18,4 @@ MonoBehaviour:
   stackable: 1
   healAmount: 20
   defenseBoost: 1
+  playerData: {fileID: 11400000, guid: e697d61607f0ae44a95fdacce9de283e, type: 2}

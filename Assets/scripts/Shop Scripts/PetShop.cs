@@ -24,6 +24,12 @@ class PetShopScroll : MonoBehaviour
         public GameObject companionPrefab;
         [HideInInspector] public bool isPurchased = false;
         [HideInInspector] public Vector3 originalPosition;
+        public int hpBuff = 0;
+        public int agilityBuff = 0;
+        public int defenseBuff = 0;
+        public int luckBuff = 0;
+        public int meleeDamageBuff = 0;
+        public int rangedDamageBuff = 0;
     }
 
     // ------------------- Serialized Fields -------------------
@@ -36,6 +42,7 @@ class PetShopScroll : MonoBehaviour
     [SerializeField] private TextMeshProUGUI popupMessageText;
     [SerializeField] private Button globalSellButton;
     [SerializeField] private Transform playerTransform;
+    [SerializeField] private PlayerData playerData;
     private Dictionary<string, GameObject> petNameToUIItem = new Dictionary<string, GameObject>();
 
 
@@ -141,6 +148,7 @@ class PetShopScroll : MonoBehaviour
                 currentSpawnedCompanion = Instantiate(item.companionPrefab, playerTransform);
                 currentSpawnedCompanion.transform.localPosition = Vector3.zero;
                 currentItem = item;
+                ApplyCompanionBuffs(item);
 
             }
             CompanionMovement movementScript = currentSpawnedCompanion.GetComponent<CompanionMovement>();
@@ -163,12 +171,24 @@ class PetShopScroll : MonoBehaviour
         }
     }
 
+    private void ApplyCompanionBuffs(ShopItem item)
+    {
+        playerData.HP += item.hpBuff;
+        playerData.Agility += item.agilityBuff;
+        playerData.Defense += item.defenseBuff;
+        playerData.Luck += item.luckBuff;
+        playerData.MeleeDamage += item.meleeDamageBuff;
+        playerData.RangedDamage += item.rangedDamageBuff;
+    }
+
     private void OnGlobalSellButtonClicked()
     {
         if (currentSpawnedCompanion == null || currentItem == null) return;
         // Save info before nulling things out
         int refundAmount = currentItem.petPrice;
         string petName = currentItem.petName;
+
+        RemoveCompanionBuffs(currentItem);
 
         currentItem.isPurchased = false;
 
@@ -182,6 +202,16 @@ class PetShopScroll : MonoBehaviour
         globalSellButton.gameObject.SetActive(false);
 
         ResetBuyButtons();  // Reactivate all buy buttons
+    }
+
+    private void RemoveCompanionBuffs(ShopItem item)
+    {
+        playerData.HP -= item.hpBuff;
+        playerData.Agility -= item.agilityBuff;
+        playerData.Defense -= item.defenseBuff;
+        playerData.Luck -= item.luckBuff;
+        playerData.MeleeDamage -= item.meleeDamageBuff;
+        playerData.RangedDamage -= item.rangedDamageBuff;
     }
 
     // ------------------- UpdateCoinBalance Method -------------------

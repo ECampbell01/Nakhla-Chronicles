@@ -2,6 +2,7 @@
 
 using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraSwitcher : MonoBehaviour
 {
@@ -29,47 +30,71 @@ public class CameraSwitcher : MonoBehaviour
 
     void Update()
     {
-        // Toggle Map if "M" key is pressed, if Pause Menu is not open and shop UI isn't open
-        if (Input.GetKeyDown(KeyCode.M) && !isPauseMenuActive && !shopTrigger.isShopOpen && !petShopTrigger.isPetShopOpen)
+        if (SceneManager.GetActiveScene().name != "Dungeon")
         {
-            isMapActive = !isMapActive;
+            // Toggle Map if "M" key is pressed, if Pause Menu is not open and shop UI isn't open
+            if (Input.GetKeyDown(KeyCode.M) && !isPauseMenuActive && !shopTrigger.isShopOpen && !petShopTrigger.isPetShopOpen)
+            {
+                isMapActive = !isMapActive;
 
-            // Freeze game while map is active
-            if (isMapActive)
-            {
-                Time.timeScale = 0;
+                // Freeze game while map is active
+                if (isMapActive)
+                {
+                    Time.timeScale = 0;
+                }
+                else
+                {
+                    Time.timeScale = 1;
+                }
+                mainCamera.enabled = !isMapActive;
+                mapCamera.enabled = isMapActive;
+                healthBar.SetActive(isHealthActive);
+                xpBar.SetActive(isXpActive);
+                toolBar.SetActive(isToolbarActive);
+                isXpActive = !isXpActive;
+                isHealthActive = !isHealthActive;
+                isToolbarActive = !isToolbarActive;
             }
-            else 
+
+
+            // Toggle Pause Menu if "F" key is pressed, if Map is not open and shop UI isn't open
+            if (Input.GetKeyDown(KeyCode.F) && !isMapActive && !shopTrigger.isShopOpen && !petShopTrigger.isPetShopOpen)
             {
-                Time.timeScale = 1;
+                isPauseMenuActive = !isPauseMenuActive;
+                pauseMenu.SetActive(isPauseMenuActive);
+                pauseMenuController.UpdateStatsUI();
+                pauseMenuController.UpdateButtonStates();
+
+                if (isPauseMenuActive)
+                {
+                    pauseMenuController.ShowPlayerInventory(); // Ensure that everytime the player pauses the game, it opens with the inventory menu
+                    Time.timeScale = 0; // Freeze game
+                }
+                else
+                {
+                    Time.timeScale = 1; // Resume game
+                    pauseMenuController.playerToolbar.SetActive(true); // Show toolbar after exiting pause menu
+                }
             }
-            mainCamera.enabled = !isMapActive;
-            mapCamera.enabled = isMapActive;
-            healthBar.SetActive(isHealthActive);
-            xpBar.SetActive(isXpActive);
-            toolBar.SetActive(isToolbarActive);
-            isXpActive = !isXpActive;
-            isHealthActive = !isHealthActive;
-            isToolbarActive = !isToolbarActive;
         }
-
-        // Toggle Pause Menu if "F" key is pressed, if Map is not open and shop UI isn't open
-        if (Input.GetKeyDown(KeyCode.F) && !isMapActive && !shopTrigger.isShopOpen && !petShopTrigger.isPetShopOpen)
-        {
-            isPauseMenuActive = !isPauseMenuActive;
-            pauseMenu.SetActive(isPauseMenuActive);
-            pauseMenuController.UpdateStatsUI();
-            pauseMenuController.UpdateButtonStates();
-
-            if (isPauseMenuActive)
+        else {
+            if (Input.GetKeyDown(KeyCode.F) && !isMapActive)
             {
-                pauseMenuController.ShowPlayerInventory(); // Ensure that everytime the player pauses the game, it opens with the inventory menu
-                Time.timeScale = 0; // Freeze game
-            }
-            else
-            {
-                Time.timeScale = 1; // Resume game
-                pauseMenuController.playerToolbar.SetActive(true); // Show toolbar after exiting pause menu
+                isPauseMenuActive = !isPauseMenuActive;
+                pauseMenu.SetActive(isPauseMenuActive);
+                pauseMenuController.UpdateStatsUI();
+                pauseMenuController.UpdateButtonStates();
+
+                if (isPauseMenuActive)
+                {
+                    pauseMenuController.ShowPlayerInventory(); // Ensure that everytime the player pauses the game, it opens with the inventory menu
+                    Time.timeScale = 0; // Freeze game
+                }
+                else
+                {
+                    Time.timeScale = 1; // Resume game
+                    pauseMenuController.playerToolbar.SetActive(true); // Show toolbar after exiting pause menu
+                }
             }
         }
     }

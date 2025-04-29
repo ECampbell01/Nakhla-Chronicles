@@ -21,7 +21,7 @@ public class PlayerCombat : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        cameraSwitcher = FindObjectOfType<CameraSwitcher>();
+        cameraSwitcher = GetComponent<CameraSwitcher>();
     }
 
     // Update is called once per frame
@@ -34,7 +34,8 @@ public class PlayerCombat : MonoBehaviour
 
     void Stab()
     {
-        if (!isAttacking && !cameraSwitcher.isPauseMenuActive)
+        //if (!isAttacking && !cameraSwitcher.isPauseMenuActive)
+        if (!isAttacking)
         {
             melee.SetActive(true);
             isAttacking = true;

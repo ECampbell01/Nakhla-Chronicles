@@ -5,57 +5,53 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
-
 public class ExperienceManager : MonoBehaviour
 {
     [SerializeField] AnimationCurve experienceCurve;
-    int currentLevel;
-    int totalExperience;
+    //int currentLevel;
+    //int totalExperience;
     int previousLevelExperience;
     int nextLevelExperience;
-    int availablePoints = 0;
+    //int availablePoints = 0;
 
     [SerializeField] TextMeshProUGUI levelText;
     [SerializeField] TextMeshProUGUI availablePointsText;
     [SerializeField] Slider experienceFill;
+    [SerializeField] PlayerData playerData;
 
     void Start()
     {
-        currentLevel = 1;
-        previousLevelExperience = (int)experienceCurve.Evaluate(currentLevel);
-        nextLevelExperience = (int)experienceCurve.Evaluate(currentLevel + 1);
+        previousLevelExperience = (int)experienceCurve.Evaluate(playerData.Level);
+        nextLevelExperience = (int)experienceCurve.Evaluate(playerData.Level + 1);
         UpdateUI();
     }
 
     public void AddExperience(int amount)
     {
-        totalExperience += amount;
+        playerData.Experience += amount;
         CheckForLevelUp();
         UpdateUI();
     }
 
     void CheckForLevelUp()
     {
-        while (totalExperience >= nextLevelExperience)
+        while (playerData.Experience >= nextLevelExperience)
         {
-            currentLevel++;
-            availablePoints++;
+            playerData.Level++;
+            playerData.AvailablePoints++;
             UpdateLevel();
         }
     }
 
     void UpdateLevel()
     {
-        previousLevelExperience = (int)experienceCurve.Evaluate(currentLevel);
-        nextLevelExperience = (int)experienceCurve.Evaluate(currentLevel + 1);
+        previousLevelExperience = (int)experienceCurve.Evaluate(playerData.Level);
+        nextLevelExperience = (int)experienceCurve.Evaluate(playerData.Level + 1);
     }
 
     void UpdateUI()
     {
-        int start = totalExperience - previousLevelExperience;
+        int start = playerData.Experience - previousLevelExperience;
         int end = nextLevelExperience - previousLevelExperience;
 
         experienceFill.minValue = 0;
@@ -71,25 +67,25 @@ public class ExperienceManager : MonoBehaviour
             experienceFill.gameObject.SetActive(true); // Show the bar if XP is greater than 0
         }
 
-        levelText.text = currentLevel.ToString();
-        availablePointsText.text = $"Available Points: {availablePoints}";
+        levelText.text = playerData.Level.ToString();
+        availablePointsText.text = $"Available Points: {playerData.AvailablePoints}";
     }
 
     public int GetPlayerLevel()
     {
-        return currentLevel;
+        return playerData.Level;
     }
 
     public bool HasAvailablePoints()
     {
-        return availablePoints > 0;
+        return playerData.AvailablePoints > 0;
     }
 
     public void SpendPoint()
     {
-        if (availablePoints > 0)
+        if (playerData.AvailablePoints > 0)
         {
-            availablePoints--;
+            playerData.AvailablePoints--;
             UpdateUI();
         }
     }

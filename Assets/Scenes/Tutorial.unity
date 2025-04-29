@@ -155,7 +155,7 @@ Transform:
   m_GameObject: {fileID: 30393205}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.85, y: 18.86, z: 0.1672469}
+  m_LocalPosition: {x: -7.76, y: 18.8, z: 0.1672469}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 135699118}
   - component: {fileID: 135699120}
   - component: {fileID: 135699119}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PetShopBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -905,7 +905,7 @@ GameObject:
   - component: {fileID: 140735689}
   - component: {fileID: 140735691}
   - component: {fileID: 140735690}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: InventoryTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1010,7 +1010,7 @@ GameObject:
   - component: {fileID: 210301818}
   - component: {fileID: 210301820}
   - component: {fileID: 210301821}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PromptTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1091,6 +1091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prompt: {fileID: 1272070121}
+  playerData: {fileID: 11400000, guid: 54eef3bebed73e74dabdbd5ec4824572, type: 2}
 --- !u!114 &212144559 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 92462224143480985, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
@@ -1135,7 +1136,7 @@ GameObject:
   - component: {fileID: 298428491}
   - component: {fileID: 298428493}
   - component: {fileID: 298428492}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PetShopBackgroundBottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2292,7 +2293,7 @@ GameObject:
   - component: {fileID: 319087935}
   - component: {fileID: 319087936}
   - component: {fileID: 319087937}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ShopTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2348,7 +2349,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.028541803, y: 0.11638069}
+  m_Offset: {x: 0.0013575554, y: 0.1240387}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -2358,7 +2359,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.1520228, y: 1.317749}
+  m_Size: {x: 1.0891457, y: 1.333065}
   m_EdgeRadius: 0
 --- !u!114 &319087937
 MonoBehaviour:
@@ -2384,7 +2385,7 @@ GameObject:
   - component: {fileID: 321669203}
   - component: {fileID: 321669205}
   - component: {fileID: 321669204}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: XPTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2599,7 +2600,7 @@ GameObject:
   m_Component:
   - component: {fileID: 350530317}
   - component: {fileID: 350530316}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Grid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2650,7 +2651,7 @@ GameObject:
   - component: {fileID: 362239817}
   - component: {fileID: 362239819}
   - component: {fileID: 362239818}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ExploreShopsTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3052,7 +3053,7 @@ GameObject:
   - component: {fileID: 554654501}
   - component: {fileID: 554654503}
   - component: {fileID: 554654502}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: DungeonCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3294,7 +3295,7 @@ GameObject:
   - component: {fileID: 581350756}
   - component: {fileID: 581350758}
   - component: {fileID: 581350757}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: ShopTopBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3866,7 +3867,7 @@ GameObject:
   - component: {fileID: 631531318}
   - component: {fileID: 631531317}
   - component: {fileID: 631531316}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: FenceCollisionRightSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4061,9 +4062,101 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 635327311069429630, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1355902963080397785, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2384464633534276744, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511556567787390073, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2790042315886300187, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2920327835968672956, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2956830672872031436, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3315405988529793012, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4026237623693895933, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4619926332758013107, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5067149797973362318, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5318185360043525456, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5546158460888918306, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515187105159162624, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610024134251274381, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6850716882771101083, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6873525394967426041, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7130645258893570517, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138054816440575410, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 7149536069062387012, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
       propertyPath: m_Name
       value: Fence
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149536069062387012, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7173208450037138997, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7333808670161756091, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7934104915620061274, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8636598940975620206, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4105,6 +4198,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8755455255166556523, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8949597869689537791, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9024979659501292927, guid: c57ad1afa82cc6a48b1243be5a186c2e, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4121,7 +4226,7 @@ GameObject:
   - component: {fileID: 681622668}
   - component: {fileID: 681622670}
   - component: {fileID: 681622669}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PetShopBottomCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4238,7 +4343,7 @@ GameObject:
   - component: {fileID: 691396717}
   - component: {fileID: 691396719}
   - component: {fileID: 691396718}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HotBarTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4408,7 +4513,7 @@ GameObject:
   - component: {fileID: 713048043}
   - component: {fileID: 713048045}
   - component: {fileID: 713048044}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: BirdTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4443,8 +4548,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupManager: {fileID: 1004338021}
-  message: This is the bird! She will give you a +10 buff to your agility stat. If
-    you wanna move quick like a bird adopt her!
+  message: This is the bird! She will give you a buff to your agility stat. If you
+    wanna move quick like a bird adopt her!
 --- !u!61 &713048045
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4502,7 +4607,7 @@ GameObject:
   - component: {fileID: 725030393}
   - component: {fileID: 725030395}
   - component: {fileID: 725030394}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: SimPod
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4662,7 +4767,7 @@ GameObject:
   - component: {fileID: 727707464}
   - component: {fileID: 727707466}
   - component: {fileID: 727707465}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: WhereAreItemsTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5028,7 +5133,7 @@ GameObject:
   - component: {fileID: 770677804}
   - component: {fileID: 770677806}
   - component: {fileID: 770677805}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CatTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5063,8 +5168,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupManager: {fileID: 1004338021}
-  message: This is the cat! She will give you a +10 buff to your melee stat. If you
-    want claws like a cat adopt her!
+  message: This is the cat! She will give you a buff to your melee stat. If you want
+    claws like a cat adopt her!
 --- !u!61 &770677806
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5268,7 +5373,7 @@ GameObject:
   - component: {fileID: 789384345}
   - component: {fileID: 789384347}
   - component: {fileID: 789384346}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61613,7 +61718,7 @@ GameObject:
   - component: {fileID: 903587218}
   - component: {fileID: 903587220}
   - component: {fileID: 903587219}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PetShopUITrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61783,7 +61888,7 @@ GameObject:
   m_Component:
   - component: {fileID: 915238786}
   - component: {fileID: 915238785}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlayerBoundaries
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62066,7 +62171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 997933910}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Dungeon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62140,7 +62245,7 @@ GameObject:
   - component: {fileID: 1042401414}
   - component: {fileID: 1042401413}
   - component: {fileID: 1042401412}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: FenceCollisionLeftSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62349,7 +62454,7 @@ GameObject:
   - component: {fileID: 1066542749}
   - component: {fileID: 1066542751}
   - component: {fileID: 1066542750}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: ShopBottomBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62748,7 +62853,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1092503044}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Triggers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63604,24 +63709,48 @@ MonoBehaviour:
     companionPrefab: {fileID: 5713086387244386974, guid: b5ae1b2dab02f6640a2fa24374881a69, type: 3}
     isPurchased: 0
     originalPosition: {x: 0, y: 0, z: 0}
+    hpBuff: 0
+    agilityBuff: 0
+    defenseBuff: 0
+    luckBuff: 0
+    meleeDamageBuff: 0
+    rangedDamageBuff: 0
   - petName: Bird
     petImage: {fileID: -6282043166299537173, guid: 285e2f18135e1ae47a31156f94cdda21, type: 3}
     petPrice: 100
     companionPrefab: {fileID: 6162367854493576755, guid: 364f5b8906454294eab771438ddc695c, type: 3}
     isPurchased: 0
     originalPosition: {x: 0, y: 0, z: 0}
+    hpBuff: 0
+    agilityBuff: 0
+    defenseBuff: 0
+    luckBuff: 0
+    meleeDamageBuff: 0
+    rangedDamageBuff: 0
   - petName: Cat
     petImage: {fileID: 8930072284066470257, guid: 8eb04277d8ea3f243831316421c8eed2, type: 3}
     petPrice: 100
     companionPrefab: {fileID: 4844566328778412315, guid: 15e9c6b0732a2d34ea8b0b46777831bf, type: 3}
     isPurchased: 0
     originalPosition: {x: 0, y: 0, z: 0}
+    hpBuff: 0
+    agilityBuff: 0
+    defenseBuff: 0
+    luckBuff: 0
+    meleeDamageBuff: 0
+    rangedDamageBuff: 0
   - petName: Racoon
     petImage: {fileID: 4687556977089906120, guid: 2e74ebdb3fa37e34e8c1a21e91562f4d, type: 3}
     petPrice: 100
     companionPrefab: {fileID: 8676826672727508195, guid: abd468167b95ef544a2f33a958e3495a, type: 3}
     isPurchased: 0
     originalPosition: {x: 0, y: 0, z: 0}
+    hpBuff: 0
+    agilityBuff: 0
+    defenseBuff: 0
+    luckBuff: 0
+    meleeDamageBuff: 0
+    rangedDamageBuff: 0
   coins: {fileID: 1792401494}
   coinBalanceText: {fileID: 306662036}
   ShopScrollView: {fileID: 309108822}
@@ -63629,6 +63758,7 @@ MonoBehaviour:
   popupMessageText: {fileID: 1766024857}
   globalSellButton: {fileID: 1759117436}
   playerTransform: {fileID: 1792401486}
+  playerData: {fileID: 11400000, guid: e697d61607f0ae44a95fdacce9de283e, type: 2}
 --- !u!1 &1232594625
 GameObject:
   m_ObjectHideFlags: 0
@@ -63640,7 +63770,7 @@ GameObject:
   - component: {fileID: 1232594626}
   - component: {fileID: 1232594628}
   - component: {fileID: 1232594627}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FoxTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63675,8 +63805,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupManager: {fileID: 1004338021}
-  message: This is the fox! He will give you a +10 buff to your luck stat! If your
-    feeling lucky adopt the fox!
+  message: This is the fox! He will give you a buff to your luck stat! If your feeling
+    lucky adopt the fox!
 --- !u!61 &1232594628
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -63732,7 +63862,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1257127403}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Shop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63988,7 +64118,7 @@ GameObject:
   - component: {fileID: 1348698357}
   - component: {fileID: 1348698359}
   - component: {fileID: 1348698358}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: GetReadyTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -64946,7 +65076,7 @@ GameObject:
   - component: {fileID: 1513545525}
   - component: {fileID: 1513545527}
   - component: {fileID: 1513545526}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PetShop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65099,7 +65229,7 @@ GameObject:
   - component: {fileID: 1523714498}
   - component: {fileID: 1523714500}
   - component: {fileID: 1523714499}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RacoonTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65134,7 +65264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupManager: {fileID: 1004338021}
-  message: This is the racoon! He will give you a +10 to your defense stat. If you
+  message: This is the racoon! He will give you a buff to your defense stat. If you
     wanna be strong adopt the racoon!
 --- !u!61 &1523714500
 BoxCollider2D:
@@ -65465,7 +65595,7 @@ GameObject:
   - component: {fileID: 1549600361}
   - component: {fileID: 1549600363}
   - component: {fileID: 1549600362}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: ShopMaster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -65607,7 +65737,7 @@ Tilemap:
       - {fileID: 587036754, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: 1450491786, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: -1667000059, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
-      m_AnimationSpeed: 1.5000001
+      m_AnimationSpeed: 1.5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -6, y: 9, z: 0}
@@ -65972,7 +66102,7 @@ GameObject:
   - component: {fileID: 1585829437}
   - component: {fileID: 1585829439}
   - component: {fileID: 1585829438}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: DungeonTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66207,6 +66337,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrels
       objectReference: {fileID: 0}
+    - target: {fileID: 1483482846650555887, guid: dd4863ba6bcf79648ba3052a359aace2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2012140363332462908, guid: dd4863ba6bcf79648ba3052a359aace2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2031931610146908466, guid: dd4863ba6bcf79648ba3052a359aace2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2283485189536451913, guid: dd4863ba6bcf79648ba3052a359aace2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304041198375895994, guid: dd4863ba6bcf79648ba3052a359aace2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 2949903561169358122, guid: dd4863ba6bcf79648ba3052a359aace2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.4836836
@@ -66247,6 +66397,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3343851970598380369, guid: dd4863ba6bcf79648ba3052a359aace2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5481936004690702281, guid: dd4863ba6bcf79648ba3052a359aace2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5905813676255032479, guid: dd4863ba6bcf79648ba3052a359aace2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8036924839997781352, guid: dd4863ba6bcf79648ba3052a359aace2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8793117153670976892, guid: dd4863ba6bcf79648ba3052a359aace2, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -66263,7 +66433,7 @@ GameObject:
   - component: {fileID: 1643019139}
   - component: {fileID: 1643019140}
   - component: {fileID: 1643019141}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: PetShopTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -66494,7 +66664,7 @@ GameObject:
   - component: {fileID: 1657178257}
   - component: {fileID: 1657178256}
   - component: {fileID: 1657178255}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: GroundCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68345,7 +68515,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1657194408}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68717,7 +68887,7 @@ GameObject:
   - component: {fileID: 1781557697}
   - component: {fileID: 1781557698}
   - component: {fileID: 1781557699}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: SimPodBottomCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68800,8 +68970,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.13729882, y: 1.2288195}
-  m_Radius: 0.8913015
+  m_Offset: {x: -0.12643635, y: 1.2583393}
+  m_Radius: 0.8732883
 --- !u!1001 &1792401485
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68810,6 +68980,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 849643311814038722, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 136
+      objectReference: {fileID: 0}
+    - target: {fileID: 849643311814038722, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1695822233648863508, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
       propertyPath: healthBar
       value: 
@@ -68820,11 +68998,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2134898097317099352, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.98
+      value: -18
       objectReference: {fileID: 0}
     - target: {fileID: 2134898097317099352, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.66
+      value: 13.68
       objectReference: {fileID: 0}
     - target: {fileID: 2134898097317099352, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -68866,6 +69044,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5776647834404087237, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 54eef3bebed73e74dabdbd5ec4824572, type: 2}
+    - target: {fileID: 8681875692299957092, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: e697d61607f0ae44a95fdacce9de283e, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -68873,6 +69059,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3314896538915096734, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
       insertIndex: 7
       addedObject: {fileID: 1792401494}
+    - targetCorrespondingSourceObject: {fileID: 3314896538915096734, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1792401504}
   m_SourcePrefab: {fileID: 100100000, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
 --- !u!4 &1792401486 stripped
 Transform:
@@ -68903,6 +69092,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0c350bdab5301942a889eaf5e6e3c85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1792401504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437503131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecf61672a559314da0fb72aaba99a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBar: {fileID: 461496791}
+  playerData: {fileID: 11400000, guid: e697d61607f0ae44a95fdacce9de283e, type: 2}
 --- !u!114 &1802606150 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1213160148954762527, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
@@ -69077,7 +69280,7 @@ GameObject:
   - component: {fileID: 1856053795}
   - component: {fileID: 1856053797}
   - component: {fileID: 1856053796}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ExitTutorialTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69171,7 +69374,7 @@ GameObject:
   - component: {fileID: 1873000980}
   - component: {fileID: 1873000982}
   - component: {fileID: 1873000981}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: DungeonBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70222,7 +70425,7 @@ GameObject:
   - component: {fileID: 1891099142}
   - component: {fileID: 1891099144}
   - component: {fileID: 1891099143}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: SimPodBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70583,7 +70786,7 @@ GameObject:
   - component: {fileID: 1920956760}
   - component: {fileID: 1920956759}
   - component: {fileID: 1920956758}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EnemyPopup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70607,7 +70810,7 @@ MonoBehaviour:
   popUpText: {fileID: 34386235}
   prefabsToSpawn:
   - {fileID: 1504224799072722550, guid: 36681c7d4ac377743ba7384bd4a70f26, type: 3}
-  - {fileID: 993084297212088161, guid: e44be74748156e44ebc489dddc97e4f5, type: 3}
+  - {fileID: 1504224799072722550, guid: 36681c7d4ac377743ba7384bd4a70f26, type: 3}
   spawnPoint: {fileID: 30393206}
   playerController: {fileID: 1792401503}
 --- !u!61 &1920956759
@@ -70682,7 +70885,7 @@ GameObject:
   - component: {fileID: 1947791383}
   - component: {fileID: 1947791384}
   - component: {fileID: 1947791385}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: ShopBottomCollision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71012,7 +71215,7 @@ GameObject:
   - component: {fileID: 1973885880}
   - component: {fileID: 1973885882}
   - component: {fileID: 1973885881}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PetShopTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -71117,7 +71320,7 @@ GameObject:
   - component: {fileID: 2020011218}
   - component: {fileID: 2020011220}
   - component: {fileID: 2020011219}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: GroundBackground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83419,7 +83622,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2031438226}
   - component: {fileID: 2031438225}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PlayerBoundLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83514,7 +83717,7 @@ GameObject:
   - component: {fileID: 2045477512}
   - component: {fileID: 2045477514}
   - component: {fileID: 2045477513}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ItemShopTrigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83918,6 +84121,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3552352409466199460, guid: b50ba9fff19246c4090f7ac6847e000f, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 54eef3bebed73e74dabdbd5ec4824572, type: 2}
+    - target: {fileID: 3552352409466199460, guid: b50ba9fff19246c4090f7ac6847e000f, type: 3}
       propertyPath: availablePointsText
       value: 
       objectReference: {fileID: 5557211984483150400}
@@ -84017,63 +84224,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 322886528987f174a8a5e6d1777059b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &3705018142638450287
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1137513345217657108, guid: e514e14f3dfff354e997f17cf08d57b5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.08381805
-      objectReference: {fileID: 0}
-    - target: {fileID: 1137513345217657108, guid: e514e14f3dfff354e997f17cf08d57b5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 12.477791
-      objectReference: {fileID: 0}
-    - target: {fileID: 1137513345217657108, guid: e514e14f3dfff354e997f17cf08d57b5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.27656782
-      objectReference: {fileID: 0}
-    - target: {fileID: 1137513345217657108, guid: e514e14f3dfff354e997f17cf08d57b5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1137513345217657108, guid: e514e14f3dfff354e997f17cf08d57b5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1137513345217657108, guid: e514e14f3dfff354e997f17cf08d57b5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1137513345217657108, guid: e514e14f3dfff354e997f17cf08d57b5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1137513345217657108, guid: e514e14f3dfff354e997f17cf08d57b5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1137513345217657108, guid: e514e14f3dfff354e997f17cf08d57b5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1137513345217657108, guid: e514e14f3dfff354e997f17cf08d57b5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8020903213638412666, guid: e514e14f3dfff354e997f17cf08d57b5, type: 3}
-      propertyPath: m_Name
-      value: Stats Manager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e514e14f3dfff354e997f17cf08d57b5, type: 3}
 --- !u!1001 &4655680947609045449
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -84451,13 +84601,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5962410882855159779, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 54eef3bebed73e74dabdbd5ec4824572, type: 2}
+    - target: {fileID: 5962410882855159779, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
+      propertyPath: exitTrigger
+      value: 
+      objectReference: {fileID: 210301821}
+    - target: {fileID: 5962410882855159779, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
       propertyPath: playerToolbar
       value: 
       objectReference: {fileID: 782696833}
     - target: {fileID: 5962410882855159779, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
-      propertyPath: exitPromptTrigger
+      propertyPath: cameraSwitcher
       value: 
-      objectReference: {fileID: 210301821}
+      objectReference: {fileID: 1601491677}
     - target: {fileID: 5962410882855159779, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
       propertyPath: experienceManager
       value: 
@@ -84693,7 +84851,6 @@ SceneRoots:
   - {fileID: 2092647370}
   - {fileID: 1487460042}
   - {fileID: 1792401485}
-  - {fileID: 3705018142638450287}
   - {fileID: 7076757367089205309}
   - {fileID: 2755800370182511155}
   - {fileID: 241562804013120123}
