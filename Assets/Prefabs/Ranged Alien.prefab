@@ -239,7 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 639066715310359171, guid: fa3b44ff661f9084493f4556add4c393, type: 3}
   aimPoint: {fileID: 7588075272472366561}
-  fireRate: 1
+  fireRate: 2
   shootingRange: 10
 --- !u!114 &3777288537823988835
 MonoBehaviour:

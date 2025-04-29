@@ -151,8 +151,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Offset: {x: -0.0059898496, y: 0.0039931936}
+  m_Radius: 0.23844737
 --- !u!50 &810809774328155938
 Rigidbody2D:
   serializedVersion: 5
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 639066715310359171, guid: fa3b44ff661f9084493f4556add4c393, type: 3}
   aimPoint: {fileID: 2644881606732227959}
-  fireRate: 1
+  fireRate: 1.5
   shootingRange: 10
 --- !u!114 &4551771026513561799
 MonoBehaviour:
@@ -268,7 +268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 119414398265679809, guid: 8e3368059b4fd704884ebeb0830fb254, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.117
+      value: 0.003
       objectReference: {fileID: 0}
     - target: {fileID: 119414398265679809, guid: 8e3368059b4fd704884ebeb0830fb254, type: 3}
       propertyPath: m_LocalPosition.z
