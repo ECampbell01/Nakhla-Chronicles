@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public float lerpSpeed = 10;
+    public float lerpSpeed = 15;
     private Rigidbody2D rb;
     private Vector2 input;
 

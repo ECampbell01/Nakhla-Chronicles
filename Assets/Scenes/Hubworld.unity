@@ -60781,10 +60781,10 @@ RectTransform:
   - {fileID: 339472144}
   m_Father: {fileID: 1511847604}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 205, y: -50}
-  m_SizeDelta: {x: 410, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &839263992
 MonoBehaviour:
@@ -62378,24 +62378,48 @@ MonoBehaviour:
     companionPrefab: {fileID: 5713086387244386974, guid: b5ae1b2dab02f6640a2fa24374881a69, type: 3}
     isPurchased: 0
     originalPosition: {x: 0, y: 0, z: 0}
+    hpBuff: 0
+    agilityBuff: 0
+    defenseBuff: 0
+    luckBuff: 1
+    meleeDamageBuff: 0
+    rangedDamageBuff: 0
   - petName: Bird
     petImage: {fileID: -6282043166299537173, guid: 285e2f18135e1ae47a31156f94cdda21, type: 3}
     petPrice: 100
     companionPrefab: {fileID: 6162367854493576755, guid: 364f5b8906454294eab771438ddc695c, type: 3}
     isPurchased: 0
     originalPosition: {x: 0, y: 0, z: 0}
+    hpBuff: 0
+    agilityBuff: 1
+    defenseBuff: 0
+    luckBuff: 0
+    meleeDamageBuff: 0
+    rangedDamageBuff: 0
   - petName: Cat
     petImage: {fileID: 8930072284066470257, guid: 8eb04277d8ea3f243831316421c8eed2, type: 3}
     petPrice: 100
     companionPrefab: {fileID: 4844566328778412315, guid: 15e9c6b0732a2d34ea8b0b46777831bf, type: 3}
     isPurchased: 0
     originalPosition: {x: 0, y: 0, z: 0}
+    hpBuff: 0
+    agilityBuff: 0
+    defenseBuff: 0
+    luckBuff: 0
+    meleeDamageBuff: 5
+    rangedDamageBuff: 0
   - petName: Racoon
     petImage: {fileID: 4687556977089906120, guid: 2e74ebdb3fa37e34e8c1a21e91562f4d, type: 3}
     petPrice: 100
     companionPrefab: {fileID: 8676826672727508195, guid: abd468167b95ef544a2f33a958e3495a, type: 3}
     isPurchased: 0
     originalPosition: {x: 0, y: 0, z: 0}
+    hpBuff: 0
+    agilityBuff: 0
+    defenseBuff: 1
+    luckBuff: 0
+    meleeDamageBuff: 0
+    rangedDamageBuff: 0
   coins: {fileID: 1792401494}
   coinBalanceText: {fileID: 306662036}
   ShopScrollView: {fileID: 309108822}
@@ -62403,6 +62427,7 @@ MonoBehaviour:
   popupMessageText: {fileID: 1766024857}
   globalSellButton: {fileID: 1759117436}
   playerTransform: {fileID: 1792401486}
+  playerData: {fileID: 11400000, guid: e697d61607f0ae44a95fdacce9de283e, type: 2}
 --- !u!1 &1257127402
 GameObject:
   m_ObjectHideFlags: 0
@@ -66478,10 +66503,10 @@ RectTransform:
   - {fileID: 1386888398}
   m_Father: {fileID: 309108822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 205, y: -50}
-  m_SizeDelta: {x: 410, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1676122467
 MonoBehaviour:
@@ -67017,6 +67042,10 @@ PrefabInstance:
     - target: {fileID: 4187883161975756274, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776647834404087237, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
+      propertyPath: lerpSpeed
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5776647834404087237, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
       propertyPath: playerData

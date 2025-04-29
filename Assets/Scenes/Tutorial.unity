@@ -63709,24 +63709,48 @@ MonoBehaviour:
     companionPrefab: {fileID: 5713086387244386974, guid: b5ae1b2dab02f6640a2fa24374881a69, type: 3}
     isPurchased: 0
     originalPosition: {x: 0, y: 0, z: 0}
+    hpBuff: 0
+    agilityBuff: 0
+    defenseBuff: 0
+    luckBuff: 1
+    meleeDamageBuff: 0
+    rangedDamageBuff: 0
   - petName: Bird
     petImage: {fileID: -6282043166299537173, guid: 285e2f18135e1ae47a31156f94cdda21, type: 3}
     petPrice: 100
     companionPrefab: {fileID: 6162367854493576755, guid: 364f5b8906454294eab771438ddc695c, type: 3}
     isPurchased: 0
     originalPosition: {x: 0, y: 0, z: 0}
+    hpBuff: 0
+    agilityBuff: 1
+    defenseBuff: 0
+    luckBuff: 0
+    meleeDamageBuff: 0
+    rangedDamageBuff: 0
   - petName: Cat
     petImage: {fileID: 8930072284066470257, guid: 8eb04277d8ea3f243831316421c8eed2, type: 3}
     petPrice: 100
     companionPrefab: {fileID: 4844566328778412315, guid: 15e9c6b0732a2d34ea8b0b46777831bf, type: 3}
     isPurchased: 0
     originalPosition: {x: 0, y: 0, z: 0}
+    hpBuff: 0
+    agilityBuff: 0
+    defenseBuff: 0
+    luckBuff: 0
+    meleeDamageBuff: 0
+    rangedDamageBuff: 0
   - petName: Racoon
     petImage: {fileID: 4687556977089906120, guid: 2e74ebdb3fa37e34e8c1a21e91562f4d, type: 3}
     petPrice: 100
     companionPrefab: {fileID: 8676826672727508195, guid: abd468167b95ef544a2f33a958e3495a, type: 3}
     isPurchased: 0
     originalPosition: {x: 0, y: 0, z: 0}
+    hpBuff: 0
+    agilityBuff: 0
+    defenseBuff: 1
+    luckBuff: 0
+    meleeDamageBuff: 5
+    rangedDamageBuff: 0
   coins: {fileID: 1792401494}
   coinBalanceText: {fileID: 306662036}
   ShopScrollView: {fileID: 309108822}
@@ -63734,6 +63758,7 @@ MonoBehaviour:
   popupMessageText: {fileID: 1766024857}
   globalSellButton: {fileID: 1759117436}
   playerTransform: {fileID: 1792401486}
+  playerData: {fileID: 11400000, guid: e697d61607f0ae44a95fdacce9de283e, type: 2}
 --- !u!1 &1232594625
 GameObject:
   m_ObjectHideFlags: 0
@@ -65734,7 +65759,7 @@ Tilemap:
       - {fileID: 652224514, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: -1638227662, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: -1921442583, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
-      m_AnimationSpeed: 1.5
+      m_AnimationSpeed: 1.5000001
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -6, y: 10, z: 0}
