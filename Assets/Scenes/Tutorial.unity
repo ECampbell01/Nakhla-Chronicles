@@ -4548,8 +4548,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupManager: {fileID: 1004338021}
-  message: This is the bird! She will give you a +10 buff to your agility stat. If
-    you wanna move quick like a bird adopt her!
+  message: This is the bird! She will give you a buff to your agility stat. If you
+    wanna move quick like a bird adopt her!
 --- !u!61 &713048045
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5168,8 +5168,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupManager: {fileID: 1004338021}
-  message: This is the cat! She will give you a +10 buff to your melee stat. If you
-    want claws like a cat adopt her!
+  message: This is the cat! She will give you a buff to your melee stat. If you want
+    claws like a cat adopt her!
 --- !u!61 &770677806
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -63712,7 +63712,7 @@ MonoBehaviour:
     hpBuff: 0
     agilityBuff: 0
     defenseBuff: 0
-    luckBuff: 1
+    luckBuff: 0
     meleeDamageBuff: 0
     rangedDamageBuff: 0
   - petName: Bird
@@ -63722,7 +63722,7 @@ MonoBehaviour:
     isPurchased: 0
     originalPosition: {x: 0, y: 0, z: 0}
     hpBuff: 0
-    agilityBuff: 1
+    agilityBuff: 0
     defenseBuff: 0
     luckBuff: 0
     meleeDamageBuff: 0
@@ -63747,9 +63747,9 @@ MonoBehaviour:
     originalPosition: {x: 0, y: 0, z: 0}
     hpBuff: 0
     agilityBuff: 0
-    defenseBuff: 1
+    defenseBuff: 0
     luckBuff: 0
-    meleeDamageBuff: 5
+    meleeDamageBuff: 0
     rangedDamageBuff: 0
   coins: {fileID: 1792401494}
   coinBalanceText: {fileID: 306662036}
@@ -63805,8 +63805,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupManager: {fileID: 1004338021}
-  message: This is the fox! He will give you a +10 buff to your luck stat! If your
-    feeling lucky adopt the fox!
+  message: This is the fox! He will give you a buff to your luck stat! If your feeling
+    lucky adopt the fox!
 --- !u!61 &1232594628
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -65264,7 +65264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupManager: {fileID: 1004338021}
-  message: This is the racoon! He will give you a +10 to your defense stat. If you
+  message: This is the racoon! He will give you a buff to your defense stat. If you
     wanna be strong adopt the racoon!
 --- !u!61 &1523714500
 BoxCollider2D:
@@ -65759,7 +65759,7 @@ Tilemap:
       - {fileID: 652224514, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: -1638227662, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: -1921442583, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
-      m_AnimationSpeed: 1.5000001
+      m_AnimationSpeed: 1.5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -6, y: 10, z: 0}
