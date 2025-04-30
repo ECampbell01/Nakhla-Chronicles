@@ -8,11 +8,8 @@ using TMPro;
 public class ExperienceManager : MonoBehaviour
 {
     [SerializeField] AnimationCurve experienceCurve;
-    //int currentLevel;
-    //int totalExperience;
     int previousLevelExperience;
     int nextLevelExperience;
-    //int availablePoints = 0;
 
     [SerializeField] TextMeshProUGUI levelText;
     [SerializeField] TextMeshProUGUI availablePointsText;
@@ -40,6 +37,27 @@ public class ExperienceManager : MonoBehaviour
             playerData.Level++;
             playerData.AvailablePoints++;
             UpdateLevel();
+
+            // Level 10 Achievement
+            if (playerData.Level >= 10 && PlayerPrefs.GetInt("Achievement_Level10", 0) == 0)
+            {
+                PlayerPrefs.SetInt("Achievement_Level10", 1);
+                PlayerPrefs.Save(); // Ensure it's written to disk
+            }
+
+            // Level 25 Achievement
+            if (playerData.Level >= 25 && PlayerPrefs.GetInt("Achievement_Level25", 0) == 0)
+            {
+                PlayerPrefs.SetInt("Achievement_Level25", 1);
+                PlayerPrefs.Save(); // Ensure it's written to disk
+            }
+
+            // Level 50 Achievement
+            if (playerData.Level >= 50 && PlayerPrefs.GetInt("Achievement_Level50", 0) == 0)
+            {
+                PlayerPrefs.SetInt("Achievement_Level50", 1);
+                PlayerPrefs.Save(); // Ensure it's written to disk
+            }
         }
     }
 

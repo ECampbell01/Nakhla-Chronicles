@@ -57,6 +57,10 @@ public class TutorialExitPromptTrigger : MonoBehaviour
             playerData.Level = 1;
             playerData.AvailablePoints = 0;
             SceneManager.LoadScene("Hubworld");
+
+            //Player achieves "Complete Tutorial" Achievement
+            PlayerPrefs.SetInt("Achievement_TutorialComplete", 1);
+            PlayerPrefs.Save();
         }
     }
 
