@@ -15,12 +15,37 @@ public class ButtonController : MonoBehaviour
     public GameObject characterCreationMenu;
     public Button continueButton;
 
+    [SerializeField] PlayerData playerData;
+
     private void Start()
     {
         // Later will check if the player has a saved game or not. If the player has a saved
         // game the button will be enabled, if the player doesn't have a saved game it will
         // be disabled.
-        continueButton.interactable = false;
+        //continueButton.interactable = false;
+    }
+
+    public void ContinueGame()
+    {
+        // Load the last saved game
+        // This is a placeholder. You will need to implement the actual loading logic.
+        SceneManager.LoadScene("Hubworld");
+    }
+
+    public void NewGame()
+    {
+        // Load the character creation menu
+        playerData.HP = 100;
+        playerData.Agility = 2;
+        playerData.Defense = 1;
+        playerData.Luck = 1;
+        playerData.MeleeDamage = 10;
+        playerData.RangedDamage = 10;
+        playerData.Level = 1;
+        playerData.Experience = 0;
+        playerData.AvailablePoints = 0;
+        playerData.CompanionPrefab = null;
+        SceneManager.LoadScene("Prologue");
     }
 
     public void ShowMainMenu()
@@ -60,11 +85,6 @@ public class ButtonController : MonoBehaviour
     {
         mainMenu.SetActive(false);
         characterCreationMenu.SetActive(true);
-    }
-
-    public void LoadPrologue()
-    {
-        SceneManager.LoadScene("Prologue");
     }
 
     public void ExitGame()
