@@ -9,6 +9,8 @@ public class DungeonExitTrigger : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            PlayerPrefs.SetInt("Achievement_DungeonComplete", 1);
+            PlayerPrefs.Save();
             SceneManager.LoadScene(sceneName);
         }
     }

@@ -22,8 +22,13 @@ public class PauseMenuController : MonoBehaviour
     public TutorialPromptTrigger promptTrigger;
     public TutorialExitPromptTrigger exitTrigger;
 
-    [SerializeField] PlayerData playerData;
+    [SerializeField] private TextMeshProUGUI tutorialAchievementText;
+    [SerializeField] private TextMeshProUGUI dungeonAchievementText;
+    [SerializeField] private TextMeshProUGUI level10AchievementText;
+    [SerializeField] private TextMeshProUGUI level25AchievementText;
+    [SerializeField] private TextMeshProUGUI level50AchievementText;
 
+    [SerializeField] PlayerData playerData;
     [SerializeField] TextMeshProUGUI hpText;
     [SerializeField] TextMeshProUGUI agilityText;
     [SerializeField] TextMeshProUGUI defenseText;
@@ -31,9 +36,64 @@ public class PauseMenuController : MonoBehaviour
     [SerializeField] TextMeshProUGUI meleeText;
     [SerializeField] TextMeshProUGUI rangedText;
 
-    void Start()
+
+    private void UpdateAchievementStatus()
     {
-        //cameraSwitcher = GetComponent<CameraSwitcher>();
+        bool tutorialComplete = PlayerPrefs.GetInt("Achievement_TutorialComplete", 0) == 1;
+        bool dungeonComplete = PlayerPrefs.GetInt("Achievement_DungeonComplete", 0) == 1;
+        bool level10Complete = PlayerPrefs.GetInt("Achievement_Level10", 0) == 1;
+        bool level25Complete = PlayerPrefs.GetInt("Achievement_Level25", 0) == 1;
+        bool level50Complete = PlayerPrefs.GetInt("Achievement_Level50", 0) == 1;
+
+        // Show that the tutorial achievement is complete when it is completed
+        if (tutorialComplete)
+        {
+            tutorialAchievementText.text = "Completed";
+        }
+        else
+        {
+            tutorialAchievementText.text = "";
+        }
+
+        // Show that the dungeon achievement is complete when it is completed
+        if (dungeonComplete)
+        {
+            dungeonAchievementText.text = "Completed";
+        }
+        else
+        {
+            dungeonAchievementText.text = "";
+        }
+
+        // Show that the level 10 achievement is complete when it is completed
+        if (level10Complete)
+        {
+            level10AchievementText.text = "Completed";
+        }
+        else
+        {
+            level10AchievementText.text = "";
+        }
+
+        // Show that the level 25 achievement is complete when it is completed
+        if (level25Complete)
+        {
+            level25AchievementText.text = "Completed";
+        }
+        else
+        {
+            level25AchievementText.text = "";
+        }
+
+        // Show that the level 50 achievement is complete when it is completed
+        if (level50Complete)
+        {
+            level50AchievementText.text = "Completed";
+        }
+        else
+        {
+            level50AchievementText.text = "";
+        }
     }
 
     public void ClosePauseMenu()
@@ -148,6 +208,7 @@ public class PauseMenuController : MonoBehaviour
         playerStatsMenu.SetActive(false);
         playerInventory.SetActive(false);
         playerToolbar.SetActive(false);
+        UpdateAchievementStatus();
     }
 
     public void ShowPlayerStatsMenu() 
