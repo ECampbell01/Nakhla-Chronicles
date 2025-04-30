@@ -120,7 +120,7 @@ public class RoomFirstDungeonGenerator : RandomWalkGeneration
 
         foreach (var center in validRooms)
         {
-            int enemyCount = Random.Range(minEnemiesPerRoom, maxEnemiesPerRoom + 1);
+            int enemyCount = Random.Range((int)Math.Ceiling(playerData.Level / 3.0), (int)Math.Ceiling(playerData.Level / 2.0) + 1);
             for (int i = 0; i < enemyCount; i++)
             {
                 Vector2 spawnPosition = (Vector2)center + Random.insideUnitCircle * spawnRadius;
