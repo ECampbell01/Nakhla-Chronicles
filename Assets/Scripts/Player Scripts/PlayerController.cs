@@ -40,6 +40,7 @@ public class PlayerController : MonoBehaviour
         Move();
         HandleInputs();
         Animate();
+        UpdateShootingDirection();
     }
 
     void Move()
@@ -84,6 +85,15 @@ public class PlayerController : MonoBehaviour
         input.x = Input.GetAxisRaw("Horizontal");
         input.y = Input.GetAxisRaw("Vertical");
         input.Normalize();
+    }
+
+    void UpdateShootingDirection()
+    {
+        Vector2 shootDirection = isWalking ? input : lastMoveDirection;
+
+        // Update animator shoot direction
+        anim.SetFloat("ShootX", shootDirection.x);
+        anim.SetFloat("ShootY", shootDirection.y);
     }
 
     void Animate()

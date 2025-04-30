@@ -64,7 +64,7 @@ public class PrologueManager : MonoBehaviour
 
         yield return StartCoroutine(FadeOutScreen());
 
-        SceneManager.LoadScene("Hubworld");
+        SceneManager.LoadScene("Tutorial");
     }
 
     private IEnumerator FadeInSkipButton()
@@ -121,6 +121,6 @@ public class PrologueManager : MonoBehaviour
     public void SkipPrologue()
     {
         StopAllCoroutines();
-        SceneManager.LoadScene("Hubworld");
+        SceneManager.LoadScene("Tutorial");
     }
 }
