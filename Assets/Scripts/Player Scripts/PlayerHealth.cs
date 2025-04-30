@@ -72,6 +72,7 @@ public class PlayerHealth : MonoBehaviour
         playerData.Level = 1;
         playerData.Experience = 0;
         playerData.AvailablePoints = 0;
+        playerData.CompanionPrefab = null;
 
         if (SceneManager.GetActiveScene().name == "Tutorial")
         {
