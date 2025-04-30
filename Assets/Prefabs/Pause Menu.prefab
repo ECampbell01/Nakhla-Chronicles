@@ -324,6 +324,9 @@ MonoBehaviour:
   level10AchievementText: {fileID: 5295745262054790158}
   level25AchievementText: {fileID: 5438278685722157258}
   level50AchievementText: {fileID: 8814130156042917097}
+  kill100AchievementText: {fileID: 4510521723514126243}
+  kill200AchievementText: {fileID: 2793983364244323281}
+  bossAchievementText: {fileID: 2502251143677193853}
   playerData: {fileID: 11400000, guid: e697d61607f0ae44a95fdacce9de283e, type: 2}
   hpText: {fileID: 4846949908588697875}
   agilityText: {fileID: 721282917087028171}

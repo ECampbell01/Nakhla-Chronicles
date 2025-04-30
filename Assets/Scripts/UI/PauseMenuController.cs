@@ -27,6 +27,9 @@ public class PauseMenuController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI level10AchievementText;
     [SerializeField] private TextMeshProUGUI level25AchievementText;
     [SerializeField] private TextMeshProUGUI level50AchievementText;
+    [SerializeField] private TextMeshProUGUI kill100AchievementText;
+    [SerializeField] private TextMeshProUGUI kill200AchievementText;
+    [SerializeField] private TextMeshProUGUI bossAchievementText;
 
     [SerializeField] PlayerData playerData;
     [SerializeField] TextMeshProUGUI hpText;
@@ -44,6 +47,9 @@ public class PauseMenuController : MonoBehaviour
         bool level10Complete = PlayerPrefs.GetInt("Achievement_Level10", 0) == 1;
         bool level25Complete = PlayerPrefs.GetInt("Achievement_Level25", 0) == 1;
         bool level50Complete = PlayerPrefs.GetInt("Achievement_Level50", 0) == 1;
+        bool kill100Complete = PlayerPrefs.GetInt("Achievement_Kill100Enemies", 0) == 1;
+        bool kill200Complete = PlayerPrefs.GetInt("Achievement_Kill200Enemies", 0) == 1;
+        bool bossComplete = PlayerPrefs.GetInt("Achievement_BossDefeated", 0) == 1;
 
         // Show that the tutorial achievement is complete when it is completed
         if (tutorialComplete)
@@ -93,6 +99,36 @@ public class PauseMenuController : MonoBehaviour
         else
         {
             level50AchievementText.text = "";
+        }
+
+        // Show that the kill 100 enemies achievement is complete when it is completed
+        if (kill100Complete)
+        {
+            kill100AchievementText.text = "Completed";
+        }
+        else
+        {
+            kill100AchievementText.text = "";
+        }
+
+        // Show that the kill 200 enemies achievement is complete when it is completed
+        if (kill200Complete)
+        {
+            kill200AchievementText.text = "Completed";
+        }
+        else
+        {
+            kill200AchievementText.text = "";
+        }
+
+        // Show that the boss achievement is complete when it is completed
+        if (bossComplete)
+        {
+            bossAchievementText.text = "Completed";
+        }
+        else
+        {
+            bossAchievementText.text = "";
         }
     }
 
