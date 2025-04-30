@@ -688,11 +688,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 8be67674-d146-4305-8e43-c56b94463866
+  cloudProjectId: fae58172-d50a-468f-b120-c53897e234b5
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Test
-  organizationId: deegledeeg
+  projectName: Nakhla Chronicles
+  organizationId: ecampbellmcn
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

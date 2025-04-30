@@ -10,7 +10,6 @@ using UnityEngine.UI;
 using PlayerCoins;
 using System.Runtime.CompilerServices;
 using System.Linq.Expressions;
-using static UnityEditor.Progress;
 using Unity.VisualScripting;
 
 class PetShopScroll : MonoBehaviour
