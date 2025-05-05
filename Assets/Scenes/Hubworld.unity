@@ -60770,10 +60770,10 @@ RectTransform:
   - {fileID: 339472144}
   m_Father: {fileID: 1511847604}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 205, y: -50}
+  m_SizeDelta: {x: 410, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &839263992
 MonoBehaviour:
@@ -64050,7 +64050,7 @@ Tilemap:
       - {fileID: 652224514, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: -1638227662, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
       - {fileID: -1921442583, guid: b56a2751ee16c5549809f3a48f6fbfb4, type: 3}
-      m_AnimationSpeed: 1.5000001
+      m_AnimationSpeed: 1.5
       m_AnimationTimeOffset: 0
       m_Flags: 0
   - first: {x: -6, y: 10, z: 0}
@@ -66538,10 +66538,10 @@ RectTransform:
   - {fileID: 1386888398}
   m_Father: {fileID: 309108822}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 205, y: -50}
+  m_SizeDelta: {x: 410, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1676122467
 MonoBehaviour:
