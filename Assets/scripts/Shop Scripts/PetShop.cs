@@ -10,6 +10,7 @@ using UnityEngine.UI;
 using PlayerCoins;
 using System.Runtime.CompilerServices;
 using System.Linq.Expressions;
+using Unity.VisualScripting;
 
 class PetShopScroll : MonoBehaviour
 {
@@ -24,6 +25,12 @@ class PetShopScroll : MonoBehaviour
         public GameObject companionPrefab;
         [HideInInspector] public bool isPurchased = false;
         [HideInInspector] public Vector3 originalPosition;
+        public int hpBuff = 0;
+        public int agilityBuff = 0;
+        public int defenseBuff = 0;
+        public int luckBuff = 0;
+        public int meleeDamageBuff = 0;
+        public int rangedDamageBuff = 0;
     }
 
     // ------------------- Serialized Fields -------------------
@@ -35,14 +42,16 @@ class PetShopScroll : MonoBehaviour
     [SerializeField] private GameObject popupPanel;
     [SerializeField] private TextMeshProUGUI popupMessageText;
     [SerializeField] private Button globalSellButton;
-    [SerializeField] private Transform playerTransform;
+    [SerializeField] private GameObject player;
+    [SerializeField] private PlayerData playerData;
     private Dictionary<string, GameObject> petNameToUIItem = new Dictionary<string, GameObject>();
+    private GameObject companion;
 
 
 
 
     private GameObject itemTemplate;
-    private GameObject currentSpawnedCompanion = null;
+    //private GameObject currentSpawnedCompanion = null;
     private ShopItem currentItem = null;
 
     // ------------------- Start Method -------------------
@@ -64,13 +73,14 @@ class PetShopScroll : MonoBehaviour
         // Subscribe to the event that updates the coin balance when it changes
         coins.OnCoinBalanceChanged += UpdateCoinBalance;
         globalSellButton.onClick.AddListener(OnGlobalSellButtonClicked);
-        globalSellButton.gameObject.SetActive(false);
 
         foreach (var item in ShopItemsList)
         {
-            if (item.companionPrefab != null)
+            if (item.companionPrefab == playerData.CompanionPrefab)
             {
-                item.originalPosition = item.companionPrefab.transform.position;
+                //item.originalPosition = item.companionPrefab.transform.position;
+                currentItem = item;
+                currentItem.isPurchased = true;
             }
         }
 
@@ -112,6 +122,16 @@ class PetShopScroll : MonoBehaviour
             {
                 buyBtn.onClick.AddListener(() => OnBuyButtonClicked(item, buyBtn));
             }
+
+            if (playerData.CompanionPrefab != null)
+            {
+                globalSellButton.gameObject.SetActive(true);
+                buyBtn.interactable = false;
+                DisableOtherBuyButtons(item.petName);
+            }
+            else {
+                globalSellButton.gameObject.SetActive(false);
+            }
         }
     }
 
@@ -124,34 +144,36 @@ class PetShopScroll : MonoBehaviour
             ShowPopup("You already own this companion!", Color.yellow);
             return;
         }
-
-        if (currentSpawnedCompanion != null)
+        
+        if (playerData.CompanionPrefab != null)
         {
-            ShowPopup("You can only have on companion at a time!", Color.yellow);
+            ShowPopup("You can only have one companion at a time!", Color.yellow);
         }
 
         // Attempt to deduct coins from the player. If successful, display a success message
         if (coins.DeductCoins(item.petPrice))
         {
             item.isPurchased = true;
-            currentSpawnedCompanion = item.companionPrefab;
+            playerData.CompanionPrefab = item.companionPrefab;
 
-            if (item.companionPrefab != null && playerTransform != null)
+            if (item.companionPrefab != null && player.transform != null)
             {
-                currentSpawnedCompanion = Instantiate(item.companionPrefab, playerTransform);
-                currentSpawnedCompanion.transform.localPosition = Vector3.zero;
+                companion = Instantiate(playerData.CompanionPrefab, player.transform);
+                companion.transform.localPosition = Vector3.zero;
                 currentItem = item;
+                ApplyCompanionBuffs(item);
 
             }
-            CompanionMovement movementScript = currentSpawnedCompanion.GetComponent<CompanionMovement>();
+            CompanionMovement movementScript = companion.GetComponent<CompanionMovement>();
             if (movementScript != null)
             {
-                movementScript.playerTransform = playerTransform;
-                movementScript.playerAnimator = playerTransform.GetComponent<Animator>();
+                movementScript.playerTransform = player.transform;
+                movementScript.playerAnimator = player.GetComponent<Animator>();
             }
 
             ShowPopup($"Purchased {item.petName} for {item.petPrice} coins!", Color.green);
             UpdateCoinBalance();  // Update the coin balance display after the purchase
+
             globalSellButton.gameObject.SetActive(true);
             buyBtn.interactable = false;
             DisableOtherBuyButtons(item.petName);
@@ -163,17 +185,30 @@ class PetShopScroll : MonoBehaviour
         }
     }
 
+    private void ApplyCompanionBuffs(ShopItem item)
+    {
+        playerData.HP += item.hpBuff;
+        playerData.Agility += item.agilityBuff;
+        playerData.Defense += item.defenseBuff;
+        playerData.Luck += item.luckBuff;
+        playerData.MeleeDamage += item.meleeDamageBuff;
+        playerData.RangedDamage += item.rangedDamageBuff;
+        playerData.CompanionPrefab = item.companionPrefab;
+    }
+
     private void OnGlobalSellButtonClicked()
     {
-        if (currentSpawnedCompanion == null || currentItem == null) return;
+        if (playerData.CompanionPrefab == null) return;
         // Save info before nulling things out
         int refundAmount = currentItem.petPrice;
         string petName = currentItem.petName;
 
+        RemoveCompanionBuffs(currentItem);
+
         currentItem.isPurchased = false;
 
-        Destroy(currentSpawnedCompanion);
-        currentSpawnedCompanion = null;
+        Destroy(player.transform.GetChild(2).gameObject);
+        playerData.CompanionPrefab = null;
         currentItem = null;
 
         coins.AddCoins(refundAmount);
@@ -182,6 +217,17 @@ class PetShopScroll : MonoBehaviour
         globalSellButton.gameObject.SetActive(false);
 
         ResetBuyButtons();  // Reactivate all buy buttons
+    }
+
+    private void RemoveCompanionBuffs(ShopItem item)
+    {
+        playerData.HP -= item.hpBuff;
+        playerData.Agility -= item.agilityBuff;
+        playerData.Defense -= item.defenseBuff;
+        playerData.Luck -= item.luckBuff;
+        playerData.MeleeDamage -= item.meleeDamageBuff;
+        playerData.RangedDamage -= item.rangedDamageBuff;
+        playerData.CompanionPrefab = null;  // Reset the companion prefab to null
     }
 
     // ------------------- UpdateCoinBalance Method -------------------

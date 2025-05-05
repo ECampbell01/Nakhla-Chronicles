@@ -32,10 +32,11 @@ public class CompanionMovement : MonoBehaviour
 
 
     }
-
+    
     void LateUpdate()
     {
         Vector3 targetPos = playerTransform.position + followOffset;
-        transform.position = Vector3.MoveTowards(transform.position, targetPos, followSpeed * Time.deltaTime);
+        //transform.position = Vector3.MoveTowards(transform.position, targetPos, followSpeed * Time.deltaTime);
+        transform.position = targetPos;
     }
 }

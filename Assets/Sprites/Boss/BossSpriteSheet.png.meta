@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 6a783db7453554740b819750abddf111
+guid: 709872522c20d2f44b34468322376141
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6901009450598336039
-    second: DungeonEntrancePortal_0
+      213: -4299671849899544076
+    second: BossSpriteSheet_0
+  - first:
+      213: 5094742884689845964
+    second: BossSpriteSheet_1
+  - first:
+      213: 2552008081489578967
+    second: BossSpriteSheet_2
+  - first:
+      213: 8246876241338402324
+    second: BossSpriteSheet_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +46,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +60,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 48
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -75,7 +84,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: DungeonEntrancePortal_0
+      name: BossSpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 31
-        y: 31
-        width: 130
-        height: 130
+        x: 0
+        y: 0
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +137,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 726078e388f45cf50800000000000000
-      internalID: 6901009450598336039
+      spriteID: 4f1bdffab3f7454c0800000000000000
+      internalID: -4299671849899544076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossSpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cce13e719a924b640800000000000000
+      internalID: 5094742884689845964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossSpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dbcc1934dd8a6320800000000000000
+      internalID: 2552008081489578967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BossSpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41685976f3ac27270800000000000000
+      internalID: 8246876241338402324
       vertices: []
       indices: 
       edges: []
@@ -138,7 +213,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9b0030e4bc61a554b844bc040d7dafab
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +223,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      DungeonEntrancePortal_0: 6901009450598336039
+      BossSpriteSheet_0: -4299671849899544076
+      BossSpriteSheet_1: 5094742884689845964
+      BossSpriteSheet_2: 2552008081489578967
+      BossSpriteSheet_3: 8246876241338402324
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,6 +1,5 @@
 // Contributions: Chance Daigle and Ethan Campbell
 
-using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 

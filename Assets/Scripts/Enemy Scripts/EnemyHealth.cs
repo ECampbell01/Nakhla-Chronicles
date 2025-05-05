@@ -1,7 +1,6 @@
 // Contributions: Ethan Campbell
 // Date Created: 3/1/2025
 
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
@@ -39,6 +38,32 @@ public class EnemyHealth : MonoBehaviour
 
     private void Die()
     {
+
+        // Check for boss kill achievement
+        if (CompareTag("Boss") && PlayerPrefs.GetInt("Achievement_BossDefeated", 0) == 0)
+        {
+            PlayerPrefs.SetInt("Achievement_BossDefeated", 1);
+            PlayerPrefs.Save();
+        }
+        // Increment kill count
+        int currentKills = PlayerPrefs.GetInt("EnemiesKilled", 0);
+        currentKills++;
+        PlayerPrefs.SetInt("EnemiesKilled", currentKills);
+
+        // Check for 100 kills achievement
+        if (currentKills >= 100 && PlayerPrefs.GetInt("Achievement_Kill100Enemies", 0) == 0)
+        {
+            PlayerPrefs.SetInt("Achievement_Kill100Enemies", 1);
+            PlayerPrefs.Save();
+        }
+
+        // Check for 200 kills achievement
+        if (currentKills >= 200 && PlayerPrefs.GetInt("Achievement_Kill200Enemies", 0) == 0)
+        {
+            PlayerPrefs.SetInt("Achievement_Kill200Enemies", 1);
+            PlayerPrefs.Save();
+        }
+
         Destroy(gameObject); // Enemy dies
     }
 

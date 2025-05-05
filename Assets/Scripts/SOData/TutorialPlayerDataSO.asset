@@ -21,3 +21,4 @@ MonoBehaviour:
   _level: 1
   _experience: 0
   _availablePoints: 0
+  _companionPrefab: {fileID: 0}

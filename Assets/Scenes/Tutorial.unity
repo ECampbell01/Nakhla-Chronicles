@@ -4548,8 +4548,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupManager: {fileID: 1004338021}
-  message: This is the bird! She will give you a +10 buff to your agility stat. If
-    you wanna move quick like a bird adopt her!
+  message: This is the bird! She will give you a buff to your agility stat. If you
+    wanna move quick like a bird adopt her!
 --- !u!61 &713048045
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5168,8 +5168,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupManager: {fileID: 1004338021}
-  message: This is the cat! She will give you a +10 buff to your melee stat. If you
-    want claws like a cat adopt her!
+  message: This is the cat! She will give you a buff to your melee stat. If you want
+    claws like a cat adopt her!
 --- !u!61 &770677806
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -63709,31 +63709,56 @@ MonoBehaviour:
     companionPrefab: {fileID: 5713086387244386974, guid: b5ae1b2dab02f6640a2fa24374881a69, type: 3}
     isPurchased: 0
     originalPosition: {x: 0, y: 0, z: 0}
+    hpBuff: 0
+    agilityBuff: 0
+    defenseBuff: 0
+    luckBuff: 0
+    meleeDamageBuff: 0
+    rangedDamageBuff: 0
   - petName: Bird
     petImage: {fileID: -6282043166299537173, guid: 285e2f18135e1ae47a31156f94cdda21, type: 3}
     petPrice: 100
     companionPrefab: {fileID: 6162367854493576755, guid: 364f5b8906454294eab771438ddc695c, type: 3}
     isPurchased: 0
     originalPosition: {x: 0, y: 0, z: 0}
+    hpBuff: 0
+    agilityBuff: 0
+    defenseBuff: 0
+    luckBuff: 0
+    meleeDamageBuff: 0
+    rangedDamageBuff: 0
   - petName: Cat
     petImage: {fileID: 8930072284066470257, guid: 8eb04277d8ea3f243831316421c8eed2, type: 3}
     petPrice: 100
     companionPrefab: {fileID: 4844566328778412315, guid: 15e9c6b0732a2d34ea8b0b46777831bf, type: 3}
     isPurchased: 0
     originalPosition: {x: 0, y: 0, z: 0}
+    hpBuff: 0
+    agilityBuff: 0
+    defenseBuff: 0
+    luckBuff: 0
+    meleeDamageBuff: 0
+    rangedDamageBuff: 0
   - petName: Racoon
     petImage: {fileID: 4687556977089906120, guid: 2e74ebdb3fa37e34e8c1a21e91562f4d, type: 3}
     petPrice: 100
     companionPrefab: {fileID: 8676826672727508195, guid: abd468167b95ef544a2f33a958e3495a, type: 3}
     isPurchased: 0
     originalPosition: {x: 0, y: 0, z: 0}
+    hpBuff: 0
+    agilityBuff: 0
+    defenseBuff: 0
+    luckBuff: 0
+    meleeDamageBuff: 0
+    rangedDamageBuff: 0
   coins: {fileID: 1792401494}
   coinBalanceText: {fileID: 306662036}
   ShopScrollView: {fileID: 309108822}
   popupPanel: {fileID: 909170255}
   popupMessageText: {fileID: 1766024857}
   globalSellButton: {fileID: 1759117436}
-  playerTransform: {fileID: 1792401486}
+  player: {fileID: 437503131}
+  playerData: {fileID: 11400000, guid: 54eef3bebed73e74dabdbd5ec4824572, type: 2}
 --- !u!1 &1232594625
 GameObject:
   m_ObjectHideFlags: 0
@@ -63780,8 +63805,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupManager: {fileID: 1004338021}
-  message: This is the fox! He will give you a +10 buff to your luck stat! If your
-    feeling lucky adopt the fox!
+  message: This is the fox! He will give you a buff to your luck stat! If your feeling
+    lucky adopt the fox!
 --- !u!61 &1232594628
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -65239,7 +65264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   popupManager: {fileID: 1004338021}
-  message: This is the racoon! He will give you a +10 to your defense stat. If you
+  message: This is the racoon! He will give you a buff to your defense stat. If you
     wanna be strong adopt the racoon!
 --- !u!61 &1523714500
 BoxCollider2D:
@@ -68955,6 +68980,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 244049267159561634, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: 54eef3bebed73e74dabdbd5ec4824572, type: 2}
     - target: {fileID: 849643311814038722, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
       propertyPath: m_ExcludeLayers.m_Bits
       value: 136
@@ -68973,11 +69002,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2134898097317099352, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -18
+      value: -18.06
       objectReference: {fileID: 0}
     - target: {fileID: 2134898097317099352, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13.68
+      value: 13.54
       objectReference: {fileID: 0}
     - target: {fileID: 2134898097317099352, guid: 4d011fe9c88f51d44942e979f0aa86f9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -84580,9 +84609,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 54eef3bebed73e74dabdbd5ec4824572, type: 2}
     - target: {fileID: 5962410882855159779, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
+      propertyPath: exitTrigger
+      value: 
+      objectReference: {fileID: 210301821}
+    - target: {fileID: 5962410882855159779, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
       propertyPath: playerToolbar
       value: 
       objectReference: {fileID: 782696833}
+    - target: {fileID: 5962410882855159779, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
+      propertyPath: cameraSwitcher
+      value: 
+      objectReference: {fileID: 1601491677}
     - target: {fileID: 5962410882855159779, guid: b5978f6807590834f87b3597237d5a1c, type: 3}
       propertyPath: experienceManager
       value: 
