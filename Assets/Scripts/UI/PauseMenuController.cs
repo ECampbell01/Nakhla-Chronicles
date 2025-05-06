@@ -21,6 +21,7 @@ public class PauseMenuController : MonoBehaviour
     public ExperienceManager experienceManager;
     public TutorialPromptTrigger promptTrigger;
     public TutorialExitPromptTrigger exitTrigger;
+    public DungeonPrompt dungeonPrompt;
 
     [SerializeField] private TextMeshProUGUI tutorialAchievementText;
     [SerializeField] private TextMeshProUGUI dungeonAchievementText;
@@ -147,6 +148,11 @@ public class PauseMenuController : MonoBehaviour
         if (exitTrigger != null)
         {
             exitTrigger.CloseInventory();
+        }
+
+        if(dungeonPrompt != null) 
+        {
+            dungeonPrompt.CloseInventory();
         }
     }
 

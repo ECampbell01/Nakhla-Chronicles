@@ -49,6 +49,14 @@ public class DungeonPrompt : MonoBehaviour
             SceneManager.LoadScene("Dungeon");
         }
     }
+    public void CloseInventory()
+    {
+        isInventoryOpen = false;
+        if (playerInRange)
+        {
+            prompt.SetActive(true);
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
