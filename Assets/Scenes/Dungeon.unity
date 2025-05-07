@@ -524,6 +524,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6082821547079653747, guid: c27a5b4ebf3711241ad06dd57ceb849f, type: 3}
+      propertyPath: playerData
+      value: 
+      objectReference: {fileID: 11400000, guid: e697d61607f0ae44a95fdacce9de283e, type: 2}
+    - target: {fileID: 6082821547079653747, guid: c27a5b4ebf3711241ad06dd57ceb849f, type: 3}
+      propertyPath: inventoryData
+      value: 
+      objectReference: {fileID: 11400000, guid: c4e63a3bba804ed48a5b87d53ea7f51a, type: 2}
+    - target: {fileID: 6082821547079653747, guid: c27a5b4ebf3711241ad06dd57ceb849f, type: 3}
+      propertyPath: maxStackedItems
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6082821547079653747, guid: c27a5b4ebf3711241ad06dd57ceb849f, type: 3}
       propertyPath: 'inventorySlots.Array.data[0]'
       value: 
       objectReference: {fileID: 1073073278}
@@ -1418,7 +1430,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4238113570506963875, guid: b50ba9fff19246c4090f7ac6847e000f, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -107
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4238113570506963875, guid: b50ba9fff19246c4090f7ac6847e000f, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1575,6 +1587,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBar: {fileID: 874930429}
   playerData: {fileID: 11400000, guid: e697d61607f0ae44a95fdacce9de283e, type: 2}
+  inventoryData: {fileID: 11400000, guid: c4e63a3bba804ed48a5b87d53ea7f51a, type: 2}
 --- !u!1 &1235355283
 GameObject:
   m_ObjectHideFlags: 0

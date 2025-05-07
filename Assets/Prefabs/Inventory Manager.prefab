@@ -72,3 +72,4 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   inventoryItemPrefab: {fileID: 2489310737286420062, guid: 235e77cdc71eca44b8488fd61a152652, type: 3}
+  inventoryData: {fileID: 11400000, guid: c4e63a3bba804ed48a5b87d53ea7f51a, type: 2}
