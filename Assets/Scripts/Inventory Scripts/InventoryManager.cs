@@ -5,21 +5,27 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
-    public int maxStackedItems = 4;
+    public int maxStackedItems = 1;
     public InventorySlot[] inventorySlots;
     public GameObject inventoryItemPrefab;
     int selectedSlot = -1;
+    public InventoryData inventoryData;
 
     public static InventoryManager Instance;
 
     private void Awake()
     {
+        if (inventoryData == null)
+        {
+            DontDestroyOnLoad(gameObject);
+        }
         Instance = this;
     }
 
     private void Start()
     {
         ChangeSelectedSlot(0);
+        LoadInventory();
     }
 
     private void Update()
@@ -49,7 +55,48 @@ public class InventoryManager : MonoBehaviour
         selectedSlot = newValue;
     }
 
-    public bool AddItem(Item item) 
+    public void LoadInventory()
+    {
+        // Clear all inventory slots
+        foreach (var slot in inventorySlots)
+        {
+            foreach (Transform child in slot.transform)
+            {
+                Destroy(child.gameObject);
+            }
+        }
+
+        // Reload items from saved data
+        foreach (var entry in inventoryData.items)
+        {
+            int remainingCount = entry.count;
+
+            while (remainingCount > 0)
+            {
+                int stackToAdd = Mathf.Min(remainingCount, maxStackedItems);
+
+                for (int i = 0; i < inventorySlots.Length; i++)
+                {
+                    InventorySlot slot = inventorySlots[i];
+                    InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
+
+                    if (itemInSlot == null)
+                    {
+                        GameObject newItemGO = Instantiate(inventoryItemPrefab, slot.transform);
+                        InventoryItem newItem = newItemGO.GetComponent<InventoryItem>();
+                        newItem.InitializeItem(entry.item);
+                        newItem.count = stackToAdd;
+                        newItem.RefreshCount();
+
+                        remainingCount -= stackToAdd;
+                        break;
+                    }
+                }
+            }
+        }
+    }
+
+    public bool AddItem(Item item)
     {
         // Check if any slot has the same item with count lower than max
         for (int i = 0; i < inventorySlots.Length; i++)
@@ -65,16 +112,16 @@ public class InventoryManager : MonoBehaviour
         }
 
         // Find an empty slot
-        for (int i = 0; i < inventorySlots.Length; i++) 
+        for (int i = 0; i < inventorySlots.Length; i++)
         {
             InventorySlot slot = inventorySlots[i];
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
-            if(itemInSlot == null) 
+            if (itemInSlot == null)
             {
                 SpawnNewItem(item, slot);
                 return true;
             }
-        } 
+        }
         return false;
     }
 
@@ -83,6 +130,7 @@ public class InventoryManager : MonoBehaviour
         GameObject newItemGameObject = Instantiate(inventoryItemPrefab, slot.transform);
         InventoryItem inventoryItem = newItemGameObject.GetComponent<InventoryItem>();
         inventoryItem.InitializeItem(item);
+        inventoryData.AddItem(item);
     }
 
     public Item GetSelectedItem(bool use) 
@@ -115,6 +163,7 @@ public class InventoryManager : MonoBehaviour
         if (item != null)
         {
             item.Use(GameObject.FindWithTag("Player"));
+            inventoryData.RemoveItem(item);
         }
     }
 }

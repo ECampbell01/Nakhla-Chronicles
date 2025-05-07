@@ -13,6 +13,9 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField]
     private PlayerData playerData;
 
+    [SerializeField]
+    private InventoryData inventoryData;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -73,12 +76,7 @@ public class PlayerHealth : MonoBehaviour
         playerData.Experience = 0;
         playerData.AvailablePoints = 0;
         playerData.CompanionPrefab = null;
-
-        if (SceneManager.GetActiveScene().name == "Tutorial")
-        {
-            SceneManager.LoadScene("Tutorial");
-        }
-        else
+        inventoryData.ClearInventory();
         {
             SceneManager.LoadScene("GameOver");
         }

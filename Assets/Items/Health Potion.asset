@@ -15,7 +15,7 @@ MonoBehaviour:
   tile: {fileID: 0}
   image: {fileID: -5986076536372221526, guid: 7d0fd4f2146c716449731cd823d9c89a, type: 3}
   type: 0
-  stackable: 1
+  stackable: 0
   healAmount: 20
   defenseBoost: 1
   playerData: {fileID: 11400000, guid: e697d61607f0ae44a95fdacce9de283e, type: 2}
