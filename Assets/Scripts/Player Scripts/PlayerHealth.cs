@@ -58,8 +58,8 @@ public class PlayerHealth : MonoBehaviour
     public void RestoreHealth(float amount)
     {
         currentHealth += amount;
-        if (currentHealth > StatsManager.Instance.HP)
-            currentHealth = StatsManager.Instance.HP;
+        if (currentHealth > playerData.HP)
+            currentHealth = playerData.HP;
 
         healthBar.SetHealth(currentHealth);
     }
@@ -77,8 +77,6 @@ public class PlayerHealth : MonoBehaviour
         playerData.AvailablePoints = 0;
         playerData.CompanionPrefab = null;
         inventoryData.ClearInventory();
-        {
-            SceneManager.LoadScene("GameOver");
-        }
+        SceneManager.LoadScene("GameOver");
     }
 }

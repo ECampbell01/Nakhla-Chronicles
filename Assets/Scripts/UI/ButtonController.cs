@@ -13,8 +13,8 @@ public class ButtonController : MonoBehaviour
     public GameObject achievementsScreen;
     public GameObject creditsScreen;
     public GameObject howToPlayScreen;
-    public GameObject characterCreationMenu;
     public Button continueButton;
+    public InventoryManager inventoryManager;
 
     [SerializeField] private TextMeshProUGUI tutorialAchievementText;
     [SerializeField] private TextMeshProUGUI dungeonAchievementText;
@@ -26,14 +26,7 @@ public class ButtonController : MonoBehaviour
     [SerializeField] private TextMeshProUGUI bossAchievementText;
 
     [SerializeField] PlayerData playerData;
-
-    private void Start()
-    {
-        // Later will check if the player has a saved game or not. If the player has a saved
-        // game the button will be enabled, if the player doesn't have a saved game it will
-        // be disabled.
-        //continueButton.interactable = false;
-    }
+    [SerializeField] InventoryData inventoryData;
 
     public void ContinueGame()
     {
@@ -55,6 +48,8 @@ public class ButtonController : MonoBehaviour
         playerData.Experience = 0;
         playerData.AvailablePoints = 0;
         playerData.CompanionPrefab = null;
+        inventoryData.ClearInventory();
+        inventoryManager.LoadInventory();
         SceneManager.LoadScene("Prologue");
     }
 
@@ -182,12 +177,6 @@ public class ButtonController : MonoBehaviour
     {
         mainMenu.SetActive(false);
         howToPlayScreen.SetActive(true);
-    }
-
-    public void LoadCharacterCreation()
-    {
-        mainMenu.SetActive(false);
-        characterCreationMenu.SetActive(true);
     }
 
     public void ExitGame()
