@@ -32,7 +32,8 @@ public class CameraSwitcher : MonoBehaviour
         if (SceneManager.GetActiveScene().name != "Dungeon")
         {
             // Toggle Map if "M" key is pressed, if Pause Menu is not open and shop UI isn't open
-            if (Input.GetKeyDown(KeyCode.M) && !isPauseMenuActive && !shopTrigger.isShopOpen && !petShopTrigger.isPetShopOpen)
+            if (Input.GetKeyDown(KeyCode.M) && !isPauseMenuActive && 
+                (shopTrigger == null || !shopTrigger.isShopOpen) && (petShopTrigger == null || !petShopTrigger.isPetShopOpen))
             {
                 isMapActive = !isMapActive;
 
@@ -57,7 +58,8 @@ public class CameraSwitcher : MonoBehaviour
 
 
             // Toggle Pause Menu if "F" key is pressed, if Map is not open and shop UI isn't open
-            if (Input.GetKeyDown(KeyCode.F) && !isMapActive && !shopTrigger.isShopOpen && !petShopTrigger.isPetShopOpen)
+            if (Input.GetKeyDown(KeyCode.F) && !isMapActive && 
+                (shopTrigger == null || !shopTrigger.isShopOpen) && (petShopTrigger == null || !petShopTrigger.isPetShopOpen))
             {
                 isPauseMenuActive = !isPauseMenuActive;
                 pauseMenu.SetActive(isPauseMenuActive);
