@@ -11,6 +11,7 @@ using PlayerCoins;
 using System.Runtime.CompilerServices;
 using System.Linq.Expressions;
 using Unity.VisualScripting;
+using UnityEngine.EventSystems;
 
 class PetShopScroll : MonoBehaviour
 {
@@ -31,6 +32,7 @@ class PetShopScroll : MonoBehaviour
         public int luckBuff = 0;
         public int meleeDamageBuff = 0;
         public int rangedDamageBuff = 0;
+        public string description;
     }
 
     // ------------------- Serialized Fields -------------------
@@ -44,6 +46,7 @@ class PetShopScroll : MonoBehaviour
     [SerializeField] private Button globalSellButton;
     [SerializeField] private GameObject player;
     [SerializeField] private PlayerData playerData;
+    [SerializeField] private TextMeshProUGUI petDescriptionText;
     private Dictionary<string, GameObject> petNameToUIItem = new Dictionary<string, GameObject>();
     private GameObject companion;
 
@@ -132,6 +135,26 @@ class PetShopScroll : MonoBehaviour
             else {
                 globalSellButton.gameObject.SetActive(false);
             }
+
+            // Add EventTrigger for hover events
+            EventTrigger trigger = newItem.AddComponent<EventTrigger>();
+
+            // On pointer enter: show item description
+            EventTrigger.Entry entryEnter = new EventTrigger.Entry();
+            entryEnter.eventID = EventTriggerType.PointerEnter;
+            entryEnter.callback.AddListener((eventData) => {
+                petDescriptionText.text = item.description;
+            });
+
+            // On pointer exit: clear item description
+            EventTrigger.Entry entryExit = new EventTrigger.Entry();
+            entryExit.eventID = EventTriggerType.PointerExit;
+            entryExit.callback.AddListener((eventData) => {
+                petDescriptionText.text = "";
+            });
+
+            trigger.triggers.Add(entryEnter);
+            trigger.triggers.Add(entryExit);
         }
     }
 
