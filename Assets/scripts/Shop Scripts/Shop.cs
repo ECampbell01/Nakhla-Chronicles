@@ -8,6 +8,9 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using PlayerCoins;
+using UnityEditorInternal.Profiling.Memory.Experimental;
+using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 
 public class ShopScroll : MonoBehaviour
 {
@@ -30,6 +33,7 @@ public class ShopScroll : MonoBehaviour
     [SerializeField] private Transform ShopScrollView;
     [SerializeField] private GameObject popupPanel;
     [SerializeField] private TextMeshProUGUI popupMessageText;
+    [SerializeField] private TextMeshProUGUI itemDescriptionText;
 
     private GameObject itemTemplate;
     public InventoryManager inventoryManager;
@@ -91,6 +95,26 @@ public class ShopScroll : MonoBehaviour
             {
                 buyBtn.onClick.AddListener(() => OnBuyButtonClicked(item));
             }
+
+            // Add EventTrigger for hover events
+            EventTrigger trigger = newItem.AddComponent<EventTrigger>();
+
+            // On pointer enter: show item description
+            EventTrigger.Entry entryEnter = new EventTrigger.Entry();
+            entryEnter.eventID = EventTriggerType.PointerEnter;
+            entryEnter.callback.AddListener((eventData) => {
+                itemDescriptionText.text = item.itemToGive.description;
+            });
+
+            // On pointer exit: clear item description
+            EventTrigger.Entry entryExit = new EventTrigger.Entry();
+            entryExit.eventID = EventTriggerType.PointerExit;
+            entryExit.callback.AddListener((eventData) => {
+                itemDescriptionText.text = "";
+            });
+
+            trigger.triggers.Add(entryEnter);
+            trigger.triggers.Add(entryExit);
         }
     }
 

@@ -18,4 +18,5 @@ MonoBehaviour:
   stackable: 0
   healAmount: 20
   defenseBoost: 1
+  description: Restores 20 HP instantly. A basic healing item.
   playerData: {fileID: 11400000, guid: e697d61607f0ae44a95fdacce9de283e, type: 2}

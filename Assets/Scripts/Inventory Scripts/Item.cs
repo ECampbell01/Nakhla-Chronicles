@@ -14,6 +14,7 @@ public class Item : ScriptableObject
     public bool stackable = true;
     public int healAmount = 20; // For Health Potions
     public int defenseBoost = 1; // For Armor
+    [TextArea] public string description;
     [SerializeField] PlayerData playerData;
 
     public enum ItemType 
