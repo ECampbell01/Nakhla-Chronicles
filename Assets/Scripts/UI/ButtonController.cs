@@ -28,11 +28,25 @@ public class ButtonController : MonoBehaviour
     [SerializeField] PlayerData playerData;
     [SerializeField] InventoryData inventoryData;
 
+
+    void Start()
+    {
+        if (PlayerPrefs.HasKey("HasSaveData") && PlayerPrefs.GetInt("HasSaveData") == 1)
+        {
+            continueButton.interactable = true;
+        }
+        else
+        {
+            continueButton.interactable = false;
+        }
+    }
+
     public void ContinueGame()
     {
-        // Load the last saved game
-        // This is a placeholder. You will need to implement the actual loading logic.
-        SceneManager.LoadScene("Hubworld");
+        if (PlayerPrefs.HasKey("HasSaveData") && PlayerPrefs.GetInt("HasSaveData") == 1)
+        {
+            SceneManager.LoadScene("Hubworld");
+        }
     }
 
     public void NewGame()

@@ -60,6 +60,7 @@ public class TutorialExitPromptTrigger : MonoBehaviour
 
             //Player achieves "Complete Tutorial" Achievement
             PlayerPrefs.SetInt("Achievement_TutorialComplete", 1);
+            PlayerPrefs.SetInt("HasSaveData", 1);
             PlayerPrefs.Save();
         }
     }
