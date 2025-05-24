@@ -144,7 +144,7 @@ public class ShopScroll : MonoBehaviour
     // This method updates the UI to show the current coin balance
     private void UpdateCoinBalance()
     {
-        coinBalanceText.text = coins.coinBalance.ToString();  // Set coin balance UI text
+        coinBalanceText.text = coins.playerData.Coins.ToString();  // Set coin balance UI text
     }
 
     // ------------------- ShowPopup Method -------------------

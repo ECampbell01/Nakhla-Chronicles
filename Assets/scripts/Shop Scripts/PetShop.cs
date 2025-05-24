@@ -257,7 +257,7 @@ class PetShopScroll : MonoBehaviour
     // Updates the UI to reflect the current coin balance
     private void UpdateCoinBalance()
     {
-        coinBalanceText.text = coins.coinBalance.ToString();  // Update the coin balance text on the UI
+        coinBalanceText.text = coins.playerData.Coins.ToString();  // Update the coin balance text on the UI
     }
 
     // ------------------- ShowPopup Method -------------------

@@ -61,6 +61,7 @@ public class ButtonController : MonoBehaviour
         playerData.Level = 1;
         playerData.Experience = 0;
         playerData.AvailablePoints = 0;
+        playerData.Coins = 0;
         playerData.CompanionPrefab = null;
         inventoryData.ClearInventory();
         inventoryManager.LoadInventory();
