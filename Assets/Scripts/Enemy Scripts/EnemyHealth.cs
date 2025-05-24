@@ -8,6 +8,10 @@ public class EnemyHealth : MonoBehaviour
     [SerializeField] private GameObject experiencePoint;
     [SerializeField] private int baseXP = 5;
     [SerializeField] private int xpDropCount = 3;
+    [SerializeField] private GameObject coin;
+    [SerializeField] private float coinDropChance = 0.5f; // 50% chance
+    [SerializeField] private int minCoins = 1;
+    [SerializeField] private int maxCoins = 3;
     private Rigidbody2D rb;
     public float maxHealth = 50f;
     private float currentHealth;
@@ -33,6 +37,7 @@ public class EnemyHealth : MonoBehaviour
         {
             Die();
             DropXP();
+            DropCoins();
         }
     }
 
@@ -79,6 +84,23 @@ public class EnemyHealth : MonoBehaviour
             Vector2 dropPosition = (Vector2)transform.position + Random.insideUnitCircle * 0.5f;
             GameObject xpDot = Instantiate(experiencePoint, dropPosition, Quaternion.identity);
             xpDot.GetComponent<ExperienceOrb>().SetXPValue(xpPerDrop);
+        }
+    }
+
+    private void DropCoins()
+    {
+        if (coin == null) return;
+
+        float roll = Random.value;
+        if (roll <= coinDropChance)
+        {
+            int coinCount = Random.Range(minCoins, maxCoins + 1);
+
+            for (int i = 0; i < coinCount; i++)
+            {
+                Vector2 dropPos = (Vector2)transform.position + Random.insideUnitCircle * 0.3f;
+                Instantiate(coin, dropPos, Quaternion.identity);
+            }
         }
     }
 }

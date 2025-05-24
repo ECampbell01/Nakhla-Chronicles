@@ -256,6 +256,10 @@ MonoBehaviour:
   experiencePoint: {fileID: 8633082520157059324, guid: b54ba839ceedc304e983eac7a3096852, type: 3}
   baseXP: 5
   xpDropCount: 3
+  coin: {fileID: 6280982123292613977, guid: 047e9eedd9f2f8b4095cd65b16668fbb, type: 3}
+  coinDropChance: 0.5
+  minCoins: 1
+  maxCoins: 3
   maxHealth: 50
 --- !u!1 &2881101911539138347
 GameObject:

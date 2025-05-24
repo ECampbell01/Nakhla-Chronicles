@@ -28,6 +28,6 @@ public class CoinDisplay : MonoBehaviour
 
     private void UpdateCoinText()
     {
-        coinText.text = $"{playerCoins.coinBalance}";
+        coinText.text = $"{playerCoins.playerData.Coins}";
     }
 }

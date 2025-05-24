@@ -8,14 +8,15 @@ namespace PlayerCoins
 
     public class Coins : MonoBehaviour
     {
-        [SerializeField] public int coinBalance = 1000;
+        [SerializeField]
+        public PlayerData playerData;
         public event Action OnCoinBalanceChanged;
 
         public bool DeductCoins(int amount)
         {
-            if (coinBalance >= amount)
+            if (playerData.Coins >= amount)
             {
-                coinBalance -= amount;
+                playerData.Coins -= amount;
                 OnCoinBalanceChanged?.Invoke();
                 return true;
             }
@@ -24,7 +25,7 @@ namespace PlayerCoins
 
         public void AddCoins(int amount)
         {
-            coinBalance += amount;
+            playerData.Coins += amount;
             OnCoinBalanceChanged?.Invoke();
         }
     }
